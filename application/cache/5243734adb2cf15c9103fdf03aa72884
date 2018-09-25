@@ -1,0 +1,1099 @@
+1537867874TS--->
+<!DOCTYPE html>
+<html ng-app="phptravelsApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FREE & EASY MŨI NÉ: GÓI DU LỊCH DÀNH CHO 6 NGƯỜI Ở 2N1Đ TẠI SEALINK BEACH VILLAS">
+    <meta name="keywords" content="FREE & EASY MŨI NÉ, SEALINK BEACH VILLAS, dat phong  SEALINK BEACH VILLAS">
+    <meta name="author" content="HOSPI">
+    <meta property="fb:app_id" content="159189514584032" />
+    <title>FREE & EASY MŨI NÉ: GÓI DU LỊCH DÀNH CHO 6 KHÁCH Ở 2N1Đ TẠI SEALINK BEACH VILLAS</title>
+    <link rel="shortcut icon" href="https://www.hospi.vn/uploads/global/favicon.png">
+    <link href="https://www.hospi.vn/themes/new_theme/assets/css/bootstrap-modal.css" rel="stylesheet" media="screen">
+    <link href="https://www.hospi.vn/themes/new_theme/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="https://www.hospi.vn/themes/new_theme/assets/css/bootstrap-slider.css" rel="stylesheet" media="screen">
+    <link href="https://www.hospi.vn/themes/new_theme/assets/css/custom.css" rel="stylesheet" media="screen">
+
+  <!-- Duc add css file -->
+    <link href="https://www.hospi.vn/themes/new_theme/style.css" rel="stylesheet" media="screen">
+    <link href="https://www.hospi.vn/themes/new_theme/asset/css/styleNews.css" rel="stylesheet">
+    <link href="https://www.hospi.vn/themes/new_theme/asset/css/Menu.css" rel="stylesheet">
+    <link href="https://www.hospi.vn/themes/new_theme/asset/css/timkiem.css" rel="stylesheet">
+    <link href="https://www.hospi.vn/themes/new_theme/asset/css/responsive-honeymoon.css" rel="stylesheet" media="screen">
+     <link href="https://www.hospi.vn/themes/new_theme/asset/css/book.css" rel="stylesheet">
+   
+    <link href="https://www.hospi.vn/themes/new_theme/asset/css/responsive-cookbook.css" rel="stylesheet">
+    <link href="https://www.hospi.vn/themes/new_theme/asset/css/responsive.css" rel="stylesheet">
+<!--     <link href="https://www.hospi.vn/themes/new_theme/asset/css/responsive-khachsan.css" rel="stylesheet">
+ -->    <link href="https://www.hospi.vn/themes/new_theme/asset/css/responsive-combo.css" rel="stylesheet">
+    <!-- facebook --------> 
+    <meta property="og:title" content="FREE & EASY MŨI NÉ: GÓI DU LỊCH DÀNH CHO 6 KHÁCH Ở 2N1Đ TẠI SEALINK BEACH VILLAS"/>
+    <meta property="og:site_name" content="HOSPI - Đặt phòng khách sạn"/>
+    <meta property="og:description" content="FREE & EASY MŨI NÉ: GÓI DU LỊCH DÀNH CHO 6 NGƯỜI Ở 2N1Đ TẠI SEALINK BEACH VILLAS"/>
+    <meta property="og:publisher" content="https://www.facebook.com/HOSPI - Đặt phòng khách sạn"/>
+    <script type="application/ld+json">{"@context":"http://schema.org/","@type":"Organization","name":"HOSPI - Đặt phòng khách sạn","url":"https://www.hospi.vn/","logo":"https://www.hospi.vn/uploads/global/favicon.png","sameAs":"https://www.facebook.com/HOSPI - Đặt phòng khách sạn","sameAs":"https://twitter.com/HOSPI - Đặt phòng khách sạn","sameAs":"https://www.pinterest.com/HOSPI - Đặt phòng khách sạn/","sameAs":"https://plus.google.com/u/0/HOSPI - Đặt phòng khách sạn/posts","contactPoint":{"@type":"ContactPoint","telephone":"028 3826 8797","contactType":"Customer Service"}}{"@context":"http://schema.org","@type":"WebSite","name":"HOSPI - Đặt phòng khách sạn","url":"https://www.hospi.vn"}  </script>
+    <!--[if lt IE 9]>        <script src="https://www.hospi.vn/themes/new_theme/assets/js/html5shiv.js"></script> <script src="https://www.hospi.vn/themes/new_theme/assets/js/respond.min.js"></script><![endif]-->
+    <!-- BASE CSS ---------> 
+    <link href="https://www.hospi.vn/themes/new_theme/style.css" rel="stylesheet">
+    <style> @import "https://www.hospi.vn/themes/new_theme/childtheme/childstyle.css"; </style>
+    <!-- Google Maps ------> <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyAAgXXrHR9Rf4DY_zdtfkhlqplUtfaOonk&libraries=places"></script>
+    <!-- jQuery -----------> <script src="https://www.hospi.vn/themes/new_theme/assets/js/jquery-1.11.2.min.js"></script> <script src="https://www.hospi.vn/themes/new_theme/assets/js/wow.min.js"></script>
+    <!-- RTL CSS ---------->     <!-- Mobile Redirect -->     <!--[if lt IE 7]>        
+    <link rel="stylesheet" type="text/css" href="https://www.hospi.vn/themes/new_theme/assets/css/font-awesome-ie7.css" media="screen" />
+    <![endif]-->
+    <link rel="stylesheet" href="https://www.hospi.vn/themes/new_theme/assets/css/jquery-ui.css" />
+  </head>
+
+  <body id="top">
+    <div id="wait">
+      <div class="lds-css ng-scope">
+        <div style="width:100%;height:100%" class="lds-flickr">
+          <!-- <div class="rotatingwait"></div> -->
+          <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=159189514584032";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+<!--hoangnhonline    <script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",59360]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>-->
+
+        <!-- Duc add html header-top -->
+    <header class="block-header">
+      <div class="header-top">
+        <div class="container">
+          <div class="col-sm-6 col-xs-12">
+            <div class="row">
+              <p class="col-sm-6 text-right col-xs-6 no-padding-right-mobile">
+                <a id="doan" href="#datphongdoan" data-toggle="modal" data-content="Đặt vé nhanh" rel="popover" data-placement="top" data-original-title="Đặt vé nhanh" data-trigger="hover">
+                  Đặt vé nhanh <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Giá trên hệ thống HOSPI là giá dành cho khách lẻ để lấy giá đoàn rẻ nhất(Áp dụng từ 10 phòng trở lên) vui lòng gửi yêu cầu cho chúng tôi"></i></a>
+              </p>
+              <p class="col-sm-6 text-center col-xs-6 no-padding-right-mobile">
+                <a id="nhanh" href="#datphongnhanh" data-toggle="modal" data-content="Đặt phòng nhanh ?" rel="popover" data-placement="top" data-original-title="Đặt phòng nhanh ?" data-trigger="hover">Đặt phòng nhanh <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Bạn không muốn thời gian để tìm kiếm khách sạn với giá tốt nhất hãy gửi yêu cầu để được báo giá nhanh trong vòng 30 phút"></i></a>
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 hidden-xs">
+            <div class="row">
+              <p class="col-sm-4 text-right"><i class="fa fa-phone-square"></i> (028) 3826 8797</p>
+              <p class="col-sm-4 text-right">Hotline: 09 6868 0106</p>
+              <p class="col-sm-4 text-right">Zalo: 090 345 5152</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="navbar navbar-static-top navbar-default navbar-custom ">
+      <div class="container">
+        <div class="navbar">
+          <!-- Navigation-->
+                      <div class="col-md-2">
+                            <div class="navbar-header go-right logo-mobile">
+                <!-- <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button> -->
+                                <a href="https://www.hospi.vn/" class="navbar-brand"><img src="https://www.hospi.vn/themes/new_theme/assets/img/logo.png" alt="HOSPI - Đặt phòng khách sạn" class="logo"/></a>
+                              </div>
+              <div class="menu-section clearfix" id="menumobilemain">
+            <div class="slicknav_menu">
+                 <a href="#menumobile" data-type="menu" data-toggle="collapse" class="slicknav_btn">
+                      <span class="icon-bar icon-1"></span>
+                      <span class="icon-bar icon-2"></span>
+                      <span class="icon-bar icon-3"></span>
+                    <span class="slicknav_menutxt">MENU</span>
+                    <span class="icon-down-menu ">
+                      <i class="fa fa-caret-down"></i>
+                    </span>
+                     
+                  </a>
+                  <ul class="slicknav_nav" aria-hidden="true" role="menu" id="menumobile" class="collapse out">
+                    <li><a data-type="menu" data-toggle="collapse" href="#menu-child-mobile" class="show-menu"><i class="fa fa-angle-right"></i> Khách sạn</a>
+                      <ul class="menu-child" id="menu-child-mobile" class="collapse in">
+                          <li>
+                            <a href="">Deal - Giảm giá</a>
+                          </li>
+                            <li>
+                              <a href="">Khuyến mãi</a>
+                          </li>
+                          <li>
+                            <a href="">Combo</a>
+                          </li>
+                      </ul>
+                    </li>
+                    <li><a data-type="menu" href="https://www.hospi.vn/tours"><i class="fa fa-angle-right"></i> Tours</a></li>
+                    <li><a data-type="menu" href="https://www.hospi.vn/hotels/honeymoon"><i class="fa fa-angle-right"></i> Honeymoon</a></li>
+                    <li><a data-type="menu" href="https://www.hospi.vn/blog"><i class="fa fa-angle-right"></i> Tôi yêu du lịch</a></li>
+                    <li><a data-type="menu" href="#"><i class="fa fa-angle-right"></i> Giao diện đầy đủ</a></li>
+                    <li>
+                        <div class="block-user menu-mb">
+                          <div class="block-content">
+                            <p class="user-img">
+                              <img alt="" src="https://www.hospi.vn/themes/default/assets/img/user.jpg">
+                            </p>
+                            <div class="user-menu">
+                              <p>
+                                <a href="https://www.hospi.vn/login">Đăng nhập</a>
+                              </p>
+                              <p>
+                                <a href="https://www.hospi.vn/register">  Đăng ký</a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li>
+                      <div class="text-left item-contact">
+                          <div class="number-mobile"><i class="fa fa-phone-square"></i> (028) 3826 8797</div> 
+                          <div>Email: bookinghospi.vn</div> 
+                         <div>Hotline: 09 6868 0106</div> 
+                          <div>Zalo: 090 345 5152</div> 
+                      </div>
+                    </li>
+                  </ul>
+             </div>
+           </div>
+
+            </div>
+            <div class="col-md-8">            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right go-left top-menu">
+                                <!--<li class="dropdown  go-right">
+                  <a class="dropdown-toggle" href="https://www.hospi.vn/"> Trang chủ </a>
+                  </li>-->
+                                <li class="main-menu go-right  ">
+                                    <a href="https://www.hospi.vn/offers" class=""   target="_blank" >
+                    <!--<i class='fa fa-gift'></i>--> Khuyến mãi                         <div class="current-page"></div>
+                  </a>
+                                                    </li>
+                                <li class="main-menu go-right  ">
+                                    <a href="https://www.hospi.vn/hotels" class=""   target="_self" >
+                    <!--<i class='fa fa-building'></i>--> Khách sạn                         <div class="current-page"></div>
+                  </a>
+                                                    </li>
+                                <li class="main-menu go-right active ">
+                                    <a href="https://www.hospi.vn/tours" class="active"   target="_self" >
+                    <!--<i class='fa fa-briefcase'></i>--> Tours                          <div class="current-page"></div>
+                  </a>
+                                                    </li>
+                                <li class="main-menu go-right  ">
+                                    <a href="https://www.hospi.vn/hotels/honeymoon" class=""   target="" >
+                  <!--<i class='fa fa-heart'></i>--> Honey Moon                      <div class="current-page"></div>
+                  </a>
+                                                    </li>
+                                <li class="main-menu go-right  ">
+                                    <a href="https://www.hospi.vn/blog" class=""   target="_self" >
+                    <!--<i class='fa fa-building'></i>--> Tôi yêu du lịch                           <div class="current-page"></div>
+                  </a>
+                                                    </li>
+                                                                                                <!-- <li class="menu-mb">
+                  <a href="#" title="Giao dien đầy đử" class="menu-item-mb">Giao dien đầy đử</a>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+                    
+                    <div class="col-sm-2 hidden-xs">
+            <div class="block-user menu-mb">
+              <div class="block-content">
+                <p class="user-img">
+                  <img alt="" src="https://www.hospi.vn/themes/new_theme/assets/img/user.jpg">
+                </p>
+                <div class="user-menu">
+                                    <p>
+                    <a href="https://www.hospi.vn/login">Đăng nhập</a>
+                  </p>
+                  <p>
+                    <a href="https://www.hospi.vn/register">  Đăng ký</a>
+                  </p>
+                                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container visible-xs">
+      <div style="margin-top:0">
+        <p class="text-center" style="margin: 0; line-height: 40px; color: #6f1040; font-size: 15px;"><i class="fa fa-phone-square"></i> (028) 3826 8797</p>
+      </div>
+    </div>
+
+    <div id="checkbookingform" class="modal fade checkbooking-modal" tabindex="-1" data-focus-on="input:first" style="display: none;">
+      <div class="modal-dialog click-2email">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="hotel-name">
+              Check booking
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="panel-body">
+              <form class="checkbooking-form" action="https://www.hospi.vn/invoice/" method="GET">
+                <div class="type-select">
+                  <input type="radio" id="ck-hotel" class="booking-type" name="booking-type"><label for="ck-hotel" class="lb-hotel">Kiểm tra booking phòng</label>
+                </div>
+                <div class="type-select">
+                  <input type="radio" id="ck-tour" class="booking-type" name="booking-type"><label for="ck-tour" class="lb-hotel">Kiểm tra booking tour</label>
+                </div>
+                <div class="white-line"></div>
+                <input type="text" class="form-control" name="sessid" placeholder="Nhập mã booking">
+                <button type="submit" class="btn-ck purple" name="do" value="check-booking">Kiểm tra</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><link href="https://www.hospi.vn/themes/new_theme/assets/include/slider/slider.min.css" rel="stylesheet" />
+<script src="https://www.hospi.vn/themes/new_theme/assets/js/single.js"></script>
+<script src="https://www.hospi.vn/themes/new_theme/assets/include/slider/slider.js"></script>
+<script src="https://www.hospi.vn/themes/new_theme/assets/js/infobox.js"></script>
+<div class="mtslide2 sliderbg2"></div>
+<!-- map -->
+<div class="collapse" id="collapseMap">
+            <iframe id="mapframe" width="100%" height="450" style="position: static;" src="" frameborder="0"></iframe>
+        <script>
+            $('#collapseMap').on('shown.bs.collapse', function (e) {
+                $("#mapframe").prop("src", "https://www.hospi.vn/tours/tourmap/65");
+                    });
+        </script>
+    </div>
+<!-- map -->
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ol id="breadcrumb" class="breadcrumb"><li><a href="https://www.hospi.vn/">Trang chủ</a></li><li><a href="https://www.hospi.vn/tours/vietnam">Tour du lịch trong nước</a></li><li class="active"><span>FREE & EASY MŨI NÉ: GÓI DU LỊCH DÀNH CHO 6 KHÁCH Ở 2N1Đ TẠI SEALINK BEACH VILLAS</span></li></ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="OVERVIEW" class="container">
+    <!-- aside -->
+    <div class="secondary col-md-3 go-right">
+        <div class="panel-body panel panel-default">
+            <div class="tour-price-detail">
+            <div class="andes text-center tour-price-text">
+                GIÁ TOUR            </div>
+            <div class="andes size30 text-center">
+                1,055,000            </div>
+            <div class="text-center">
+                (VND/khách)            </div>
+            </div>
+            <div id="purple-chevron"></div>
+            <div class="clearfix"></div>
+            <br>
+            <!-- Start Tour Form aside -->
+                        <span class="book-tour-title purple"><i class="fa fa-angle-right" aria-hidden="true"></i> Mã tour: </span><span class="matour"> HPFE00013</span>
+            <!--<hr>
+                <div class="book-tour-title purple"><i class="fa fa-angle-right" aria-hidden="true"></i> Ngày khởi hành</div>        
+                <form action="" method="GET" >
+                        
+                        <div class="date-box" style="position: relative;">
+                            <input id="tchkin" name="date" value="25/09/2018" placeholder="date" type="text" class="form-control form-group mySelectCalendar" placeholder="Tìm kiếm">
+                            <button type="submit" class="btn btn-block btn-info pull-right">Đổi ngày</button>
+                        </div>
+                </form>-->
+                <div class="clearfix"></div>
+                <hr>
+                <div class="book-tour-title purple"><i class="fa fa-angle-right" aria-hidden="true"></i> Đặt chỗ</div>
+                <form  action="https://www.hospi.vn/tours/book/free-easy-mui-ne-goi-du-lich-danh-cho-6-khach-o-2n1d-tai-sealink-beach-villas?date=25/09/2018&adults=1" method="GET" role="search">
+                    
+                        
+                        
+                    <input type="hidden" name="date" value="25/09/2018">
+                                                
+                                                <div class="passenger">
+                                Người lớn                                        <select style="min-width:50px;width:auto" name="adults" class="selectx changeInfo input-sm" id="selectedAdults">
+                                                                                            <option value="1" selected>1</option>
+                                                                                            <option value="2" >2</option>
+                                                                                            <option value="3" >3</option>
+                                                                                            <option value="4" >4</option>
+                                                                                            <option value="5" >5</option>
+                                                                                            <option value="6" >6</option>
+                                                                                            <option value="7" >7</option>
+                                                                                            <option value="8" >8</option>
+                                                                                            <option value="9" >9</option>
+                                                                                            <option value="10" >10</option>
+                                                                                            <option value="11" >11</option>
+                                                                                            <option value="12" >12</option>
+                                                                                            <option value="13" >13</option>
+                                                                                            <option value="14" >14</option>
+                                                                                            <option value="15" >15</option>
+                                                                                            <option value="16" >16</option>
+                                                                                            <option value="17" >17</option>
+                                                                                            <option value="18" >18</option>
+                                                                                            <option value="19" >19</option>
+                                                                                            <option value="20" >20</option>
+                                                                                    </select>
+                    </div>
+                                    
+                                                <div class="passenger">
+                                Trẻ em <span style="color:#888;">(từ 4-11 tuổi)</span>
+                                        <br><select style="min-width:50px;width:auto" name="child" class="selectx changeInfo input-sm" id="selectedChild">
+                                            <option value="0">0</option>
+                                                                                    </select>
+                    </div>                
+                                                <hr>    
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <button style="border-radius: 10px; margin: 3px;" type="submit" class="btn btn-block btn-action btn-lg">Đặt tour</button>
+                        </div>
+                    </div>
+                </form>
+                        <!-- End Tour Form aside -->
+
+            <input type="hidden" id="loggedin" value="" />
+            <input type="hidden" id="itemid" value="65" />
+            <input type="hidden" id="module" value="tours" />
+            <input type="hidden" id="addtxt" value="Add to wishlist" />
+            <input type="hidden" id="removetxt" value="Remove from wishlist" />
+
+        </div>
+        <script>
+            $(function () {
+
+                $(".changeInfo").on("change", function () {
+                    var tourid = "65";
+                    var adults = $("#selectedAdults").val();
+                    var child = $("#selectedChild").val();
+                    var infants = $("#selectedInfants").val();
+                    $.post("https://www.hospi.vn/tours/tourajaxcalls/changeInfo", {tourid: tourid, adults: adults, child: child, infants: infants}, function (resp) {
+                        var result = $.parseJSON(resp);
+                        $(".adultPrice").html(result.currSymbol + result.adultPrice);
+                        $(".childPrice").html(result.currSymbol + result.childPrice);
+                        $(".infantPrice").html(result.currSymbol + result.infantPrice);
+                        $(".totalCost").html(result.currCode + " " + result.currSymbol + result.totalCost);
+                        $(".totaldeposit").html(result.currCode + " " + result.currSymbol + result.totalDeposit);
+                        console.log(result);
+                    })
+                }); //end of change info
+            })// end of document ready
+        </script>
+        <!-- aside -->
+
+
+        <!------------------------  Related Listings   ------------------------------>
+                <!------------------------  Related Listings   ------------------------------>
+
+    </div>
+
+    <div class="col-md-9 go-left">
+        <div  class="">
+            <div class="tour-detail">
+                <h2 class="go-right" style="display:inline-block;">FREE & EASY MŨI NÉ: GÓI DU LỊCH DÀNH CHO 6 KHÁCH Ở 2N1Đ TẠI SEALINK BEACH VILLAS</h2> <span class="purple">2 Ngày 1 Đêm</span>
+                <div class="clearfix"></div>
+                <span class="go-right RTL"><span class='tour-desc'>Ngày khởi hành</span> <i class='fa fa-angle-double-right' aria-hidden='true'></i> <span class='andes-bold purple'>Chủ nhật đến thứ 5</span> | <span class='tour-desc'>Phương tiện</span> <i class='fa fa-angle-double-right' aria-hidden='true'></i> <span class='andes-bold purple'>Tàu lửa</span> | <span class='tour-desc'>Khởi hành từ</span> <i class='fa fa-angle-double-right' aria-hidden='true'></i> <span class='andes-bold purple'>Hồ Chí Minh </span>            </div>
+
+
+
+            <div class="clearfix"></div>
+
+            <div style="margin-top:10px;padding: 0 12px 12px;">
+                <!-- slider -->
+                <div class="fotorama bg-dark" data-allowfullscreen="true" data-nav="thumbs">
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/18334_sea-links-beach-villas-2.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/18334_sea-links-beach-villas-3.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/933080_sea-links-beach-villas-4.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/933080_sea-links-beach-villas-5.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/933080_sea-links-beach-villas-7.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/933080_sea-links-beach-villas-8.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/933080_sea-links-beach-villas-10.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/933080_sea-links-beach-villas-14.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/345008_sea-links-beach-villas-15.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/345008_sea-links-beach-villas-17.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/345008_sea-links-beach-villas-18.jpg" />
+                                            <img src="https://www.hospi.vn/uploads/images/tours/slider/345008_sea-links-beach-villas-19.jpg" />
+                                    </div>
+            </div>
+            <div class="clearfix"></div>
+            <h2 class="tour-amenities">Điểm nổi bật & Dịch vụ đi kèm</h2>
+            <div class="clearfix"></div>
+                        <ul class="col-md-4 RTL" style="margin: 0 0 5px 0;list-style-type:none;">
+              <li class="go-right"><i class="amenities-star text-warning fa fa-star voted"></i> Khách sạn 5 sao</li>
+            </ul>
+                        <ul class="col-md-4 RTL" style="margin: 0 0 5px 0;list-style-type:none;">
+              <li class="go-right"><i class="amenities-star text-warning fa fa-star voted"></i> Vé tàu lửa khứ hồi 5 sao</li>
+            </ul>
+                        <ul class="col-md-4 RTL" style="margin: 0 0 5px 0;list-style-type:none;">
+              <li class="go-right"><i class="amenities-star text-warning fa fa-star voted"></i> Sử dụng sân Tennis</li>
+            </ul>
+                        <ul class="col-md-4 RTL" style="margin: 0 0 5px 0;list-style-type:none;">
+              <li class="go-right"><i class="amenities-star text-warning fa fa-star voted"></i> xe đưa đón từ ga tàu lửa đến khách sạn</li>
+            </ul>
+                        <ul class="col-md-4 RTL" style="margin: 0 0 5px 0;list-style-type:none;">
+              <li class="go-right"><i class="amenities-star text-warning fa fa-star voted"></i> ăn sáng tô ly</li>
+            </ul>
+                        <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#description" data-toggle="tab">Lịch trình Tour</a></li>
+            <li><a href="#information" data-toggle="tab">Thông tin</a></li>
+            <li><a href="#partner" data-toggle="tab">Đối tác</a></li>
+        </ul>
+        <div class="list-group tour-details-panel">
+            <div class="panel panel-default">
+
+                <div class="tab-content" style="padding:0;"> 
+                    <div class="tab-pane active" id="description">
+                        <div style="display: inline-block;width: 100%;padding: 20px;">
+                            <p><em><a href="http://www.hospi.vn/hotels/search/vietnam/mui-ne/87?txtSearch=M%C5%A9i+N%C3%A9"><strong>Mũi N&eacute;</strong></a>&nbsp;l&agrave; một trong những địa điểm được nhiều du kh&aacute;ch quan t&acirc;m khi tới Phan Thiết. Nếu bạn đang t&igrave;m đặt ph&ograve;ng kh&aacute;ch sạn ở Mũi N&eacute;,Phan Thiết th&igrave; những sự lựa chọn từ cao cấp tới b&igrave;nh d&acirc;n, gi&aacute; rẻ HOSPI điều&nbsp;c&oacute; thể đ&aacute;p ứng nhu cầu của bạn... Nhưng để mang đến cho kh&aacute;ch h&agrave;ng sự lựa chọn tốt nhất HOSPI giới thiệu đến bạn c&aacute;c chương tr&igrave;nh free &amp; easy 2&nbsp;ng&agrave;y 1 đ&ecirc;m.</em></p>
+
+<p><strong>G&oacute;i du lịch linh hoạt Free &amp; Easy điểm đến Mũi N&eacute;</strong><br />
+<strong>- Gi&aacute; trọn g&oacute;i: 1.055.000 VND/1&nbsp;Kh&aacute;ch</strong><br />
++ Thời gian đặt v&agrave; ở:25/4/2017-31/5/2017<br />
++ Loại ph&ograve;ng:<strong>&nbsp;Villa 3 ph&ograve;ng ngủ</strong></p>
+
+<p>Y&ecirc;u cầu: <strong>Khuyến m&atilde;i d&agrave;nh cho 6 kh&aacute;ch</strong></p>
+
+<p><strong>Giới thiệu về Sea Links Beach Villas</strong> <strong> Mũi N&eacute;</strong></p>
+
+<p><strong>Sea Links Beach Villas</strong>&nbsp;nằm trong quần thể của resort nghỉ dưỡng SeaLinks City, tọa lạc tại vịnh Mũi N&eacute;. C&aacute;ch th&agrave;nh phố Phan Thiết khoảng 10 km, c&aacute;ch Đồi C&aacute;t Bay khoảng 16 km, chỉ mất 20 ph&uacute;t đi xe m&aacute;y đến Chợ Đầm.</p>
+
+<p><strong>Sea Links Beach Villas</strong>&nbsp;c&oacute; 315 ph&ograve;ng được trang bị c&aacute;c tiện nghi như m&aacute;y lạnh, truy cập internet kh&ocirc;ng d&acirc;y (miễn ph&iacute;), b&agrave;n, k&eacute;t sắt,&nbsp;ph&ograve;ng tắm ri&ecirc;ng với bồn tắm spa.<br />
+C&aacute;c dịch vụ của kh&aacute;ch sạn gồm&nbsp;quầy lễ t&acirc;n 24 giờ, dịch vụ ph&ograve;ng 24 giờ, thủ tục nhận ph&ograve;ng/trả ph&ograve;ng nhanh, giữ h&agrave;nh l&yacute;, thu đổi ngoại tệ, trung t&acirc;m hội nghị, đưa đ&oacute;n s&acirc;n bay, cho thu&ecirc; xe đạp/xe m&aacute;y, dịch vụ giặt l&agrave;, cửa h&agrave;ng lưu niệm.<br />
+<br />
+Những phương tiện giải tr&iacute; của kh&aacute;ch sạn như&nbsp;bồn tắm nước n&oacute;ng, b&atilde;i biển ri&ecirc;ng, trung t&acirc;m thể dục, ph&ograve;ng x&ocirc;ng hơi kh&ocirc;, s&acirc;n golf (tại chỗ),&nbsp;s&acirc;n tennis,&nbsp;C&acirc;u lạc bộ trẻ em.<br />
+Bạn c&oacute; thể ăn uống cả ng&agrave;y tại nh&agrave; h&agrave;ng Sea Green Restaurant, nơi c&oacute; c&aacute;c m&oacute;n ăn quốc tế cũng như đặc sản ch&acirc;u &Aacute;.&nbsp;</p>
+
+<p>Địa chỉ:Sea Links City, Km9, Ph&uacute; H&agrave;i, Mũi N&eacute;, Phan Thiết</p>
+
+<p><strong><em>Th&ocirc;ng tin hữu &iacute;ch</em></strong><br />
+<strong>Số lượng ph&ograve;ng: 315 ph&ograve;ng</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="information">
+                        <div style="display: inline-block;width: 100%;padding: 20px;">
+                            <h4 class="main-title go-right tour-info-title">Giá Tour/khách <span style="color:#555;font-size: 14px;text-transform: uppercase;">(VND/khách)</span></h4>
+                            <div class="clearfix"></div>
+                            <br>
+                            <div class="row">
+                        <div class="col-md-3">
+                            <div class="price-item">
+                            <div class="text-center price-title">Người lớn</div>
+                            <div class="text-center price-age">(Từ 12 tuổi)</div>
+                            <div class="text-center price-img"><img src="https://www.hospi.vn/uploads/images/tours/icons/adult.png"></div>
+                            <div class="text-center price-amount">1,055,000</div>
+                            </div>
+                        </div>
+                                                <div class="col-md-3">
+                            <div class="price-item">
+                            <div class="text-center price-title">Trẻ em</div>
+                            <div class="text-center price-age">(4-11 tuổi)</div>
+                            <div class="text-center price-img"><img src="https://www.hospi.vn/uploads/images/tours/icons/children.png"></div>
+                            <div class="text-center price-amount">0</div>
+                            </div>
+                        </div>
+                                                                            </div>
+                        <div class="clearfix"></div>
+                        <div id="INCLUSIONS">
+                            <h4 class="main-title go-right tour-info-title">Bao gồm</h4>
+                            <div class="clearfix"></div>
+                            <div class="clearfix"></div>
+                            <br>
+                                                             -	1 đêm nghỉ dưỡng tại Sea Links Beach Villas dành cho 6 người lớn và dùng bữa sáng tại nhà hàng Golf theo thực đơn chọn món 01 tô+01 ly/6 khách/Biệt thự<br />
+-	1 phần quà tặng (1 chai rượu RD R7)<br />
+-	Tham quan lâu đài rượu vang RD (khách được tặng 1 ly rượu)<br />
+-	Tham quan và thử rượu (khách được thử 5 loại rượu vang)<br />
+-	Dịch vụ miễn phí: Trái cây, nước khoáng, trà, cà phê ngày nhận phòng, hồ bơi, sân tennis, sân bóng đá mini (trước 17:30), khu vui chơi trẻ em, xông hơi, xe điện ra biển (6:00-18:30)<br />
+-	10% VAT, 5% phí phục vụ<br />
+-	Miễn phí đưa tiễn từ ga tàu lửa đến khách sạn<br />
+                                                                   <div class="clearfix"></div>
+                        </div>
+
+                        <div id="EXCLUSIONS">
+                            <h4 class="main-title go-right tour-info-title">Không bao gồm</h4>
+                            <div class="clearfix"></div>
+                            <br>
+                                                             Phụ thu người phát sinh:<br />
+•	Trẻ em 0-5 tuổi: miễn phí (dùng bữa và ngủ chung với ba mẹ)<br />
+•	Trẻ em 6-11 tuổi: 300.000VND/khách/đêm (bao gồm ăn sáng 01 tô+01 ly, không bao gồm giường phụ)<br />
+•	Người lớn từ 12 tuổi : 500.000VND/khách/đêm (bao gồm ăn sáng 01tô+01 ly,bao gồm giường phụ)<br />
+•	Chỉ áp dụng cho các booking trong tuần từ chủ nhật tới thứ 5<br />
+•	Không áp dụng cho booking cuối tuần (thứ 2 và thứ 7) và các giai đoạn Lễ như sau:( 27/4/2017-03/05/2017)<br />
+•	Không áp dụng đồng thời các chương trình khuyến mãi khác cho cùng 1 booking <br />
+•	Không áp dụng với chương trình khuyến mãi khác <br />
+•	Không áp dụng cho các booking đã thanh toán<br />
+•	Không áp dụng cho chi phí cá nhân khác<br />
+                                                                   <div class="clearfix"></div>
+                        </div>
+                        </div>
+                        </div>
+
+                    <div class="tab-pane" id="partner">
+                        <div style="display: inline-block;width: 100%;padding: 20px;">
+                                                            <div>Đơn vị tổ chức: <span class='purple'>HOSPI</span></div>                                                                                        <div>Địa chỉ: Lầu 1, Số 124 Khánh Hội, Phường 6, Quận 4, tp. HCM</div>                                                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <!-- slider -->
+
+
+</div>
+
+<script>
+    //------------------------------
+    // Write Reviews
+    //------------------------------
+    $(function () {
+        $('.reviewscore').change(function () {
+            var sum = 0;
+            var avg = 0;
+            var id = $(this).attr("id");
+            $('.reviewscore_' + id + ' :selected').each(function () {
+                sum += Number($(this).val());
+            });
+            avg = sum / 5;
+            $("#avgall_" + id).html(avg);
+            $("#overall_" + id).val(avg);
+        });
+
+        //submit review
+        $(".addreview").on("click", function () {
+            var id = $(this).prop("id");
+            $.post("https://www.hospi.vn/admin/ajaxcalls/postreview", $("#reviews-form-" + id).serialize(), function (resp) {
+                var response = $.parseJSON(resp);
+                // alert(response.msg);
+                $("#review_result" + id).html("<div class='alert " + response.divclass + "'>" + response.msg + "</div>").fadeIn("slow");
+                if (response.divclass == "alert-success") {
+                    setTimeout(function () {
+                        $("#ADDREVIEW").removeClass('in');
+                        $("#ADDREVIEW").slideUp();
+                    }, 5000);
+                }
+            });
+            setTimeout(function () {
+                $("#review_result" + id).fadeOut("slow");
+            }, 3000);
+        });
+    })
+
+    //------------------------------
+    // Add to Wishlist
+    //------------------------------
+    $(function () {
+        // Add/remove wishlist
+        $(".wish").on('click', function () {
+            var loggedin = $("#loggedin").val();
+            var removelisttxt = $("#removetxt").val();
+            var addlisttxt = $("#addtxt").val();
+            var title = $("#itemid").val();
+            var module = $("#module").val();
+            if (loggedin > 0) {
+                if ($(this).hasClass('addwishlist')) {
+                    var confirm1 = confirm("Do you want to add it to wishlist ?");
+                    if (confirm1) {
+                        $(".wish").removeClass('addwishlist btn-primary');
+                        $(".wish").addClass('removewishlist btn-warning');
+                        $(".wishtext").html(removelisttxt);
+                        $.post("https://www.hospi.vn/account/wishlist/add", {loggedin: loggedin, itemid: title, module: module}, function (theResponse) { });
+                    }
+                    return false;
+                } else if ($(this).hasClass('removewishlist')) {
+                    var confirm2 = confirm("Are you sure you want to remove from wishlist ?");
+                    if (confirm2) {
+                        $(".wish").addClass('addwishlist btn-primary');
+                        $(".wish").removeClass('removewishlist btn-warning');
+                        $(".wishtext").html(addlisttxt);
+                        $.post("https://www.hospi.vn/account/wishlist/remove", {loggedin: loggedin, itemid: title, module: module}, function (theResponse) {
+                        });
+                    }
+                    return false;
+                }
+            } else {
+                alert("Please Login to add to wishlist.");
+            }
+        });
+        // End Add/remove wishlist
+    })
+
+    //------------------------------
+    // Rooms
+    //------------------------------
+
+    $('.collapse').on('show.bs.collapse', function () {
+        $('.collapse.in').collapse('hide');
+    });
+
+</script>    <div class="block-newsletter_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 text-center newsletter_footer"> Đăng ký nhận tin  ưu đãi để không bỏ lỡ những ưu đãi lên tới 79% từ HOSPI</div>
+                <div class="col-md-5">
+                    <div class="relative input">
+                        <input type="email" name="email" class="form-control fccustom2 sub_email" id="exampleInputEmail1" placeholder="Nhập email của bạn" required>
+                        <div style="color:white" class="subscriberesponse"></div>
+                        <button type="submit" class="btn btn-default btncustom sub_newsletter">Đăng Ký</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- block-newsletter_footer -->
+        <div id="footer" class="clearfix  footerbg" >
+        <div class="back-ft-po hidden-xs"></div>
+        <div class="footer-link not-blog"></div>
+        <div class="container">
+            <a class="hidden-xs" href="https://www.hospi.vn/" style="display: block;margin-bottom: 5px;margin-top: 5px;"><img src="https://www.hospi.vn/themes/new_theme/asset/img/logo-ft.png" class="img-responsive logo"/></a>
+             <!-- <div class="row"></div> -->
+            <div class="row">
+                <!-- Hotels -->
+                <div class="col-md-4 go-right col-xs-12 hidden-xs" id="contact">
+                    <div class="footer-brand">
+                        <div style="color: #fff;">HOSPI.vn: Đặt phòng khách sạn giá rẻ, combo khách sạn</div>
+                        <div class="ftitle go-text-right">Lầu 1, Số 124 Khánh Hội, P.6, Quận 4, Tp. Hồ Chí Minh</div>
+                        <div class="ftitle go-text-right">Tel: 028 3826 8797 - Fax: (08) 3826 8798</div>
+                        <div class="ftitle go-text-right"><a class="purple" target="_blank" href="https://www.google.com/maps/place/124+Kh%C3%A1nh+H%E1%BB%99i,+ph%C6%B0%E1%BB%9Dng+6,+Qu%E1%BA%ADn+4,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7572978,106.6982959,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f6d4faf461f:0xcf0c2485be1d0fdc!8m2!3d10.7572925!4d106.7004846"><i style="margin-left: -3px;" class="icon-location-6 go-right"></i>Bản đồ đến văn phòng Hospi</a></div>
+                        <p style="color: #fff;">&copy; Bản quyền của Hospi Travel Co., Ltd</p>
+                    </div>
+                    <div class="scont">
+                        <div class="clearfix"></div>
+                        <div id="social_footer go-right">
+                                                        <a href="https://www.facebook.com/hospi.vn/" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/14mwk4qrczfkcw4g44.png" class="social-icons-footer" /></a>
+                                                        <a href="https://plus.google.com/u/0/104246180420952281462" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/nmuccodyt00cs88k4g.png" class="social-icons-footer" /></a>
+                                                        <a href="https://www.youtube.com/channel/UCxfzWdfkaDPWGIVrI2vKchg" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/g0xrz89bm7sw08848.png" class="social-icons-footer" /></a>
+                                                        <a href="https://www.linkedin.com/in/hospi/" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/1iodmuvjtwys0ook8.png" class="social-icons-footer" /></a>
+                                                        <a href="https://twitter.com/HOSPITRAVEL" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/2kvq766k0qm8oskkk8.png" class="social-icons-footer" /></a>
+                                                    </div>
+                        <img src="https://www.hospi.vn/themes/new_theme//assets/img/bocongthuong.png" width="152" height="57" data-retina="true" class="congthuong img-responsive">
+                        <span class="">Xem thông tin tại đây !</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="row col-md-8 col-xs-12 ">
+                    <!-- End of column 1-->
+                    <div class="col-xs-12 col-md-4 go-right">
+                        <h2 class="ftitle go-text-right" style="margin-top: 15px"><strong>Hỗ trợ khách hàng</strong></h2>
+                                                <div class="phone_footer go-right"><i class="fa fa-phone-square"></i> 028 3826 8797</div>
+                                                <!-- <div class="working-time">(8:00AM - 21:00PM)</div> -->
+                        <a class="go-right ftitle " href="mailto:booking@hospi.vn" id="email_footer"><i style="font-size:18px" class="icon-email"></i> <span >booking@hospi.vn</span></a>
+                                    <div class="ho-tro" >
+              <!--<h2 class="ftitle go-text-right"><strong>Support</strong></h2>-->
+              <ul class="footerlist go-right go-text-right">
+                                <li><a href="https://www.hospi.vn/cau-hoi-thuong-gap" target="" title="">Câu hỏi thường gặp?</a></li>
+                                <li><a href="https://www.hospi.vn/goi-yeu-cau-ho-tro" target="" title="">Gởi yêu cầu hỗ trợ</a></li>
+                                <li><a href="https://www.hospi.vn/huong-dan-dat-phong" target="" title="">Hướng dẫn đặt phòng</a></li>
+                                <li><a href="https://www.hospi.vn/chinh-sach-huy-doi-hoan-tien" target="" title="">Chính sách huỷ đổi, hoàn tiền</a></li>
+                                <li><a href="https://www.hospi.vn/phuong-thuc-thanh-toan" target="" title="">Phương thức thanh toán</a></li>
+                                <li><a href="https://www.hospi.vn/quy-che-hoat-dong" target="" title="">Quy chế hoạt động</a></li>
+                              </ul>
+            </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 go-right menu-link-ft hidden-xs">
+                        <h2 class="ftitle go-text-right"><strong>Về Hospi.vn</strong></h2>
+                                    <div class="about-us" >
+              <!--<h2 class="ftitle go-text-right"><strong>About Us</strong></h2>-->
+              <ul class="footerlist go-right go-text-right">
+                                <li><a href="https://www.hospi.vn/chung-toi-la-ai" target="" title="">Chúng tôi là ai ?</a></li>
+                                <li><a href="https://www.hospi.vn/tuyen-dung" target="" title="">Tuyển dụng</a></li>
+                                <li><a href="https://www.hospi.vn/chinh-sach-bao-mat" target="" title="">Chính sách bảo mật</a></li>
+                                <li><a href="https://www.hospi.vn/dieu-khoan-su-dung" target="" title="">Điều khoản sử dụng</a></li>
+                                <li><a href="https://www.hospi.vn/qua-tang-voucher" target="" title="">Quà tặng voucher</a></li>
+                                <li><a href="http://www.hospi.vn/blog" target="_self" title="">Hợp tác với Hospi</a></li>
+                                <li><a href="https://www.hospi.vn/quy-che-hoat-dong" target="" title="">Quy chế hoạt động</a></li>
+                              </ul>
+            </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 go-right menu-link-ft hidden-xs">
+                        <h2 class="ftitle go-text-right"><strong>Liên kết nhanh</strong></h2>
+                        <div class="about-us">
+                            <!--<h2 class="ftitle go-text-right"><strong>About Us</strong></h2>-->
+                            <ul class="footerlist go-right go-text-right">
+                                <li><a href="https://www.hospi.vn/bestchoice"  title="Khuyến mãi">Khuyến mãi</a></li>
+                                <li><a href="https://www.hospi.vn/offers" title="Deals - Giảm giá">Deals - Giảm giá</a></li>
+                                <li><a href="https://www.hospi.vn/offers/bestchoice" title="Voucher">Voucher</a></li>
+                                <li><a href="https://www.hospi.vn/hotels/honeymoon" title="Honeymoon">Honeymoon</a></li>
+                                <li><a href="https://www.hospi.vn/tours" title="Tours">Tours</a></li>
+                                <li><a href="https://www.hospi.vn/blog" title="Tôi yêu du lịch">Tôi yêu du lịch</a></li>
+                                <li>
+                                    <a href="#checkbookingform" data-toggle="modal" data-content="Kiểm tra booking" rel="popover" data-placement="top" data-original-title="Kiểm tra booking" data-trigger="hover">Kiểm tra booking</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                                
+                <div class="visible-xs" style="width: 100%;clear: left;height: 25px"></div>
+                <a href="https://www.hospi.vn/themes/new_theme/index.html" class="visible-xs" style="display: block;margin-bottom: 5px;margin-top: 5px;margin-left: 15px"><img src="https://www.hospi.vn/themes/default/assets/img/logo-ft.png" class="img-responsive logo"/></a>
+                <div class="col-md-4 go-right col-xs-12 visible-xs" id="contact">
+                  <div class="footer-brand">
+                    <div style="color: #fff;">HOSPI.vn: Đặt phòng khách sạn giá rẻ, combo khách sạn</div>
+                    <div class="ftitle go-text-right">Lầu 1, Số 124 Khánh Hội, P.6, Quận 4, Tp. Hồ Chí Minh</div>
+                    <div class="ftitle go-text-right">Tel: 028 3826 8797 - Fax: (028) 3826 8798</div>
+                    <div class="ftitle go-text-right"><a class="purple" target="_blank" href="https://www.google.com/maps/place/124+Khánh+Hội,+phường+6,+Quận+4,+Hồ+Chí+Minh,+Việt+Nam/@10.7572978,106.6982959,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f6d4faf461f:0xcf0c2485be1d0fdc!8m2!3d10.7572925!4d106.7004846"><i style="margin-left: -3px;" class="icon-location-6 go-right"></i>Bản đồ đến văn phòng Hospi</a></div>
+                    <p style="color: #fff;">&copy; Bản quyền của Hospi Travel Co., Ltd</p>
+                  </div>
+                  <div class="scont">
+                    <div class="clearfix"></div>
+                    <div id="social_footer go-right">
+                      <a href="https://www.facebook.com/hospi.vn/" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/14mwk4qrczfkcw4g44.png" class="social-icons-footer" /></a>
+                      <a href="https://plus.google.com/u/0/104246180420952281462" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/nmuccodyt00cs88k4g.png" class="social-icons-footer" /></a>
+                      <a href="https://www.youtube.com/channel/UCxfzWdfkaDPWGIVrI2vKchg" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/g0xrz89bm7sw08848.png" class="social-icons-footer" /></a>
+                      <a href="https://www.linkedin.com/in/hospi/" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/1iodmuvjtwys0ook8.png" class="social-icons-footer" /></a>
+                      <a href="https://twitter.com/HOSPITRAVEL" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/2kvq766k0qm8oskkk8.png" class="social-icons-footer" /></a>
+                    </div>
+                    <img src="https://www.hospi.vn/themes/default//assets/img/bocongthuong.png" width="152" height="57" data-retina="true" class="congthuong img-responsive">
+                    <span class="">Xem thông tin tại đây !</span>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="container">
+                    <div class="clearfix">
+                        <a href="https://www.hospi.vn/" title="Về Trang Chủ" style="  display: block;margin-top: 30px;margin-bottom: 30px;color: #fff;">
+                            <i class="fa fa-angle-double-right"></i> Về Trang Chủ
+                        </a>
+                    </div>
+                    <!-- clearfix -->
+                   <!--  <div class="row hidden-xs">
+                        <div class="col-sm-7 col-xs-12 wg-bt">
+                            <div class="row link-ft-bt">
+                                <div class="col-sm-3 col-xs-6">
+                                    <a href="https://www.hospi.vn/themes/new_theme/hotels" title="Khách Sạn">Khách Sạn</a>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <a href="https://www.hospi.vn/themes/new_theme/tours" title="Tours">Tours</a>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <a href="https://www.hospi.vn/themes/new_theme/hotels/honeymoon" title="HoneyMoon">HoneyMoon</a>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <a href="https://www.hospi.vn/themes/new_theme/blog" title="Tôi Yêu Du Lịch">Tôi Yêu Du Lịch</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-sm-6 
+                        <div class="col-sm-5 col-xs-12 wg-bt">
+                            <div class="social-wg">
+                                <ul class="list-inline">
+                                    <li>KẾT NỐI VỚI CHÚNG TÔI:</li>
+                                    <li class="icon"><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="icon"><a href="#" title="google"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="icon"><a href="#" title="youtube"><i class="fa fa-youtube"></i></a></li>
+                                    <li class="icon"><a href="#" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                                    <li class="icon"><a href="#" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- col-sm-6 
+                    </div> -->
+                </div>
+                <!-- End Hotels -->
+            </div>
+        </div>
+    </div>
+    <!-- Angular Data -->
+
+<script src='//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+
+ <link rel="stylesheet" href="https://www.hospi.vn/themes/new_theme/asset/include/angucomplete/angucomplete.css" />
+<script src="https://www.hospi.vn/themes/new_theme/asset/include/angucomplete/angucomplete.js"></script>
+<script type="text/javascript"> (function () {
+  'use strict';
+  var app = angular.module('phptravelsApp',['ngSanitize','angucomplete-alt']);
+  app.controller('appCtrl', ['$scope', '$http', function appCtrl ($scope, $http) { var self = this; var url = "https://www.hospi.vn/tours/featuredTours/"; $scope.lg = "6"; $scope.md = "6"; $scope.items = []; $http.get(url).success(function(data) { $scope.items = data; $scope.setClasses($scope.items); }); $scope.getData = function(loc){ $http.get(url+loc).success(function(data) { $scope.items = data; $scope.setClasses($scope.items); }); }; $scope.setClasses = function(data){ var totalItems = data.length; if(totalItems == 1){ $scope.lg = "6 tours12"; $scope.md = "6 tours12"; }else if(totalItems == 2){ $scope.lg = "6"; $scope.md = "6"; }else if(totalItems > 2){ $scope.lg = "6"; $scope.md = "6"; } }; } ]);
+  app.filter('strLimit', function() { 'use strict'; return function(input, limit) { if (input) { if (limit > input.length) { return input.slice(0, limit); } else { return input.slice(0, limit) + '...'; } } }; });
+  app.controller('autoSuggest', ['$scope','$http', function autoSuggest ($scope, $http) {
+   $scope.searching = "";
+   $scope.modType = "";
+   $scope.txtSearch = "";
+ $scope.remoteUrlRequestFn = function(str) {
+      return {q: str};
+    };
+  $scope.selectedItem = function(selected) {
+    $scope.searching = selected.originalObject.id;
+    $scope.modType = selected.originalObject.module;
+
+    };
+
+
+    } ]);
+
+})(); </script>
+
+<!-- End Angular Data -->
+
+<link href="https://www.hospi.vn/themes/new_theme/assets/include/select2/select2.css" rel="stylesheet" />
+<script src="https://www.hospi.vn/themes/new_theme/assets/include/select2/select2.min.js"></script>
+<!-- This page JS -->
+<!-- Custom functions -->
+<script src="https://www.hospi.vn/themes/new_theme/assets/js/functions.js"></script>
+<!-- Picker UI-->
+<!--<script src="https://www.hospi.vn/themes/new_theme/assets/js/jquery-ui.js"></script>-->
+<script type="text/javascript" src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+<!-- Easing -->
+<script src="https://www.hospi.vn/themes/new_theme/assets/js/jquery.easing.js"></script>
+<!-- Nicescroll  -->
+<!--<script src="https://www.hospi.vn/themes/new_theme/assets/js/jquery.nicescroll.min.js"></script>-->
+<!-- CarouFredSel -->
+<script src="https://www.hospi.vn/themes/new_theme/assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="https://www.hospi.vn/themes/new_theme/assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="https://www.hospi.vn/themes/new_theme/assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="https://www.hospi.vn/themes/new_theme/assets/js/helper-plugins/jquery.transit.min.js"></script>
+<script type="text/javascript" src="https://www.hospi.vn/themes/new_theme/assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+<!-- Custom Select -->
+<script type='text/javascript' src='https://www.hospi.vn/themes/new_theme/assets/js/jquery.customSelect.js'></script>
+<script src="https://www.hospi.vn/themes/new_theme/assets/js/bootstrap.min.js"></script>
+<script src="https://www.hospi.vn/themes/new_theme/assets/js/bootstrap-slider.js"></script>
+<script src="https://www.hospi.vn/themes/new_theme/assets/include/datepicker/datepicker.js"></script>
+<link rel="stylesheet" href="https://www.hospi.vn/themes/new_theme/assets/include/datepicker/datepicker.css" />
+<link rel="stylesheet" href="https://www.hospi.vn/themes/new_theme/assets/include/datepicker/dp2.css" />
+<script>
+  $('#popoverData').popover();
+  $('#popoverOption').popover({ trigger: "hover" });
+</script>
+
+<!-- WOWJs -->
+<script>
+  //new WOW().init();
+</script>
+<!-- WOWJs -->
+
+<script>
+  var fmt = "dd/mm/yyyy";
+  var baseURL = "https://www.hospi.vn/";
+
+  $(function() {
+
+   /* Wish list global function */
+   $(".wishlistcheck").on("click",function(){
+     var id = $(this).prop('id');
+     var module = $(this).data('module');
+     var userid = "";
+     var action = "add";
+     var thisdiv = $(this);
+     if($(this).hasClass('fav')){
+         action = "remove";
+     }
+
+
+  $.post(baseURL+'account/wishlist/'+action,{module: module, itemid: id, loggedin: userid},function(resp){
+    var response = $.parseJSON(resp);
+
+    if(response.isloggedIn){
+
+      if(action == "remove"){
+      $("."+module+"wishsign"+id).html("+");
+      //$("."+module+"wishtext"+id).html("Add to Wishlist");
+      $("."+module+"wishtext"+id).tooltip('hide').attr('data-original-title', "Add to Wishlist").tooltip('fixTitle').tooltip('show');
+      $("."+module+"wishsign"+id).removeClass("fav");
+      thisdiv.removeClass('fav');
+
+     }else{
+
+      thisdiv.addClass('fav');
+      $("."+module+"wishsign"+id).addClass("fav");
+      $("."+module+"wishsign"+id).html("-");
+      //$("."+module+"wishtext"+id).html("Remove From Wishlist");
+      $("."+module+"wishtext"+id).tooltip('hide').attr('data-original-title', "Remove From Wishlist").tooltip('fixTitle').tooltip('show');
+
+     }
+
+     }else{
+      alert("Please Login to add to wishlist.");
+     }
+     console.log(response);
+   });
+
+   })
+   /* End Wish list global function */
+
+  /* select2 */
+  $('.chosen-select').select2({ width: '100%', maximumSelectionSize: 1  });
+
+  /* homepage main search auto detector */
+  $('.nav-tabs li:first-child').addClass('active');  var t  = $('.nav-tabs li:first-child').data('title'); $("#"+t).addClass("active in"); $('.feat li:first-child').addClass('active'); var t  = $('.feat li:first-child').data('title'); $("#"+t).addClass("active in");
+
+  /* tours ajax categories loader */
+    $('#location').on('change',function(){ var location = $(this).val(); $.post(baseURL+'tours/tourajaxcalls/onChangeLocation',{location: location},function(resp){ var response = $.parseJSON(resp); console.log(response); if(response.hasResult){ $("#tourtype").html(response.optionsList); }else{ $("#tourtype").html(response.optionsList); } mySelectUpdate(); }) });
+  
+   /* cars ajax types loader */
+  function parseDate(str) {
+    var mdy = str.split('/')
+    return new Date(mdy[2],  mdy[1], mdy[0]-1);
+}
+
+function daydiff(first, second) {
+    return (second-first)/(1000*60*60*24);
+}
+function Padder(len, pad) {
+  if (len === undefined) {
+    len = 1;
+  } else if (pad === undefined) {
+    pad = '0';
+  }
+
+  var pads = '';
+  while (pads.length < len) {
+    pads += pad;
+  }
+
+  this.pad = function (what) {
+    var s = what.toString();
+    return pads.substring(0, pads.length - s.length) + s;
+  };
+}
+
+
+
+   /* tooltip */
+  $('[data-toggle=tooltip]').tooltip();
+
+  /* datepicker */
+  window.prettyPrint&&prettyPrint(),$(".dob").datepicker({format:fmt,autoclose:!0}).on("changeDate",function(){$(this).datepicker("hide")}),$("#dp1").datepicker(),$("#dp2").datepicker();
+  window.prettyPrint&&prettyPrint(),$(".dob").datepicker({format:fmt,autoclose:!0}).on("changeDate",function(){$(this).datepicker("hide")}),$("#dp3").datepicker(),$("#dp4").datepicker();
+
+  /* disabling dates */
+      var nowTemp = new Date();
+      var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+      var checkin = $('.dpd1').datepicker({
+          format: fmt,
+          language: 'vi',
+          onRender: function(date) {
+              return date.valueOf() < now.valueOf() ? 'disabled' : '';
+          }
+      }).on('changeDate', function(ev) {
+          if (ev.date.valueOf() > checkout.date.valueOf()) {
+              var newDate = new Date(ev.date)
+              newDate.setDate(newDate.getDate() + 1);
+              checkout.setValue(newDate);              
+          }
+          checkin.hide();
+          $('.dpd2')[0].focus();
+          if($('.dpd2').val() != '' && $('.dpd1').val() != '' ){
+            var number_night = parseInt(daydiff(parseDate($('.dpd1').val()), parseDate($('.dpd2').val())));
+            var zero2 = new Padder(2);            
+            $('#number_night').html(zero2.pad(number_night));
+          }
+      }).data('datepicker');
+      var checkout = $('.dpd2').datepicker({
+          format: fmt,
+          onRender: function(date) {
+              return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+          }
+      }).on('changeDate', function(ev) {
+          checkout.hide();
+          if($('.dpd2').val() != '' && $('.dpd1').val() != '' ){
+            var number_night = parseInt(daydiff(parseDate($('.dpd1').val()), parseDate($('.dpd2').val())));
+            var zero2 = new Padder(2);            
+            $('#number_night').html(zero2.pad(number_night));
+          }
+
+      }).data('datepicker');
+
+      var checkins = $('.dpd3').datepicker({
+          format: fmt,
+          language: 'vi',
+          onRender: function(date) {
+              return date.valueOf() < now.valueOf() ? 'disabled' : '';
+          }
+      }).on('changeDate', function(ev) {
+          if (ev.date.valueOf() > checkouts.date.valueOf()) {
+              var newDates = new Date(ev.date)
+              newDates.setDate(newDates.getDate() + 1);
+              checkouts.setValue(newDates);
+          }
+          checkins.hide();
+          $('.dpd4')[0].focus();
+      }).data('datepicker');
+      var checkouts = $('.dpd4').datepicker({
+          format: fmt,
+          onRender: function(date) {
+              return date.valueOf() <= checkins.date.valueOf() ? 'disabled' : '';
+          }
+      }).on('changeDate', function(ev) {
+          checkouts.hide();
+
+      }).data('datepicker');
+
+  /* Expedia datepicker */
+    /* End Expedia Datepicker*/
+
+   /* Dohop datepicker */
+    /* End Dohop Datepicker*/
+
+      // Tours checkin - disabling Single date
+  var nowTemp4 = new Date();
+  var now4 = new Date(nowTemp4.getFullYear(), nowTemp4.getMonth(), nowTemp4.getDate(), 0, 0, 0, 0);
+  var checkin4 = $('#tchkin').datepicker({format: fmt, onRender: function(date) {
+  return date.valueOf() < now4.valueOf() ? 'disabled' : ''; } }).on('changeDate', function(ev) {
+  $('#tchkin').datepicker('hide');
+  });
+  
+  
+    /* Cartrawler datepicker */
+    /* End Cartrawler Datepicker*/
+
+  /* Newsletter subscription */
+  $(".sub_newsletter").on("click",function(){var e=$(".sub_email").val();$.post("https://www.hospi.vn/home/subscribe",{email:e},function(e){$(".subscriberesponse").html(e).fadeIn("slow"),setTimeout(function(){$(".subscriberesponse").fadeOut("slow")},2000)})});
+
+  /* dropdown on hover */
+  $("ul.nav li.dropdown").hover(function(){$(this).find(".dropdown-menu").stop(!0,!0).delay(200).fadeIn(200)},function(){$(this).find(".dropdown-menu").stop(!0,!0).delay(200).fadeOut(200)}); });
+
+  /* start change currency functionality */
+  function change_currency(c){$("#loadingbg").css("display","block"),$.post("https://www.hospi.vn/admin/ajaxcalls/changeCurrency",{id:c},function(){location.reload()})}
+
+  /* map iframe modal */
+  function showMap(a,o){"modal"==o?($("#mapModal").modal("show"),$("#mapModal").on("shown.bs.modal",function(){$("#mapModal .mapContent").html('<iframe src="'+a+'" width="100%" height="450" frameborder="0" style="border:0"></iframe>')})):$("#"+o).html('<iframe src="'+a+'" width="100%" height="450" frameborder="0" style="border:0"></iframe>')}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86943600-1', 'auto');
+  ga('send', 'pageview');
+
+</script><!-- Subiz -->
+<script>
+  (function(s, u, b, i, z){
+    u[i]=u[i]||function(){
+      u[i].t=+new Date();
+      (u[i].q=u[i].q||[]).push(arguments);
+    };
+    z=s.createElement('script');
+    var zz=s.getElementsByTagName('script')[0];
+    z.async=1; z.src=b; z.id='subiz-script';
+    zz.parentNode.insertBefore(z,zz);
+  })(document, window, 'https://widgetv4.subiz.com/static/js/app.js', 'subiz');
+  subiz('setAccount', 'acppjoihtmoaeia84875');
+</script>
+<!-- End Subiz -->
+<style type="text/css">
+    .block-panel-info{
+    line-height: 25px;
+    }
+</style>
+</body>
+</html>
