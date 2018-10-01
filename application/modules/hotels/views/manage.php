@@ -141,7 +141,7 @@
           <div class="row form-group">
             <label class="col-md-2 control-label text-left">Thành phố</label>
             <div class="col-md-4">
-              <select name="hotelcity" class="chosen-select" required>
+              <select name="hotelcity" class="chosen-select" required id="hotelcity">
                 <option value="">--chọn--</option>
                 <?php foreach($locations as $loc){ ?>
                 <option value="<?php echo $loc->id; ?>" <?php makeSelected(@$loc->id, @$hdata[0]->hotel_city); ?> ><?php echo $loc->location;?></option>
@@ -601,7 +601,22 @@ map.setZoom(16);
 
       }
 
+$(document).on("change","#hotelcity", function() {    
+    
+    $.ajax({           
+           url: "<?php echo base_url();?>admin/bookings/nearby_ajax?city_id=" + $(this).val(),         
+            type : "GET",
+            dataType : 'html',
+           success: function(result){
+            alert(result);
+               $(".loadbg").css("display","none");
+                 $("#ajax-data").html(result);                  
+           }
+      });
 
+
+
+});
     </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $appSettings->mapApi; ?>&libraries=places&callback=initAutocomplete" async defer></script>
  <!-- Google Places -->

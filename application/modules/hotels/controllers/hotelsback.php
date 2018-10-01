@@ -993,10 +993,31 @@ class hotelsback extends MX_Controller
         echo modules::run('admin/reviews/listings', 'hotels');
     }
 
-    function updateorderroom()
+    function nearby_ajax()
+    {       
+        $this->load->model('admin/hotels_model');
+        $city_id = (int)$_GET['city_id'];
+         var_dump($city_id);die;   
+        $this->data['nears'] = $nears = $this->hotels_model->select_nearby($city_id);  
+        var_dump($nears);die;    
+        foreach($nears as $near){ 
+                    
+            $eachnear = explode(',', $near->near); 
+            foreach($eachnear as $item){
+                echo '<option value="'.trim($item).'">'.$item.'</option>';
+            }
+        }
+    }
+    function hotel_by_city()
     {
-        echo "123";
-        die;
+        $hotel_city = $this->input->get('hotel_city');
 
+        $data = $this->hotels_model->search(['hotel_city' => $hotel_city], 500, 0);
+        echo '<option value="">--Chọn--</option>';
+        if (!empty($data)) {
+            foreach ($data as $hotel) {
+                echo '<option value="' . $hotel->hotel_id . '">' . $hotel->hotel_title . '</option>';
+            }
+        }
     }
 }
