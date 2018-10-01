@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 $db['default']['username'] = "root";
 $db['default']['password'] = "";
-$db['default']['database'] = "matsunoi_xy_762e";
+$db['default']['database'] = "hospi";
 
 $db['default']['hostname'] = "localhost";
 $db['default']['dbdriver'] = "mysqli";

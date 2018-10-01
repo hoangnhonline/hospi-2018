@@ -9212,11 +9212,13 @@ p.room-title {
 }
 
 .panel.panel-default .collapsebtn {
-    font-size: 16px;
+    font-size: 15px;
     background: #f0f0f0;
     height: 50px;
     border: none;
-    color: #666666;
+    color: #701040;
+    font-weight: bold;
+    border-top: 4px solid #701141;
 }
 
 .panel.panel-default .collapse.in {
@@ -14510,4 +14512,21 @@ textarea {
 
 .clss-img-khachsan img {
     margin-left: 85px;
+}
+
+/* Add New CSS 2018/09/28 */
+.hs_tick {
+    margin: 10px 0;
+}
+.hs_tick label {
+    border: 1px solid #3E716E;
+    padding: 5px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    color: #3E716E;
+    margin-right: 5px;
+    min-width: 105px;
+    text-align: center;
 }
