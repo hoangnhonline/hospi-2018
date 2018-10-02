@@ -156,7 +156,7 @@
           <div class="row form-group">
             <label class="col-md-2 control-label text-left">Gần địa điểm</label>
             <div class="col-md-8">
-              <select multiple class="chosen-multi-select" name="near[]">
+              <select multiple class="chosen-multi-select" name="near[]" id="nearsList">
                 <?php foreach($nears as $near){ 
                     
                     $eachnear = explode(',', $near->near); 
@@ -229,7 +229,7 @@
           <div class="row form-group">
             <label class="col-md-2 control-label text-left">Khách sạn tương đương</label>
             <div class="col-md-8">
-              <select multiple class="chosen-multi-select" name="relatedhotels[]">
+              <select multiple class="chosen-multi-select" name="relatedhotels[]" id="relatedhotels">
                 <?php foreach($all_hotels as $hotel){ if($hdata[0]->hotel_id != $hotel->hotel_id){ ?>
                 <option value="<?php echo $hotel->hotel_id;?>" <?php  if(in_array($hotel->hotel_id,@$hrelated)){ echo 'selected'; } ?>  >
                   <?php echo $hotel->hotel_title;?>
@@ -604,16 +604,21 @@ map.setZoom(16);
 $(document).on("change","#hotelcity", function() {    
     
     $.ajax({           
-           url: "<?php echo base_url();?>admin/bookings/nearby_ajax?city_id=" + $(this).val(),         
+           url: "<?php echo base_url();?>admin/ajaxcalls/nearby_ajax?city_id=" + $(this).val(),         
             type : "GET",
             dataType : 'html',
-           success: function(result){
-            alert(result);
-               $(".loadbg").css("display","none");
-                 $("#ajax-data").html(result);                  
+           success: function(result){                           
+              $("#nearsList").html(result).select2('refresh');
            }
       });
-
+    $.ajax({           
+           url: "<?php echo base_url();?>admin/ajaxcalls/hotel_by_city?city_id=" + $(this).val(),         
+            type : "GET",
+            dataType : 'html',
+           success: function(result){                           
+              $("#relatedhotels").html(result).select2('refresh');
+           }
+      });
 
 
 });

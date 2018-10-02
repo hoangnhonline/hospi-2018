@@ -996,10 +996,8 @@ class hotelsback extends MX_Controller
     function nearby_ajax()
     {       
         $this->load->model('admin/hotels_model');
-        $city_id = (int)$_GET['city_id'];
-         var_dump($city_id);die;   
-        $this->data['nears'] = $nears = $this->hotels_model->select_nearby($city_id);  
-        var_dump($nears);die;    
+        $city_id = (int)$_GET['city_id'];         
+        $this->data['nears'] = $nears = $this->hotels_model->select_nearby($city_id);           
         foreach($nears as $near){ 
                     
             $eachnear = explode(',', $near->near); 
