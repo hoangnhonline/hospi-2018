@@ -704,8 +704,8 @@
                             <?php } else { ?>
                             <a href="<?php echo $item->slug; ?>">
                                 <?php } ?>
-                                <!-- <img src="<?php echo $item->thumbnail; ?>" alt="<?php echo character_limiter($item->title, 20); ?>"> -->
-                                <img src="https://www.hospi.vn/uploads/images/hotels/slider/thumbs/518556_Khach-san-imperial-Hue---Hospi-(13).jpg" alt="Khách sạn Imperial…">
+                                <img src="<?php echo $item->thumbnail; ?>" alt="<?php echo character_limiter($item->title, 20); ?>">
+                                <!-- <img src="https://www.hospi.vn/uploads/images/hotels/slider/thumbs/518556_Khach-san-imperial-Hue---Hospi-(13).jpg" alt="Khách sạn Imperial…"> -->
                                 <div class="hs_favorite">
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     Yêu thích
