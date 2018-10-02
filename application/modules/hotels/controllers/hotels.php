@@ -176,7 +176,7 @@ class Hotels extends MX_Controller
 
             // $this->output->cache(20) ; //hoangnhonline
 
-        } else {
+        } else {            
             $this->listing();
         }
     }
@@ -195,8 +195,7 @@ class Hotels extends MX_Controller
         if (!$page) {
             $page = null;
         }
-        $allhotels = $this->hotels_lib->show_hotels($page);
-
+        $allhotels = $this->hotels_lib->show_hotels($page);        
         $this->data['moduleTypes'] = $this->hotels_lib->getHotelTypes();
         $this->data['amenities'] = $this->hotels_lib->getHotelAmenities();
         $this->data['checkin'] = @$_GET['checkin'];
@@ -436,8 +435,7 @@ class Hotels extends MX_Controller
             } else {
                 $cityid = "";
             }
-        }
-
+        }            
         if (array_filter($_GET)) {
             if (!empty($cityid) && $modType == "location") {
                 $allhotels = $this->hotels_lib->search_hotels_by_text($cityid, $page, $checkin, $checkout);

@@ -223,7 +223,8 @@ class Hotels_model extends CI_Model{
 			'hotel_map_city' => $this->input->post('hotelmapaddress'),
 			'tripadvisor_id' => $this->input->post('tripadvisor'),
 			'hotel_featured_forever' => $isforever,
-			'hotel_sale_forever' => $issaleforever
+			'hotel_sale_forever' => $issaleforever,
+			'diem_noi_bat' => $this->input->post('diem_noi_bat')
 		);
 		//print_r($data);
 		$this->db->insert('pt_hotels', $data);
@@ -371,7 +372,8 @@ class Hotels_model extends CI_Model{
 			'hotel_map_city' => $this->input->post('hotelmapaddress'),
 			'tripadvisor_id' => $this->input->post('tripadvisor'),
 			'hotel_featured_forever' => $isforever,
-			'hotel_sale_forever' => $issaleforever
+			'hotel_sale_forever' => $issaleforever,
+			'diem_noi_bat' => $this->input->post('diem_noi_bat'),
 		);
 		//print_r($data);
 		$this->db->where('hotel_id', $id);
@@ -704,7 +706,7 @@ class Hotels_model extends CI_Model{
 		if (!empty($page)) {
 			$offset = ($page == 1) ? 0 : ($page * $perpage) - $perpage;
 		}
-		$this->db->select('pt_hotels.hotel_id,pt_hotels.hotel_stars,pt_hotels.hotel_title,pt_hotels.hotel_order,pt_hotels.hotel_order,pt_rooms.room_basic_price as price');
+		$this->db->select('pt_hotels.hotel_id,pt_hotels.hotel_stars,pt_hotels.hotel_title,pt_hotels.hotel_order,pt_hotels.hotel_order,pt_rooms.room_basic_price as price, pt_hotels.hotel_is_featured');
 		if ($orderby == "za") {
 			$this->db->order_by('pt_hotels.hotel_title', 'desc');
 		} elseif ($orderby == "az") {

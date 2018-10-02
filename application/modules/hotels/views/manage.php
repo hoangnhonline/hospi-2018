@@ -77,7 +77,7 @@
           <div class="row form-group">
             <label class="col-md-2 control-label text-left">Tên khách sạn</label>
             <div class="col-md-4">
-              <input name="hotelname" type="text" placeholder="Hotel Name" class="form-control" value="<?php echo @$hdata[0]->hotel_title;?>" />
+              <input name="hotelname" type="text" placeholder="Tên khách sạn" class="form-control" value="<?php echo @$hdata[0]->hotel_title;?>" />
             </div>
           </div>
           <div class="row form-group">
@@ -238,7 +238,12 @@
               </select>
             </div>
           </div>
-
+            <div class="row form-group">
+            <label class="col-md-2 control-label text-left">Điểm nổi bật</label>
+            <div class="col-md-8">
+              <input name="diem_noi_bat" type="text" placeholder="Điểm nổi bật" class="form-control" value="<?php echo @$hdata[0]->diem_noi_bat;?>" />
+            </div>
+          </div>
       <!-- Address and Map -->
 
         <div class="panel panel-default">
@@ -383,9 +388,9 @@
             <div class="panel-heading"><img src="<?php echo PT_LANGUAGE_IMAGES.$lang.".png"?>" height="20" alt="" /> <?php echo $val['name']; ?></div>
             <div class="panel-body">
               <div class="row form-group">
-                <label class="col-md-2 control-label text-left">Hotel Name</label>
+                <label class="col-md-2 control-label text-left">Tên khách sạn</label>
                 <div class="col-md-4">
-                  <input name='<?php echo "translated[$lang][title]"; ?>' type="text" placeholder="Hotel Name" class="form-control" value="<?php echo @$trans[0]->trans_title;?>" />
+                  <input name='<?php echo "translated[$lang][title]"; ?>' type="text" placeholder="Tên khách sạn" class="form-control" value="<?php echo @$trans[0]->trans_title;?>" />
                 </div>
               </div>
               <div class="row form-group">

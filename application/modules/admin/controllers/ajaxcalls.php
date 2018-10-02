@@ -1379,7 +1379,7 @@ class Ajaxcalls extends MX_Controller
         $city_id = (int)$_GET['city_id'];
       
         $this->data['nears'] = $nears = $this->hotels_model->select_nearby($city_id);  
-      
+         echo '<option value="">--Chọn--</option>';
         foreach($nears as $near){ 
                     
             $eachnear = explode(',', $near->near); 
@@ -1391,7 +1391,9 @@ class Ajaxcalls extends MX_Controller
     function hotel_by_city()
     {
         $city_id = $this->input->get('city_id');
-        $data = $this->hotels_model->search(['hotel_city' => $city_id], 500, 0);       
+
+        $data = $this->hotels_model->search(['hotel_city' => $city_id], 500, 0);
+        echo '<option value="">--Chọn--</option>';
         if (!empty($data)) {
             foreach ($data as $hotel) {
                 echo '<option value="' . $hotel->hotel_id . '">' . $hotel->hotel_title . '</option>';

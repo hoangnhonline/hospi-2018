@@ -1695,7 +1695,9 @@ class Hotels_lib
                 'saleto' => $hotel_sale_to,
                 'salepercent' => $hotel_is_sale_percent,
                 'honeymoon' => $honeymoon,
-                'offer_title' => $offer_title
+                'offer_title' => $offer_title,
+                'hotel_is_featured' => $h->hotel_is_featured
+
             );
         }
 
