@@ -108,15 +108,17 @@
                                                 </div>
                                             </div><!-- customer -->
                                             <div class="item-review-info">
-                                                <p class="andes purple size25">&ldquo;<?php echo $avgOverall[review_overall_level($rev->review_overall)][0]; ?>&rdquo;</p>
-                                                <p class="grey"><strong class="go-right"><?php echo $rev->review_name;?> &nbsp;</strong></p>
-                                                <p class="text-muted"><small><?php echo pt_show_date_php($rev->review_date);?></small></p>
+                                                <p class="andes purple size25"><strong class="go-right"><?php echo $rev->review_name;?> &nbsp;</strong></p>
+                                                <p class="text-muted andes">Đã ở vào ngày: <small><?php echo pt_show_date_php($rev->review_date);?></small></p>
+                                                <p class="text-muted andes">Ngày đánh giá: <small><?php echo pt_show_date_php($rev->review_date);?></small></p>
                                             </div><!-- item-review-info -->
                                         </div>
                                     </div>
                                     <div class="rgt">
+                                        <p class="andes size25 text-center">&ldquo;<?php echo $avgOverall[review_overall_level($rev->review_overall)][0]; ?>&rdquo;</p>
+                                        <div class="comment andes">"<?php echo character_limiter($rev->review_comment,1000);?>"</div>
                                         <div class="row">
-                                            <div class="col-sm-6 col-sm-12">
+                                            <div class="col-sm-6 col-sm-12 hidden">
                                                 <div class="block-progress block-progress2">
                                                     <label class="text-left andes"><?php echo trans('033');?></label>
                                                     <div class="progress-inner">
@@ -154,12 +156,12 @@
                                                     </div>
                                                 </div>
                                             </div><!-- col-sm-6 col-sm-12 -->
-                                            <div class="col-sm-6 col-sm-12">
+                                            <div class="col-sm-6 col-sm-12 hidden">
                                                 <div class="block-progress block-progress2">
                                                     <label class="text-left andes"><?php echo trans('034');?></label>
                                                     <div class="progress-inner">
                                                         <div class="progress">
-                                                           <div class="progress-bar progress-bar-primary go-right" role="progressbar" aria-valuenow="<?php echo $avgReviews->staff;?>"
+                                                        <div class="progress-bar progress-bar-primary go-right" role="progressbar" aria-valuenow="<?php echo $avgReviews->staff;?>"
                                                                 aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $rev->review_staff * 10;?>%">
                                                                 <span class="sr-only"></span>
                                                             </div>
@@ -195,7 +197,6 @@
                                         </div>
                                     </div>
                                 </div><!-- panel-body -->
-                                <div class="comment">"<?php echo character_limiter($rev->review_comment,1000);?>"</div>
                             </div><!-- panel-body -->
                         <?php }
                     } ?>

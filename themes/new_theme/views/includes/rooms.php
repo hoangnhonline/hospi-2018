@@ -205,7 +205,7 @@
                                     <div class="zoom-gallery">
                                         <div class="zoom-gallery<?php echo $r->id; ?>">
                                             <a href="<?php echo $r->fullimage; ?>" data-source="<?php echo $r->fullimage; ?>" title="<?php echo $r->title; ?>">
-                                            <img class="img-responsive" src="<?php echo $r->thumbnail; ?>">
+                                            <!-- <img class="img-responsive" src="<?php echo $r->thumbnail; ?>"> -->
                                             <!-- <img class="img-responsive" src="https://www.hospi.vn/uploads/images/hotels/rooms/thumbs/979440_Superior-room---Novotel-Phu-Quoc.jpg"> -->
                                             </a>
                                         </div>
@@ -318,20 +318,20 @@
                                         <div class="show_hs_promotionning show_hs_roomMore">
                                             <span>Đặt 2 đêm trở lên</span>
                                             <br>
-                                            <a href="#" title="">(Chi tiết)</a>
-                                            <!-- <div class="hs_full_roomMore">
+                                            <span class="clickShow_hs_full_roomMore">(Chi tiết)</span>
+                                            <div class="hs_full_roomMoreP">
                                                 <p class="size16" style="border-bottom: 1px solid #ccc; padding: 4px 8px; color: #649800;">
                                                     Đặt 2 phòng trở lên
-                                                    <a href="#" title="">(x)</a>
+                                                    <span class="clickHide_hs_full_roomMore">(x)</span>
                                                 </p>
-                                                <div class="ct grey">
+                                                <div class="ct grey" style="padding: 4px 8px;">
                                                     Đặt tối thiểu đêm trở lên, ở tối thiểu 2 đêm. Tặng phiếu voucher ăn uống 1.000.000 VND
                                                 </div>
                                                 <p style="border-top: 1px solid #ccc; padding: 4px 8px;">
                                                     <span class="grey">Thời gian</span>
-                                                    <span class="purple size14">Thời gian</span>
+                                                    <span class="blue02 size14">Thời gian</span>
                                                 </p>
-                                            </div> -->
+                                            </div>
                                         </div>
                                         <p class="purple size18"><b><?php echo number_format($r->price['total']); ?></b></p>
                                         <div class="size13 grey">
@@ -545,11 +545,14 @@
     </div>
 </section>
 <script type="text/javascript">
-    $('.hs_cl_show_info').on('click', function(){
-        console.log('hs_cl_show_info clicked!');
-        $(this).parents('table').find('.hs_room_info').slideToggle( "slow", function() {
-            // Animation complete.
-        });
+    $('.hs_full_roomMore').on('click', function(){
+        $(this).parents('table').find('.hs_room_info').slideToggle();
+    });
+    $('.show_hs_roomMore .clickShow_hs_full_roomMore').on('click', function(){
+        $(this).parent().find('.hs_full_roomMoreP').addClass('active');
+    });
+    $('.hs_full_roomMoreP .clickHide_hs_full_roomMore').on('click', function(){
+        $(this).parents('.hs_full_roomMoreP').removeClass('active');
     });
 </script>
 <?php if(isset($_GET['details'])) { ?>

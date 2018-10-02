@@ -178,13 +178,19 @@
                 </button>
                 <!--<div class="panel-heading go-text-right"><?php echo trans('046');?><?php echo trans('0641'); ?><?php echo $module->title; ?></div>-->
                 <div id="collapse1" class="collapse" aria-expanded="false">
-                    <div class="panel-body wrapper-class border-bottom">
-                        <div class="col-md-2 align-center andes"><?php echo trans('046');?></div>
-                        <div class="col-md-10  border-left"><?php echo $module->desc; ?></div>
+                    <div class="panel-body wrapper-class">
+                        <!-- <div class="col-md-2 align-center andes"><?php echo trans('046');?></div> -->
+                        <div class="col-md-12 ">
+                            <p class="title_purple"><span class="purple"><?php echo trans('046');?></span></p>
+                            <?php echo $module->desc; ?>
+                        </div>
                     </div>
-                    <div class="panel-body wrapper-class border-bottom">
-                        <div class="col-md-2 align-center andes"><?php echo trans('0249');?></div>
-                        <div class="col-md-10  border-left"><?php include 'includes/amenities.php';?></div>
+                    <div class="panel-body wrapper-class">
+                        <!-- <div class="col-md-2 align-center andes"></div> -->
+                        <div class="col-md-12 ">
+                            <p class="title_purple"><span class="purple"><?php echo trans('0249');?></span></p>
+                            <?php include 'includes/amenities.php';?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -195,27 +201,39 @@
                 </button>
                 <div id="collapse2" class="collapse" aria-expanded="false">
                     <div class="panel-body">
+                        <p class="RTL hs_time_Getroom">
+                            <p class="title_purple2"><span class="purple">Thời gian nhận phòng</span></p>
+                            <p>Theo quy định của khách sạn</p>
+                            <p>
+                                <i class="fa fa-clock-o text-success"></i> <strong> <?php echo trans('0697');?> </strong> :   <?php echo $module->defcheckin;?>
+                                <br>
+                                <i class="fa fa-clock-o text-warning"></i> <strong> <?php echo trans('0698');?> </strong> :  <?php echo $module->defcheckout;?> 
+                            </p>
+                            <p>Trong thời gian quý khách muốn nhận phòng sớm hơn</p>
+                        </p>
+                        <div class="hs_time_Ruleroom">
+                            <p class="title_purple2"><span class="purple">Quy định nhận phòng</span></p>
+                            <p>Quý khác vui lòng mang chứng minh nhân dân .....</p>
+                        </div>
                         <span class="RTL">
                             <p><?php echo nl2br($module->policy); ?></p>
                         </span>
                         <?php if($appModule != "cars" && $appModule != "ean"){ ?>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="clearfix"></div>
                             <hr>
-                        </div>
+                        </div> -->
                         <?php if(!empty($module->paymentOptions)){ ?>
-                        <div class="col-md-7">
+                        <div class="col-md-12">
                             <div class="row">
-                                <h4 id="terms" class="main-title  go-right"><?php echo trans('0265');?></h4>
+                                <!-- <h4 id="terms" class="main-title  go-right"><?php echo trans('0265');?></h4> -->
+                                <p class="title_purple2"><span class="purple"><?php echo trans('0265');?></span></p>
                                 <div class="clearfix"></div>
-                                <i class="tiltle-line  go-right"></i>
-                                <div class="clearfix"></div>
-                                <span class="RTL">
-                                <?php foreach($module->paymentOptions as $pay){ if(!empty($pay->name)){ ?>
-                                <?php echo $pay->name;?> -
-                                <?php } } ?>
-                                </span>
-                                <br><br>
+                                <ul class="RTL hs_methodPay">
+                                    <?php foreach($module->paymentOptions as $pay){ if(!empty($pay->name)){ ?>
+                                        <li><?php echo $pay->name;?></li>
+                                    <?php } } ?>
+                                </ul>
                             </div>
                         </div>
                         <?php } ?>
@@ -274,24 +292,6 @@
                  - Trường hợp hủy phòng trong vòng 10 (trừ thứ 7, CN, Lễ, Tết) so với ngày đến hoặc không đến, tính 100 % tiền phòng <br>
                  - Các booking giai đoạn lễ tết, không được hoàn, hủy hoặc thay đổi</p>
                  </span>
-                 <div class="row">
-                    <div class="clearfix"></div>
-                    <hr>
-                 </div>
-                 <div class="col-md-7">
-                    <div class="row">
-                       <h4 id="terms" class="main-title  go-right">Phương thức thanh toán</h4>
-                       <div class="clearfix"></div>
-                       <i class="tiltle-line  go-right"></i>
-                       <div class="clearfix"></div>
-                       <span class="RTL">
-                          Thanh toán tại văn phòng Hospi -
-                          Thanh toán tại nhà  -
-                          Thanh toán chuyển khoản -
-                       </span>
-                       <br><br>
-                    </div>
-                 </div>
                  <!-- Start Tours Inclusions / Exclusions -->
                  <!-- End Tours Inclusions / Exclusions -->
               </div>
@@ -299,15 +299,12 @@
         </div>
             <div class="panel panel-default panel-hotel-details">
                 <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false">
-                <?php echo trans('0758');?><span class="collapsearrow"></span>
+                    <!-- <?php echo trans('0758');?><span class="collapsearrow"></span> -->
+                    Chính sách phụ thu
                 </button>
                 <div id="collapse3" class="collapse" aria-expanded="false">
                     <div class="panel-body">
-                        <p class="RTL">
-                            <i class="fa fa-clock-o text-success"></i> <strong> <?php echo trans('0697');?> </strong> :   <?php echo $module->defcheckin;?>
-                            <br>
-                            <i class="fa fa-clock-o text-warning"></i> <strong> <?php echo trans('0698');?> </strong> :  <?php echo $module->defcheckout;?> 
-                        </p>
+                        
                     </div>
                 </div>
             </div>
@@ -938,6 +935,9 @@
                             <div class="desc col-md-12 col-sm-12 col-xs-12 go-left">
                                 <?php
                                     $results = recentlyViewed($recent);
+                                ?>
+                                <span class="go-right RTL"><i style="margin-left:-5px" class="icon-location-6"></i><?php echo $module->location; ?> </span>
+                                <?php
                                     foreach ($results as $row) {
                                         $locationInfoUrl = pt_LocationsInfo($row->hotel_city);
 
@@ -948,7 +948,7 @@
                                         echo "<div><a href='".base_url()."hotels/".$slug."'>" . $row->hotel_title . "</a></div>" .pt_create_stars($row->hotel_stars);
 
                                     }
-                                    ?>
+                                ?>
                             </div>
                         </div>
                         <hr style="margin-top:10px;margin-bottom:10px">
