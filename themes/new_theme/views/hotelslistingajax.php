@@ -692,6 +692,13 @@
                             <a href="<?php echo $item->slug; ?>">
                                 <?php } ?>
                                 <img src="<?php echo $item->thumbnail; ?>" alt="<?php echo character_limiter($item->title, 20); ?>">
+                                <?php                                  
+                                if($item->hotel_is_featured == "yes"){ ?>
+                                <div class="hs_favorite">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    Yêu thích
+                                </div>
+                                <?php } ?>
                                 <div class="short_info"></div>
                             </a>
                         </div>
