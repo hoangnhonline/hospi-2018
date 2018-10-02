@@ -545,8 +545,8 @@
     </div>
 </section>
 <script type="text/javascript">
-    $('.hs_full_roomMore').on('click', function(){
-        $(this).parents('table').find('.hs_room_info').slideToggle();
+    $('.hs_cl_show_info').on('click', function(){
+        $(this).parents('table').find('.hs_show_info').slideToggle();
     });
     $('.show_hs_roomMore .clickShow_hs_full_roomMore').on('click', function(){
         $(this).parent().find('.hs_full_roomMoreP').addClass('active');

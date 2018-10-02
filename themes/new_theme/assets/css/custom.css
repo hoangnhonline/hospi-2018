@@ -14640,72 +14640,40 @@ textarea {
     opacity: 0;
     visibility: hidden;
 }
-.hs_progress li {
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ccc;
-    font-size: 0;
-    background: #fff;
-}
-.hs_progress li.active {
-    background: #603;
-    border-color: #fff;
-}
 
-.star-cb-group {
-  /* remove inline-block whitespace */
-  font-size: 0;
-  /* flip the order so we can use the + and ~ combinators */
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  /* the hidden clearer */
+/* Start Rating */
+.star-rating {
+    font-size: 0;
 }
-.star-cb-group * {
-  font-size: 1rem;
+.star-rating__wrap {
+    display: inline-block;
+    font-size: 15px;
 }
-.star-cb-group > input {
-  display: none;
+.star-rating__wrap:after {
+    content: "";
+    display: table;
+    clear: both;
 }
-.star-cb-group > input + label {
-  /* only enough room for the star */
-  display: inline-block;
-  overflow: hidden;
-  text-indent: 9999px;
-  width: 1em;
-  white-space: nowrap;
-  cursor: pointer;
+.star-rating__ico {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    color: #E0EAE5;
 }
-.star-cb-group > input + label:before {
-  display: inline-block;
-  text-indent: -9999px;
-  content: "☆";
-  color: #888;
+.star-rating__ico:last-child {
+    padding-left: 0;
 }
-.star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
-  content: "★";
-  color: #e52;
-  text-shadow: 0 0 1px #333;
+.star-rating__input{
+    display: none;
 }
-.star-cb-group > .star-cb-clear + label {
-  text-indent: -9999px;
-  width: .5em;
-  margin-left: -.5em;
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before {
+    content: "\f0c8";
+    color: #660033;
 }
-.star-cb-group > .star-cb-clear + label:before {
-  width: .5em;
-}
-.star-cb-group:hover > input + label:before {
-  content: "☆";
-  color: #888;
-  text-shadow: none;
-}
-.star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
-  content: "★";
-  color: #e52;
-  text-shadow: 0 0 1px #333;
-}
+/* End Rating */
+
 .title_purple {
     margin: 15px 0;
 }
