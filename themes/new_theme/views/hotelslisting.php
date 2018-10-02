@@ -704,7 +704,12 @@
                             <?php } else { ?>
                             <a href="<?php echo $item->slug; ?>">
                                 <?php } ?>
-                                <img src="<?php echo $item->thumbnail; ?>" alt="<?php echo character_limiter($item->title, 20); ?>">
+                                <!-- <img src="<?php echo $item->thumbnail; ?>" alt="<?php echo character_limiter($item->title, 20); ?>"> -->
+                                <img src="https://www.hospi.vn/uploads/images/hotels/slider/thumbs/518556_Khach-san-imperial-Hue---Hospi-(13).jpg" alt="Khách sạn Imperial…">
+                                <div class="hs_favorite">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    Yêu thích
+                                </div>
                                 <div class="short_info"></div>
                             </a>
                         </div>
@@ -768,21 +773,20 @@
                                         } ?> <!-- Cars airport pickup -->
                                 </h4>
                                 <?php if ($appModule != "offers") { ?> <a class="go-right" href="javascript:void(0);" onclick="showMap('<?php echo base_url(); ?>home/maps/<?php echo $item->latitude; ?>/<?php echo $item->longitude; ?>/<?php echo $appModule; ?>/<?php echo $item->id; ?>', 'modal');" title="<?php echo $item->location; ?>"><i style="margin-left: -3px;" class="icon-location-6 go-right"></i><?php echo character_limiter($item->location, 10); ?></a> <span class="go-right"><?php echo $item->stars; ?></span> <?php } ?>
-                                <br>
-                                <ul class="itemlabel-info">
-                                    <!--<li><a href="#" title="Combo"><span>Combo</span></a></li>
-                                    <li><a href="#" title="Deals - Giảm giá"><span>Deals - Giảm giá</span></a></li>
-                                    <li><a href="#" title="Gói honeymoon"><span>Gói honeymoon</span></a></li>-->
-                                    <?php if($item->salefrom) { ?>
-                                    <li><span style="color:#660033">Đang khuyến mãi</span></li>
-                                    <?php } ?>
-                                </ul>
                                 <?php if (is_sales_off_hotel($item->id)) { ?>
                                 <div class="purple sale-off-now-icon"><?php echo trans('0709'); ?>
                                     <span class="sale-percent-star"><?php echo "-" . is_sales_off_hotel($item->id) . "%"; ?></span>
                                 </div>
                                 <?php } ?>
                                 <p class="grey RTL des"><?php echo character_limiter($item->desc, 100); ?></p>
+                                <ul class="itemlabel-info">
+                                    <li class="hs_cb">Combo</li>
+                                    <li class="hs_deal">Deals - Giảm giá</li>
+                                    <li class="hs_hnm">Gói honeymoon</li>
+                                    <?php if($item->salefrom) { ?>
+                                    <li class="hs_prt">Đang khuyến mãi</li>
+                                    <?php } ?>
+                                </ul>
                                 <?php if ($appModule == "hotels") { ?>
                                     <ul class="hotelpreferences go-right hidden-xs">
                                         <?php $cnt = 0;

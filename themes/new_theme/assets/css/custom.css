@@ -1,6 +1,9 @@
 p {
     margin: 0;
 }
+ul li {
+    list-style: none;
+}
 
 @media (max-width: 768px) {
     .nav-justified > li {
@@ -3168,8 +3171,7 @@ a:hover.backbtn {
     border-left: 1px solid #f0f0f0;
     border-bottom: none;
     text-align: left;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px;
     color: #660033;
     font-size: 16px;
     font-weight: normal;
@@ -8811,11 +8813,11 @@ span.offer-location {
 
 }
 
-.itemlabel3 img {
+/* .itemlabel3 img {
     position: absolute;
     left: -36px;
     top: 64px;
-}
+} */
 
 .offer-page .bk-tim .RTL {
     padding-top: 20px;
@@ -11582,33 +11584,16 @@ p.view-pos a {
 .itemlabel-info li {
     display: inline-block;
     position: relative;
-    padding-left: 6px;
-    margin-right: 20px;
-    margin-left: 7px;
+    background: #dfdfdf;
+    padding: 5px 10px;
+    color: #fff;
 }
 
-.itemlabel-info li:before {
-    content: "\f111";
-    font-family: "FontAwesome";
-    color: #660033;
-    font-size: 10px;
-    position: absolute;
-    left: -7px;
-    top: -1px;
-}
 
-.itemlabel-info li a {
-    color: #660033;
-    position: relative;
-}
-
-.itemlabel-info li a:after {
-    content: "";
-    height: 1px;
-    background: #660033;
-    margin: 0 auto;
-    display: block;
-}
+.itemlabel-info .hs_cb {background: #003334;}
+.itemlabel-info .hs_deal {background: #FE0000;}
+.itemlabel-info .hs_hnm {background: #CC0096;}
+.itemlabel-info .hs_prt {background: #680436;}
 
 .description .des {
     width: 100%;
@@ -11854,7 +11839,7 @@ p.view-pos a {
     margin-bottom: 0;
 }
 
-.block-price .block-price-info span {
+.block-price .block-price-infos span {
     display: block;
     font-size: 13px;
     color: #999;
@@ -11866,11 +11851,12 @@ p.view-pos a {
 
 .block-price .block-price-info .block-info-price-rooms {
     position: absolute;
-    top: -100px;
-    padding: 8px;
+    top: -1000px;
+    padding: 0;
     opacity: 0;
     visibility: hidden;
-    background: #f0f0f0;
+    background: #fff;
+    border: 1px solid #ccc;
     color: #333;
     max-width: 200px;
     width: 190px;
@@ -11878,9 +11864,6 @@ p.view-pos a {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-}
-
-.block-price .block-price-info .block-info-price-rooms {
     margin: 5px 0;
     font-size: 13px;
 }
@@ -14529,4 +14512,162 @@ textarea {
     margin-right: 5px;
     min-width: 105px;
     text-align: center;
+    cursor: default;
+}
+.collapsebtn_Style2 {
+    width: 100%;
+    height: 43px;
+    border-top: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
+    border-bottom: none;
+    text-align: left;
+    padding: 10px 20px;
+    color: #660033;
+    font-size: 16px;
+    font-weight: normal;
+    background: url(../../assets/img/backgound-pos2.jpg);
+}
+.hs_favorite {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    left: 0;
+    background: #CB9902;
+    color: #fff;
+    padding: 5px 7px;
+    font-size: 12px;
+}
+.hs_cl_show_info {
+    cursor: pointer;
+}
+.hs_room_details {
+    margin-bottom: 25px;
+}
+.hs_room_convenient .title  {
+    margin-bottom: 10px;
+}
+.hs_room_convenient .title .purple {
+    font-size: 15px;
+    border-top: 3px solid #fff;
+}
+.hs_room_convenient .col-sm-6 {
+    margin-bottom: 5px;
+}
+.hs_room_convenient .hs_ic_room_convenient,
+.hs_room_convenient .hs_des_room_convenient {
+    display: inline-block;
+    vertical-align: middle;
+}
+.hs_room_convenient .hs_ic_room_convenient {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #603;
+    text-align: center;
+    border-radius: 50px;
+    line-height: 16px;
+}
+.hs_room_convenient .hs_ic_room_convenient i {
+    font-size: 10px;
+    color: #603;
+}
+.hs_show_info {
+    display: none;
+}
+.show_hs_promotionning {
+    background: red;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    margin: -8px -8px 15px -38px;
+}
+.show_hs_promotionning {
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    margin: -8px -8px 15px -38px;
+}
+.show_hs_promotion {
+    background: #FC0101;
+}
+.show_hs_roomMore {
+    background: #669801;
+}
+.show_hs_roomMore a {
+    color: #fff;
+    text-decoration: underline;
+}
+.table-customize.table-content > thead > tr > th {
+    background: transparent;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+}
+.hs_progress li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    font-size: 0;
+    background: #fff;
+}
+.hs_progress li.active {
+    background: #603;
+    border-color: #fff;
+}
+
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */
+}
+.star-cb-group * {
+  font-size: 1rem;
+}
+.star-cb-group > input {
+  display: none;
+}
+.star-cb-group > input + label {
+  /* only enough room for the star */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 9999px;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.star-cb-group > input + label:before {
+  display: inline-block;
+  text-indent: -9999px;
+  content: "☆";
+  color: #888;
+}
+.star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+  text-indent: -9999px;
+  width: .5em;
+  margin-left: -.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+  width: .5em;
+}
+.star-cb-group:hover > input + label:before {
+  content: "☆";
+  color: #888;
+  text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
 }

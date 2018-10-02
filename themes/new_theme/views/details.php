@@ -261,9 +261,9 @@
             </div>
             <?php if($appModule == "hotels"){ ?>
             <div class="panel panel-default panel-hotel-details">
-         <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapsehuydoi" aria-expanded="false">
-               Điều kiện hủy đổi<span class="collapsearrow"></span>
-         </button>
+            <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapsehuydoi" aria-expanded="false">
+                Điều kiện hủy đổi<span class="collapsearrow"></span>
+            </button>
            <div id="collapsehuydoi" class="collapse" aria-expanded="false">
               <div class="panel-body">
                  <span class="RTL">
@@ -685,27 +685,26 @@
             </div>
             <script>
                 $(function(){
-                
-                  $(".changeInfo").on("change",function(){
-                    var tourid = "<?php echo $module->id; ?>";
-                    var adults = $("#selectedAdults").val();
-                    var child = $("#selectedChild").val();
-                    var infants = $("#selectedInfants").val();
-                      $.post("<?php echo base_url()?>tours/tourajaxcalls/changeInfo",{tourid: tourid, adults: adults, child: child, infants: infants},function(resp){
-                      var result = $.parseJSON(resp);
-                      $(".adultPrice").html(result.currSymbol+result.adultPrice);
-                      $(".childPrice").html(result.currSymbol+result.childPrice);
-                      $(".infantPrice").html(result.currSymbol+result.infantPrice);
-                      $(".totalCost").html(result.currCode+" "+result.currSymbol+result.totalCost);
-                      $(".totaldeposit").html(result.currCode+" "+result.currSymbol+result.totalDeposit);
-                      console.log(result);
-                    })
-                  }); //end of change info
+                    $(".changeInfo").on("change",function(){
+                        var tourid = "<?php echo $module->id; ?>";
+                        var adults = $("#selectedAdults").val();
+                        var child = $("#selectedChild").val();
+                        var infants = $("#selectedInfants").val();
+                        $.post("<?php echo base_url()?>tours/tourajaxcalls/changeInfo",{tourid: tourid, adults: adults, child: child, infants: infants},function(resp){
+                            var result = $.parseJSON(resp);
+                            $(".adultPrice").html(result.currSymbol+result.adultPrice);
+                            $(".childPrice").html(result.currSymbol+result.childPrice);
+                            $(".infantPrice").html(result.currSymbol+result.infantPrice);
+                            $(".totalCost").html(result.currCode+" "+result.currSymbol+result.totalCost);
+                            $(".totaldeposit").html(result.currCode+" "+result.currSymbol+result.totalDeposit);
+                            console.log(result);
+                        })
+                    }); //end of change info
                 })// end of document ready
             </script>
             <!-- aside -->
             <form class="single-search" action="<?php echo base_url().$appModule;?>/search" method="GET">
-                <div class="collapsebtn go-text-right">
+                <div class="collapsebtn">
                     <?php echo trans('0693');?>
                 </div>
                 <div id="frmsearch">
@@ -779,133 +778,132 @@
             <div class="clearfix"></div>
             <div class="block-search-hotel clearfix visible-xs">
             <div class="container no-padding-mobile">
-               <div class="block-content">
-                 <div class="block-search-hotel-hd">
-                   <h3>Tìm khách sạn/resort</h3>
-                 </div>
-                 <!-- block-search-hotel-hd -->
-                 <div class="go-right RTL_Bar">
-                   <div class="tab-content ng-scope" ng-controller="autoSuggest">
-                     <!-- Hotels  -->
-                     <div role="tabpanel" class="tab-pane fade active in " id="HOTELS" aria-labelledby="home-tab">
-                        <form action="https://www.hospi.vn/hotels/search" method="GET" role="search" class="ng-pristine ng-valid">
-                          <div class="row">
-                            <div class="col-sm-4 col-xs-12 go-right">
-                              <div class="form-group margin-left-right-mobile-5">
-                                 <input id="search" name="txtSearch" class="form-control form-control-small ui-autocomplete-input" placeholder="Nhập tên khách sạn, thành phố!" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
-                                 <div id="autocomlete-container">
-                                   <ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1000; top: 0px; left: 0px; display: none;"></ul>
-                                 </div>
-                              </div>
+                <div class="block-content">
+                    <div class="block-search-hotel-hd">
+                        <h3>Tìm khách sạn/resort</h3>
+                    </div>
+                    <!-- block-search-hotel-hd -->
+                    <div class="go-right RTL_Bar">
+                        <div class="tab-content ng-scope" ng-controller="autoSuggest">
+                            <!-- Hotels  -->
+                            <div role="tabpanel" class="tab-pane fade active in " id="HOTELS" aria-labelledby="home-tab">
+                                <form action="https://www.hospi.vn/hotels/search" method="GET" role="search" class="ng-pristine ng-valid">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-12 go-right">
+                                            <div class="form-group margin-left-right-mobile-5">
+                                                <input id="search" name="txtSearch" class="form-control form-control-small ui-autocomplete-input" placeholder="Nhập tên khách sạn, thành phố!" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                                                <div id="autocomlete-container">
+                                                    <ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1000; top: 0px; left: 0px; display: none;"></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-xs-6 go-right">
+                                            <div class="form-group margin-left-mobile-5">
+                                                <div class="clearfix"></div>
+                                                <input type="text" placeholder=" Ngày nhận phòng " name="checkin" class="form-control mySelectCalendar dpd1 go-text-left" value="12/01/2018" required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-xs-6 go-right">
+                                            <div class="form-group margin-right-mobile-5">
+                                                <div class="clearfix"></div>
+                                                <input type="text" placeholder=" Ngày trả phòng " name="checkout" class="form-control mySelectCalendar dpd2 go-text-left" value="13/01/2018" required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-6 go-right num-night">
+                                            <div class="form-group margin-left-mobile-5">
+                                                <div class="clearfix"></div>
+                                                <div class="content">
+                                                    <strong><i class="fa fa-clock-o"></i></strong>
+                                                    <strong><span id="number_night">01</span> đêm</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="home col-sm-2 col-xs-6 go-right">
+                                            <div class="form-group margin-left-mobile-5">
+                                                <select class="form-control-cus selectx" name="adults">
+                                                    <option value="0" selected="">Người lớn</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="home col-sm-2 col-xs-6 go-right">
+                                            <div class="form-group margin-right-mobile-5">
+                                                <select class="form-control-cus selectx" name="child">
+                                                    <option value="0" selected="">Trẻ em</option>
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-xs-12 go-right">
+                                            <div class="form-group margin-left-right-mobile-5">
+                                                <div class="coupon">
+                                                    <input type="text" class="form-control-cus inputcoupon" name="inputcoupon" placeholder="Nhập mã giảm giá" style="padding-right: 20px;">
+                                                    <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Bạn có mã giảm giá ưu đãi từ HOSPI vui lòng nhập mã ưu đãi vào đây, số tiền tương ứng sẽ được trừ vào đơn phòng"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-xs-12 go-right">
+                                            <div class="form-group margin-left-right-mobile-5">
+                                                <input id="searching" type="hidden" name="searching" value=""> <input id="modType" type="hidden" name="modType" value="">
+                                                <button type="submit" class="btn-action btn btn-lg btn-block">Tìm kiếm</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-check-sale margin-left-mobile-5">
+                                        <label>
+                                        <input type="checkbox" name="issale" id="issale" value="yes"><span></span>
+                                        Đang khuyến mãi                </label>
+                                    </div>
+                                </form>
+                                <div class="clearfix"></div>
                             </div>
-                            <div class="col-sm-3 col-xs-6 go-right">
-                              <div class="form-group margin-left-mobile-5">
-                                 <div class="clearfix"></div>
-                                 <input type="text" placeholder=" Ngày nhận phòng " name="checkin" class="form-control mySelectCalendar dpd1 go-text-left" value="12/01/2018" required="">
-                              </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6 go-right">
-                              <div class="form-group margin-right-mobile-5">
-                                 <div class="clearfix"></div>
-                                 <input type="text" placeholder=" Ngày trả phòng " name="checkout" class="form-control mySelectCalendar dpd2 go-text-left" value="13/01/2018" required="">
-                              </div>
-                            </div>
-                            <div class="col-sm-2 col-xs-6 go-right num-night">
-                              <div class="form-group margin-left-mobile-5">
-                                 <div class="clearfix"></div>
-                                 <div class="content">
-                                   <strong><i class="fa fa-clock-o"></i></strong>
-                                   <strong><span id="number_night">01</span> đêm</strong>
-                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="home col-sm-2 col-xs-6 go-right">
-                              <div class="form-group margin-left-mobile-5">
-                                 <select class="form-control-cus selectx" name="adults">
-                                   <option value="0" selected="">Người lớn</option>
-                                   <option value="1">1</option>
-                                   <option value="2">2</option>
-                                   <option value="3">3</option>
-                                   <option value="4">4</option>
-                                   <option value="5">5</option>
-                                   <option value="6">6</option>
-                                   <option value="7">7</option>
-                                   <option value="8">8</option>
-                                   <option value="9">9</option>
-                                   <option value="10">10</option>
-                                   <option value="11">11</option>
-                                   <option value="12">12</option>
-                                   <option value="13">13</option>
-                                   <option value="14">14</option>
-                                   <option value="15">15</option>
-                                   <option value="16">16</option>
-                                   <option value="17">17</option>
-                                   <option value="18">18</option>
-                                   <option value="19">19</option>
-                                   <option value="20">20</option>
-                                 </select>
-                              </div>
-                            </div>
-                            <div class="home col-sm-2 col-xs-6 go-right">
-                              <div class="form-group margin-right-mobile-5">
-                                 <select class="form-control-cus selectx" name="child">
-                                   <option value="0" selected="">Trẻ em</option>
-                                   <option value="0">0</option>
-                                   <option value="1">1</option>
-                                   <option value="2">2</option>
-                                   <option value="3">3</option>
-                                   <option value="4">4</option>
-                                   <option value="5">5</option>
-                                   <option value="6">6</option>
-                                   <option value="7">7</option>
-                                   <option value="8">8</option>
-                                   <option value="9">9</option>
-                                   <option value="10">10</option>
-                                 </select>
-                              </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 go-right">
-                              <div class="form-group margin-left-right-mobile-5">
-                                 <div class="coupon">
-                                   <input type="text" class="form-control-cus inputcoupon" name="inputcoupon" placeholder="Nhập mã giảm giá" style="padding-right: 20px;">
-                                   <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Bạn có mã giảm giá ưu đãi từ HOSPI vui lòng nhập mã ưu đãi vào đây, số tiền tương ứng sẽ được trừ vào đơn phòng"></i>
-                                 </div>
-                              </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 go-right">
-                              <div class="form-group margin-left-right-mobile-5">
-                                 <input id="searching" type="hidden" name="searching" value=""> <input id="modType" type="hidden" name="modType" value="">
-                                 <button type="submit" class="btn-action btn btn-lg btn-block">Tìm kiếm</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block-check-sale margin-left-mobile-5">
-                            <label>
-                            <input type="checkbox" name="issale" id="issale" value="yes"><span></span>
-                            Đang khuyến mãi                </label>
-                          </div>
-                        </form>
-                        <div class="clearfix"></div>
-                     </div>
-                     <!-- Hotels  -->
-                   </div>
-                 </div>
-                 <!-- go-right RTL_Bar -->
-               </div>
+                            <!-- Hotels  -->
+                        </div>
+                    </div>
+                    <!-- go-right RTL_Bar -->
+                </div>
             </div>
           </div>
           <!-- timkiem -->
-
-
         <div class="clearfix"></div>
             <br>    
             <!------------------------  Related Listings   ------------------------------>
             <?php if(!empty($module->relatedItems)){ ?> 
                 <div class="list-group">
                     <div class="panel panel-default">
-                        <div class="panel-heading go-text-right"><?php if($appModule == "hotels" || $appModule == "ean"){ echo trans('0290'); }else if($appModule == "tours"){ echo trans('0453'); }else if($appModule == "cars"){ echo trans('0493'); } ?></div>
+                        <!-- <div class="panel-heading go-text-right"><?php if($appModule == "hotels" || $appModule == "ean"){ echo trans('0290'); }else if($appModule == "tours"){ echo trans('0453'); }else if($appModule == "cars"){ echo trans('0493'); } ?></div> -->
+                        <div class="collapsebtn_Style2"><?php if($appModule == "hotels" || $appModule == "ean"){ echo trans('0290'); }else if($appModule == "tours"){ echo trans('0453'); }else if($appModule == "cars"){ echo trans('0493'); } ?></div>
                         <?php foreach($module->relatedItems as $item) { ?>
                             <div class="featured">
                                 <a href="<?php echo $item->slug;?>" class="col-md-12 col-sm-12 col-xs-12 go-right" >
@@ -933,7 +931,8 @@
             <?php if(!empty($recents)){ ?>
                 <div class="list-group">
                     <div class="panel panel-default">
-                        <div class="panel-heading go-text-right"><?php echo trans('0798');?></div>
+                        <!-- <div class="panel-heading go-text-right"><?php echo trans('0798');?></div> -->
+                        <div class="collapsebtn_Style2"><?php echo trans('0798');?></div>
                         <?php foreach($recents as $recent) { ?>
                         <div class="featured">
                             <div class="desc col-md-12 col-sm-12 col-xs-12 go-left">
@@ -1077,7 +1076,7 @@
  <script type="text/javascript">
          $("input:checkbox").on('click', function() {
   // in the handler, 'this' refers to the box clicked on
-        var $box = $(this);
+        var $box = $(this); 
         if ($box.is(":checked")) {
           // the name of the box is retrieved using the .attr() method
           // as it is assumed and expected to be immutable
