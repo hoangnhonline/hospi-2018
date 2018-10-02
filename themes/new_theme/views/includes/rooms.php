@@ -205,8 +205,8 @@
                                     <div class="zoom-gallery">
                                         <div class="zoom-gallery<?php echo $r->id; ?>">
                                             <a href="<?php echo $r->fullimage; ?>" data-source="<?php echo $r->fullimage; ?>" title="<?php echo $r->title; ?>">
-                                            <!-- <img class="img-responsive" src="<?php echo $r->thumbnail; ?>"> -->
-                                            <img class="img-responsive" src="https://www.hospi.vn/uploads/images/hotels/rooms/thumbs/979440_Superior-room---Novotel-Phu-Quoc.jpg">
+                                            <img class="img-responsive" src="<?php echo $r->thumbnail; ?>">
+                                            <!-- <img class="img-responsive" src="https://www.hospi.vn/uploads/images/hotels/rooms/thumbs/979440_Superior-room---Novotel-Phu-Quoc.jpg"> -->
                                             </a>
                                         </div>
                                     </div>
