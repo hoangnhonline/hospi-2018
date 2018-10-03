@@ -14551,7 +14551,7 @@ textarea {
 }
 .hs_room_convenient .title .purple {
     font-size: 15px;
-    border-top: 3px solid #fff;
+    border-top: 3px solid #604;
 }
 .hs_room_convenient .col-sm-6 {
     margin-bottom: 5px;
@@ -14594,10 +14594,45 @@ textarea {
 }
 .show_hs_roomMore {
     background: #669801;
+    position: relative;
 }
-.show_hs_roomMore a {
+.show_hs_roomMore .clickShow_hs_full_roomMore {
+    cursor: pointer;
     color: #fff;
     text-decoration: underline;
+}
+.hs_full_roomMoreP {
+    position: absolute;
+    top: -1000px;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    border: 1px solid #669801;
+    color: #333;
+    max-width: 280px;
+    width: 280px;
+    z-index: 9;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    margin: 5px 0;
+    font-size: 13px;
+    text-align: left;
+}
+.hs_full_roomMoreP .clickHide_hs_full_roomMore {
+    cursor: pointer;
+    color: #666;
+    float: right;
+    text-decoration: none;
+}
+.hs_full_roomMoreP.active {
+    top: 45px;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
 .table-customize.table-content > thead > tr > th {
     background: transparent;
@@ -14605,69 +14640,60 @@ textarea {
     opacity: 0;
     visibility: hidden;
 }
-.hs_progress li {
+
+/* Start Rating */
+.hs_star-rating .star-rating__wrap,
+.hs_star-rating .start-rating_wrap_comment {
     display: inline-block;
     vertical-align: middle;
+}
+.hs_star-rating .star-rating__wrap {
+    font-size: 15px;
+}
+.hs_star-rating .star-rating__wrap:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.hs_star-rating .star-rating__ico {
+    float: right;
+    padding-right: 5px;
+    cursor: pointer;
+    color: #660033;
     width: 20px;
-    height: 20px;
-    border: 1px solid #ccc;
-    font-size: 0;
-    background: #fff;
+    height: auto;
+    margin-bottom: 0;
 }
-.hs_progress li.active {
-    background: #603;
-    border-color: #fff;
+.hs_star-rating .star-rating__ico:last-child {
+    padding-right: 0;
 }
+.hs_star-rating .star-rating__input {
+    display: none;
+}
+.hs_star-rating .star-rating__ico:hover:before,
+.hs_star-rating .star-rating__ico:hover ~ .star-rating__ico:before,
+.hs_star-rating  .star-rating__input:checked ~ .star-rating__ico:before {
+    content: "\f0c8";
+}
+/* End Rating */
 
-.star-cb-group {
-  /* remove inline-block whitespace */
-  font-size: 0;
-  /* flip the order so we can use the + and ~ combinators */
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  /* the hidden clearer */
+.title_purple {
+    margin: 15px 0;
 }
-.star-cb-group * {
-  font-size: 1rem;
+.title_purple .purple,
+.title_purple2 .purple {
+    font-weight: bold;
 }
-.star-cb-group > input {
-  display: none;
+.title_purple2 {
+    margin-top: 15px;
 }
-.star-cb-group > input + label {
-  /* only enough room for the star */
-  display: inline-block;
-  overflow: hidden;
-  text-indent: 9999px;
-  width: 1em;
-  white-space: nowrap;
-  cursor: pointer;
+.blue02 {
+    color: #649800;
 }
-.star-cb-group > input + label:before {
-  display: inline-block;
-  text-indent: -9999px;
-  content: "☆";
-  color: #888;
-}
-.star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
-  content: "★";
-  color: #e52;
-  text-shadow: 0 0 1px #333;
-}
-.star-cb-group > .star-cb-clear + label {
-  text-indent: -9999px;
-  width: .5em;
-  margin-left: -.5em;
-}
-.star-cb-group > .star-cb-clear + label:before {
-  width: .5em;
-}
-.star-cb-group:hover > input + label:before {
-  content: "☆";
-  color: #888;
-  text-shadow: none;
-}
-.star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
-  content: "★";
-  color: #e52;
-  text-shadow: 0 0 1px #333;
+.hs_methodPay li {
+    display: inline-block;
+    vertical-align: middle;
+    background: #f0f0f0;
+    padding: 8px;
+    margin-right: 10px;
 }
