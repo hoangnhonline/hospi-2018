@@ -65,7 +65,7 @@ class Hotels extends MX_Controller
         }
 
         $check = $this->hotels_model->hotel_exists($hotelname);
-        if ($check && !empty($hotelname)) {
+        if ($check && !empty($hotelname)) {            
             $this->hotels_lib->set_hotelid($hotelname);
             $this->data['module'] = $this->hotels_lib->hotel_details();
             $this->data['hasRooms'] = $this->hotels_lib->totalRooms($this->data['module']->id);

@@ -651,7 +651,8 @@ class Hotels_lib
             'keywords' => $keywords,
             'policy' => $policy,
             'tripadvisorid' => $tripadvisorid,
-            'mapAddress' => $details[0]->hotel_map_city
+            'mapAddress' => $details[0]->hotel_map_city,
+            'diem_noi_bat' => $details[0]->diem_noi_bat,
         );
 
         return $detailResults;
