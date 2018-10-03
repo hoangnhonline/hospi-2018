@@ -14642,38 +14642,51 @@ textarea {
 }
 
 /* Start Rating */
-.hs_star-rating .star-rating__wrap,
-.hs_star-rating .start-rating_wrap_comment {
+.star-rating__wrap, 
+.start-rating_wrap_comment {
     display: inline-block;
     vertical-align: middle;
 }
-.hs_star-rating .star-rating__wrap {
-    font-size: 15px;
-}
-.hs_star-rating .star-rating__wrap:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.hs_star-rating .star-rating__ico {
-    float: right;
-    padding-right: 5px;
-    cursor: pointer;
-    color: #660033;
-    width: 20px;
-    height: auto;
-    margin-bottom: 0;
-}
-.hs_star-rating .star-rating__ico:last-child {
-    padding-right: 0;
-}
-.hs_star-rating .star-rating__input {
+/*.starRating:not(old){
+    display        : inline-block;
+    width          : 7.5em;
+    height         : 18px;
+    overflow       : hidden;
+    vertical-align : bottom;
+}*/
+.starRating:not(old) > input{
+    margin-right : -100%;
+    opacity      : 0;
     display: none;
 }
-.hs_star-rating .star-rating__ico:hover:before,
-.hs_star-rating .star-rating__ico:hover ~ .star-rating__ico:before,
-.hs_star-rating  .star-rating__input:checked ~ .star-rating__ico:before {
-    content: "\f0c8";
+.starRating:not(old) > label{
+    display         : block;
+    float           : right;
+    position        : relative;
+    width           : 18px;
+    height          : 18px;
+    background      : url('../../images/no_active.png');
+    background-size : contain;
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+.starRating:not(old) > label:first-child {
+    margin-right: 0;
+}
+.starRating:not(old) > label:before{
+    content         : '';
+    display         : block;
+    width           : 18px;
+    height          : 18px;
+    background      : url('../../images/active.png');
+    background-size : contain;
+    opacity         : 0;
+    transition      : opacity 0.2s linear;
+}
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+    opacity : 1;
 }
 /* End Rating */
 
@@ -14696,4 +14709,25 @@ textarea {
     background: #f0f0f0;
     padding: 8px;
     margin-right: 10px;
+}
+.panel.panel-default .collapsebtn.collapsed_C {
+    border-top: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.collapsed_C .Close__ADDREVIEW {
+    float: right;
+    border-left: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    font-weight: normal;
+    color: #603;
+
 }

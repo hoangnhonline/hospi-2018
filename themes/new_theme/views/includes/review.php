@@ -1,9 +1,10 @@
 <!-- End row -->
-<div id="ADDREVIEW" class="panel-collapse collapse">
+<div id="ADDREVIEW" class="panel-collapse collapse in">
     <div class="panel panel-default">
-        <div class="panel-heading"><?php echo trans('083'); ?> <a href="#ADDREVIEW" data-toggle="collapse"
-                                                                  data-parent="#accordion"><span
-                        class="badge badge-default pull-right">x</span></a></div>
+        <button type="button" class="collapsebtn last go-text-right collapsed collapsed_C" data-toggle="collapse" data-target="#ADDREVIEW" aria-expanded="false">
+           <span class="purple"><?php echo trans('083'); ?></span>
+           <a href="#ADDREVIEW" data-toggle="collapse" data-parent="#accordion" class="Close__ADDREVIEW">x</a>
+        </button>
         <div class="panel-body">
             <span class="RTL">
                 <p>Chào bạn!</p>
@@ -46,8 +47,23 @@
                     <div class="block-review">
                         <p>Qua việc sử dụng dịch vụ tại khách sạn, Cảm nhận của bạn thế nào hãy cho chúng tôi biết thông
                             quan điểm đánh giá. Bằng chác đưa chuột vào khung màu tím và kéo ra</p>
+                        <div style="margin-top: 15px; margin-bottom: 15px;">
+                            <span class="andes">Điểm đánh giá : </span>
+                            <span>Tuyệt vời</span>
+                            <span class="purple andes">9+ </span>;
+                            <span>Rất tốt</span>
+                            <span class="purple andes">8 - 9 </span>;
+                            <span>Tốt</span>
+                            <span class="purple andes">6 - 9 </span>;
+                            <span>Tạm được</span>
+                            <span class="purple andes">5 - 6 </span>;
+                            <span>Kém</span>
+                            <span class="purple andes">3 - 5 </span>;
+                            <span>Rất kém</span>
+                            <span class="purple andes">1 - 3</span>
+                        </div>
                         <div class="form-horizontal row">
-                            <div class="col-sm-4 col-sm-push-4 col-xs-12">
+                            <div class="col-sm-4 col-xs-12">
                                 <div class="block-process-evaluate block-process-evaluate2">
                                     <div class="clearfix">
                                         <div class="circle-evaluate c100 p10">
@@ -67,7 +83,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-md-pull-4 col-xs-12">
+                            <div class="col-md-8 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label"><?php echo trans('030'); ?></label>
                                     <input id="reviews_clean" data-slider-id='reviews' type="text" name="reviews_clean"
@@ -89,8 +105,6 @@
                                            data-slider-step="1" data-slider-value="1"/>
                                     <!--<span class="txt txt2">7.9</span>-->
                                 </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label"><?php echo trans('033'); ?></label>
                                     <input id="reviews_facilities" type="text" name="reviews_facilities"
@@ -119,18 +133,6 @@
                         <div class="col-md-12">
                             <hr>
                             <p><strong><?php echo trans('0371'); ?></strong> : <?php echo trans('085'); ?></p>
-                            <div class="row" style="margin-top: 15px; margin-bottom: 15px;">
-                                <div class="col-sm-3">
-                                    <p>Tuyệt vời: <span class="purple">9+</span></p>
-                                    <p>Rất tốt:: <span class="purple">8 - 9</span></p>
-                                    <p>Tốt: <span class="purple">6 - 8</span></p>
-                                </div>
-                                <div class="col-sm-3">
-                                    <p>Tạm được: <span class="purple">5 - 6</span></p>
-                                    <p>Kém: <span class="purple">3 - 5</span></p>
-                                    <p>Rất tệ: <span class="purple">1 - 3</span></p>
-                                </div>
-                            </div>
                             <button type="button" class="btn btn-primary addreview" id="<?php echo $module->id; ?>"
                                     style="display: none; width: 300px; border-radius: 5px; font-weight: bold;"><?php echo trans('086'); ?></button>
                         </div>
