@@ -26,47 +26,216 @@
                             </div>
                             <div class="rgt">
                                 <div class="block-scores row">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-12">
+                                            <div class="hs_star-rating">
+                                                <p class="andes">Đáng giá tiền</p>
+                                                <div class="star-rating__wrap">
+                                                    <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-1" title="1 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-2" title="2 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-3" title="3 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-4" title="4 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-5" title="5 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="6">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-6" title="6 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="7">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-7" title="7 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="8">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-8" title="8 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="9">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-9" title="9 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="10">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-10" title="10 out of 10 stars"></label>
+                                                </div>
+                                                <div class="start-rating_wrap_comment">
+                                                    <span class="andes">8/10</span>
+                                                    <span class="andes">(Rất tốt)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-sm-12">
+                                            <div class="hs_star-rating">
+                                                <p class="andes">Đáng giá tiền</p>
+                                                <div class="star-rating__wrap">
+                                                    <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-1" title="1 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-2" title="2 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-3" title="3 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-4" title="4 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-5" title="5 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="6">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-6" title="6 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="7">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-7" title="7 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="8">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-8" title="8 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="9">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-9" title="9 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="10">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-10" title="10 out of 10 stars"></label>
+                                                </div>
+                                                <div class="start-rating_wrap_comment">
+                                                    <span class="andes">8/10</span>
+                                                    <span class="andes">(Rất tốt)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-12">
+                                            <div class="hs_star-rating">
+                                                <p class="andes">Đáng giá tiền</p>
+                                                <div class="star-rating__wrap">
+                                                    <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-1" title="1 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-2" title="2 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-3" title="3 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-4" title="4 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-5" title="5 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="6">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-6" title="6 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="7">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-7" title="7 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="8">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-8" title="8 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="9">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-9" title="9 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="10">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-10" title="10 out of 10 stars"></label>
+                                                </div>
+                                                <div class="start-rating_wrap_comment">
+                                                    <span class="andes">8/10</span>
+                                                    <span class="andes">(Rất tốt)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-sm-12">
+                                            <div class="hs_star-rating">
+                                                <p class="andes">Đáng giá tiền</p>
+                                                <div class="star-rating__wrap">
+                                                    <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-1" title="1 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-2" title="2 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-3" title="3 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-4" title="4 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-5" title="5 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="6">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-6" title="6 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="7">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-7" title="7 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="8">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-8" title="8 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="9">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-9" title="9 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="10">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-10" title="10 out of 10 stars"></label>
+                                                </div>
+                                                <div class="start-rating_wrap_comment">
+                                                    <span class="andes">8/10</span>
+                                                    <span class="andes">(Rất tốt)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-12">
+                                            <div class="hs_star-rating">
+                                                <p class="andes">Đáng giá tiền</p>
+                                                <div class="star-rating__wrap">
+                                                    <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-1" title="1 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-2" title="2 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-3" title="3 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-4" title="4 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-5" title="5 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="6">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-6" title="6 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="7">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-7" title="7 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="8">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-8" title="8 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="9">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-9" title="9 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="10">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-10" title="10 out of 10 stars"></label>
+                                                </div>
+                                                <div class="start-rating_wrap_comment">
+                                                    <span class="andes">8/10</span>
+                                                    <span class="andes">(Rất tốt)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-sm-12">
+                                            <div class="hs_star-rating">
+                                                <p class="andes">Đáng giá tiền</p>
+                                                <div class="star-rating__wrap">
+                                                    <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-1" title="1 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-2" title="2 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-3" title="3 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-4" title="4 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-5" title="5 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="6">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-6" title="6 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="7">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-7" title="7 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="8">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-8" title="8 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="9">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-9" title="9 out of 10 stars"></label>
+                                                    <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="10">
+                                                    <label class="star-rating__ico fa fa-square-o fa-lg" for="star-rating-10" title="10 out of 10 stars"></label>
+                                                </div>
+                                                <div class="start-rating_wrap_comment">
+                                                    <span class="andes">8/10</span>
+                                                    <span class="andes">(Rất tốt)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <?php $i = 0; foreach ($avgReviews->avgMark as $index => $mark) { ?>
                                         <?php if ($i == 0 || $i == 3) { ?>
-                                        <div class="col-sm-6 col-sm-12">
+                                        <!-- <div class="col-sm-6 col-sm-12"> -->
                                         <?php } ?>
-                                            <div class="block-progress">
-                                                <label class="text-left andes"><?php echo $avgOverall[$index][0]; ?>: <span class="purple"><?php echo $avgOverall[$index][1]; ?></span></label>
-                                                <div class="progress-inner">
-                                                    <div class="progress">
+                                            <!-- <div class="block-progress"> -->
+                                                <!-- <label class="text-left andes"><?php echo $avgOverall[$index][0]; ?>: <span class="purple"><?php echo $avgOverall[$index][1]; ?></span></label> -->
+                                                <!-- <div class="progress-inner"> -->
+                                                    <!-- <div class="progress">
                                                         <div class="progress-bar progress-bar-primary go-right" role="progressbar" aria-valuenow="<?php echo $mark; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo ($mark / $avgReviews->totalReviews) * 100; ?>%">
                                                             <span class="sr-only"></span>
                                                         </div>
-                                                    </div><!-- progress -->
-                                                    <div class="star-rating">
-                                                        <div class="star-rating__wrap">
-                                                            <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="10">
-                                                            <label class="star-rating__ico fa fa-square fa-lg" for="star-rating-10" title="10 out of 10 stars"></label>
-                                                            <input class="star-rating__input" id="star-rating-9" type="radio" name="rating" value="9">
-                                                            <label class="star-rating__ico fa fa-square fa-lg" for="star-rating-9" title="9 out of 9 stars"></label>
-                                                            <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="8">
-                                                            <label class="star-rating__ico fa fa-square fa-lg" for="star-rating-8" title="8 out of 8 stars"></label>
-                                                            <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="7">
-                                                            <label class="star-rating__ico fa fa-square fa-lg" for="star-rating-7" title="7 out of 7 stars"></label>
-                                                            <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="6">
-                                                            <label class="star-rating__ico fa fa-square fa-lg" for="star-rating-6" title="6 out of 6 stars"></label>
-                                                            <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
-                                                            <label class="star-rating__ico fa fa-square fa-lg" for="star-rating-5" title="5 out of 5 stars"></label>
-                                                            <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
-                                                            <label class="star-rating__ico fa fa-square fa-lg" for="star-rating-4" title="4 out of 5 stars"></label>
-                                                            <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
-                                                            <label class="star-rating__ico fa fa-square fa-lg" for="star-rating-3" title="3 out of 5 stars"></label>
-                                                            <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
-                                                            <label class="star-rating__ico fa fa-square fa-lg" for="star-rating-2" title="2 out of 5 stars"></label>
-                                                            <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
-                                                            <label class="star-rating__ico fa fa-square fa-lg" for="star-rating-1" title="1 out of 5 stars"></label>
-                                                        </div>
-                                                    </div>
-                                                    <span class="txt">(<?php echo $mark; ?> đánh giá)</span>
-                                                </div>
-                                            </div>
+                                                    </div> --><!-- progress -->
+                                                    <!-- <span class="txt">(<?php echo $mark; ?> đánh giá)</span> -->
+                                                <!-- </div> -->
+                                            <!-- </div> -->
                                         <?php if ($i == 2 || $i == 5) { ?>
-                                        </div><!-- col-sm-6 col-sm-12 -->
+                                        <!-- </div> -->
+                                        <!-- col-sm-6 col-sm-12 -->
                                         <?php } ?>
                                     <?php $i++; } ?>
                                 </div>
