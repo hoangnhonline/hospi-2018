@@ -44,14 +44,19 @@
                             <div class="clearfix"></div>
                             <span class="go-right RTL"><i style="margin-left:-5px" class="icon-location-6"></i><?php //echo $module->location; ?> <?php if(!empty($module->mapAddress)){ ?><small class="adddress"><?php echo $module->mapAddress;?></small></span> <?php } ?>
                             <span class="viewmap">(<a data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap"><?php echo trans('067');?></a>)</span>
+                            <?php 
+                            $tmp = array();
+                            if($module->diem_noi_bat){
+                                $tmp = explode(',', $module->diem_noi_bat);
+                            }
+                            ?>
+                            <?php if(!empty($tmp)){ ?>
                             <div class="clearfix hs_tick">
-                                <label>Đón tiễn sân bay</label>
-                                <label>Miễn phí 2 trẻ em dưới 12 tuổi</label>
-                                <label>Gần sân bay</label>
-                                <label>Trung tâm Đông Dương</label>
-                                <label>Thương hiệu Accor</label>
-                                <label>Miễn phí ăn sáng</label>
+                                <?php foreach($tmp as $diemnb){ ?>
+                                <label><?php echo $diemnb; ?></label>
+                                <?php } ?>
                             </div>
+                            <?php } ?>
                             <?php if($hasRooms || $appModule == "offers"){ ?>
                             <strong class="go-left"><span style="font-size:18px" class=" pull right go-text-right"><?php //echo trans('070');?> <?php //echo @$currencySign; ?><?php //echo @$lowestPrice; ?> </span></strong>
                             <?php } ?>
