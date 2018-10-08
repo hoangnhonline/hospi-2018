@@ -1,11 +1,6 @@
 <div class="panel panel-default" id="p_extra">
   <div class="panel-heading"  data-toggle="collapse" href="#collapse3">
-  <?php if(empty($priceExtraDetail)){ ?>
-  Thêm giá phụ thu
-  <?php }else{ ?>
-    Cập nhật giá phụ thu
-    <?php }
-    ?>
+  Giá phụ thu
   </div>
   <div class="panel-body panel-collapse collapse <?php if(!empty($priceExtraDetail)){ ?> in <?php } ?>" id="collapse3">
   <form action="" method="POST" >

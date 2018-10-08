@@ -1,11 +1,6 @@
 <div class="panel panel-default" id="p_km">
   <div class="panel-heading" data-toggle="collapse" href="#collapse2">
-  <?php if(empty($priceKmDetail)){ ?>
-  Thêm giá phòng khuyến mãi
-  <?php }else{ ?>
-    Cập nhật giá phòng khuyến mãi
-    <?php }
-    ?>
+  Giá khuyến mãi
   </div>
   <div class="panel-body panel-collapse collapse <?php if(!empty($priceKmDetail)){ ?> in <?php } ?>" id="collapse2">
   <form action="" method="POST" >

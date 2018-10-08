@@ -721,7 +721,7 @@ class hotelsback extends MX_Controller
                     if ($this->form_validation->run() == FALSE) {
                         $this->data['errormsg'] = '<div class="alert alert-danger">' . validation_errors() . '</div><br />';
                     } else {
-                        $roomid = $this->input->post('roomid');
+                        $roomid = $this->input->post('roomid');                        
                         $this->rooms_model->addRoomPrices($roomid);
                         redirect(base_url() . $this->data['adminsegment'] . '/hotels/rooms/prices/' . $roomid);
                     }
@@ -730,13 +730,16 @@ class hotelsback extends MX_Controller
                     redirect(base_url() . $this->data['adminsegment'] . '/hotels/rooms/prices/' . $editroom);
                 }
                 $price_id = isset($_GET['price_id']) ? (int)$_GET['price_id'] : 0;
-                $detailPrice = array();
+                $detailPrice = array();                            
                 if ($price_id > 0) {
-                    $detailPrice = $this->rooms_model->getDetailPrice($price_id);
+                    $detailPrice = $this->rooms_model->getDetailPrice($price_id);                    
+                    $loiNhuanArr = $detailPrice[0]->profit != '' ? json_decode($detailPrice[0]->profit, true) : array(0,0,0,0,0,0,0,0,0);                    
                 }
+                
                 $this->data['prices'] = $this->rooms_model->getRoomPrices($editroom);
                 $this->data['room'] = $this->rooms_model->getRoomData($editroom);
                 $this->data['detailPrice'] = $detailPrice;
+                $this->data['loiNhuanArr'] = $loiNhuanArr;
                 $this->data['roomid'] = $editroom;
                 $this->data['main_content'] = 'hotels/rooms/prices';
                 $this->data['page_title'] = 'Gía phòng';

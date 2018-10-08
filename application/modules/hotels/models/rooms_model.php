@@ -732,25 +732,35 @@ class Rooms_model extends CI_Model
 
     function addRoomPrices($roomid)
     {
+        
+        $loinhuanArr = $this->input->post('loi_nhuan');
+ 
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         $datefrom = databaseDate($this->input->post('fromdate'));
         $dateto = databaseDate($this->input->post('todate'));
-        $mon = floatval($this->replaceCommas($this->input->post('mon')));
-        $tue = floatval($this->replaceCommas($this->input->post('tue')));
-        $wed = floatval($this->replaceCommas($this->input->post('wed')));
-        $thu = floatval($this->replaceCommas($this->input->post('thu')));
-        $fri = floatval($this->replaceCommas($this->input->post('fri')));
-        $sat = floatval($this->replaceCommas($this->input->post('sat')));
-        $sun = floatval($this->replaceCommas($this->input->post('sun')));
+        $mon = floatval($this->replaceCommas($this->input->post('mon'))) + floatval($this->replaceCommas($loinhuanArr[2])) ;
+        $tue = floatval($this->replaceCommas($this->input->post('tue')))+ floatval($this->replaceCommas($loinhuanArr[3])) ;
+        $wed = floatval($this->replaceCommas($this->input->post('wed')))+ floatval($this->replaceCommas($loinhuanArr[4])) ;
+        $thu = floatval($this->replaceCommas($this->input->post('thu')))+ floatval($this->replaceCommas($loinhuanArr[5])) ;
+        $fri = floatval($this->replaceCommas($this->input->post('fri')))+ floatval($this->replaceCommas($loinhuanArr[6])) ;
+        $sat = floatval($this->replaceCommas($this->input->post('sat')))+ floatval($this->replaceCommas($loinhuanArr[7])) ;
+        $sun = floatval($this->replaceCommas($this->input->post('sun')))+ floatval($this->replaceCommas($loinhuanArr[8])) ;
         $type = $this->input->post('type');
         $hotel_id = $this->input->post('hotel_id');
         $bed_price = floatval($this->replaceCommas($this->input->post('bedcharges')));
+        $name_uudai = $this->input->post('name_uudai');
+        $detail_uudai = $this->input->post('detail_uudai');
+        $min_night = $this->input->post('min_night');
+        $loiNhuan = array(0,0,0,0,0,0,0,0,0);
+        foreach($loinhuanArr as $tmp){
+            $loiNhuan[] = str_replace(",", "", $tmp);
+        }
         $data = array(
             'room_id' => $roomid,
             'date_from' => $datefrom,
             'date_to' => $dateto,
             'type' => $type,
-            'type_apply' => $this->input->post('type_apply'),
+            'type_apply' => $loinhuanArr[0],
             'adults' => intval($this->input->post('adult')),
             'children' => intval($this->input->post('child')),
             'extra_bed_charge' => $bed_price,
@@ -761,12 +771,16 @@ class Rooms_model extends CI_Model
             'fri' => $fri,
             'sat' => $sat,
             'sun' => $sun,
+            'profit' => json_encode($loiNhuan),
+            'name_uudai' => $name_uudai,
+            'detail_uudai' => $detail_uudai,
+            'min_night' => $min_night,
             'created_user' => $this->session->userdata('pt_logged_admin'),
             'updated_user' => $this->session->userdata('pt_logged_admin'),
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         );
-
+      
 
         $this->db->insert('pt_rooms_prices', $data);
         //insert price detail
@@ -894,26 +908,33 @@ class Rooms_model extends CI_Model
 
     function updateRoomPrices()
     {
+        $loinhuanArr = $this->input->post('loi_nhuan');
+       
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         $datefrom = databaseDate($this->input->post('fromdate'));
         $dateto = databaseDate($this->input->post('todate'));
-
-        $mon = floatval($this->replaceCommas($this->input->post('mon')));
-        $tue = floatval($this->replaceCommas($this->input->post('tue')));
-        $wed = floatval($this->replaceCommas($this->input->post('wed')));
-        $thu = floatval($this->replaceCommas($this->input->post('thu')));
-        $fri = floatval($this->replaceCommas($this->input->post('fri')));
-        $sat = floatval($this->replaceCommas($this->input->post('sat')));
-        $sun = floatval($this->replaceCommas($this->input->post('sun')));
+        $mon = floatval($this->replaceCommas($this->input->post('mon'))) + floatval($this->replaceCommas($loinhuanArr[2])) ;
+        $tue = floatval($this->replaceCommas($this->input->post('tue')))+ floatval($this->replaceCommas($loinhuanArr[3])) ;
+        $wed = floatval($this->replaceCommas($this->input->post('wed')))+ floatval($this->replaceCommas($loinhuanArr[4])) ;
+        $thu = floatval($this->replaceCommas($this->input->post('thu')))+ floatval($this->replaceCommas($loinhuanArr[5])) ;
+        $fri = floatval($this->replaceCommas($this->input->post('fri')))+ floatval($this->replaceCommas($loinhuanArr[6])) ;
+        $sat = floatval($this->replaceCommas($this->input->post('sat')))+ floatval($this->replaceCommas($loinhuanArr[7])) ;
+        $sun = floatval($this->replaceCommas($this->input->post('sun')))+ floatval($this->replaceCommas($loinhuanArr[8])) ;
         $type = $this->input->post('type');
         $room_id = $this->input->post('roomid');
         $type_apply = $this->input->post('type_apply');
-        $bed_price = floatval($this->replaceCommas($this->input->post('bedcharges')));
+        $name_uudai = $this->input->post('name_uudai');
+        $detail_uudai = $this->input->post('detail_uudai');
+        $min_night = $this->input->post('min_night');
+        $bed_price = floatval($this->replaceCommas($this->input->post('bedcharges')));        
+        foreach($loinhuanArr as $tmp){
+            $loiNhuan[] = str_replace(",", "", $tmp);
+        }
         $data = array(
             'room_id' => $room_id,
             'date_from' => $datefrom,
             'type' => $this->input->post('type'),
-            'type_apply' => $type_apply,
+            'type_apply' => $loinhuanArr[0],
             'date_to' => $dateto,
             'adults' => intval($this->input->post('adult')),
             'children' => intval($this->input->post('child')),
@@ -925,9 +946,14 @@ class Rooms_model extends CI_Model
             'fri' => $fri,
             'sat' => $sat,
             'sun' => $sun,
+            'name_uudai' => $name_uudai,
+            'detail_uudai' => $detail_uudai,
+            'min_night' => $min_night,
+            'profit' => json_encode($loiNhuan),
             'updated_user' => $this->session->userdata('pt_logged_admin'),
             'updated_at' => date('Y-m-d H:i:s')
         );
+        
         $this->db->where('id', $this->input->post('price_id'));
         $this->db->update('pt_rooms_prices', $data);
         //update price detail

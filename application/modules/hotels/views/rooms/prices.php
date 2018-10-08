@@ -1,6 +1,6 @@
 <?php 
 $roomDetail = $room[0];
-$priceMainDetail = $priceKmDetail = $priceExtraDetail = [];
+$priceMainDetail = $priceKmDetail = $priceExtraDetail = $priceUudaiDetail = [];
 if(!empty($detailPrice)){
   $tmp = $detailPrice[0];
   if($tmp->type == 1){
@@ -9,6 +9,8 @@ if(!empty($detailPrice)){
     $priceKmDetail = $tmp;
   }elseif($tmp->type == 3){
     $priceExtraDetail = $tmp;
+  }elseif($tmp->type == 4){
+    $priceUudaiDetail = $tmp;
   }
 }
 //var_dump($roomDetail);die;
@@ -22,6 +24,8 @@ if(!empty($detailPrice)){
 <?php include 'application/modules/hotels/views/rooms/price-km.php'; ?>
 
 <?php include 'application/modules/hotels/views/rooms/price-extra.php'; ?>
+
+<?php include 'application/modules/hotels/views/rooms/price-uudai.php'; ?>
 
 <style>
   .col-md-1{
@@ -49,6 +53,9 @@ if(!empty($detailPrice)){
       border-color: #FFF;
       text-transform: uppercase;
   }
+  .panel-body{
+    padding-top: 0px !important;
+  }
 </style>
 <script type="text/javascript">
 $(function(){
@@ -65,7 +72,13 @@ $(function(){
     $('.copyPrice').click(function(){      
       obj = $(this);
       value = obj.parent().find('.price-copy').val();      
-      parent = obj.parents('form');
+      parent = obj.parents('.gia_main_div');
+      parent.find('.week').val(value);
+    });
+    $('.copyPriceProfit').click(function(){      
+      obj = $(this);
+      value = obj.parent().find('.price-copy-profit').val();      
+      parent = obj.parents('.loi_nhuan_div');
       parent.find('.week').val(value);
     });
   });
