@@ -764,9 +764,18 @@
                                 <?php if ($appModule != "offers") { ?> <a class="go-right" href="javascript:void(0);" onclick="showMap('<?php echo base_url(); ?>home/maps/<?php echo $item->latitude; ?>/<?php echo $item->longitude; ?>/<?php echo $appModule; ?>/<?php echo $item->id; ?>', 'modal');" title="<?php echo $item->location; ?>"><i style="margin-left: -3px;" class="icon-location-6 go-right"></i><?php echo character_limiter($item->location, 10); ?></a> <span class="go-right"><?php echo $item->stars; ?></span> <?php } ?>
                                 <br>
                                 <ul class="itemlabel-info">
-                                    <!--<li><a href="#" title="Combo"><span>Combo</span></a></li>
-                                    <li><a href="#" title="Deals - Giảm giá"><span>Deals - Giảm giá</span></a></li>
-                                    <li><a href="#" title="Gói honeymoon"><span>Gói honeymoon</span></a></li>-->
+                                    <?php if(is_have_deal($item->id, 2)) { ?>
+                                    <li class="hs_cb">Combo</li>
+                                    <?php } ?>
+                                    <?php if(is_have_deal($item->id)) { ?>
+                                    <li class="hs_deal">Deals - Giảm giá</li>
+                                    <?php } ?>
+                                    <?php if(is_have_deal($item->id, 3)) { ?>
+                                    <li class="hs_hnm">Gói honeymoon</li>
+                                    <?php } ?>
+                                    <?php if($item->salefrom) { ?>
+                                    <li class="hs_prt">Đang khuyến mãi</li>
+                                    <?php } ?>
                                     <?php if($item->salefrom) { ?>
                                     <li><span style="color:#660033">Đang khuyến mãi</span></li>
                                     <?php } ?>

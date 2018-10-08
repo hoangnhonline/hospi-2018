@@ -712,7 +712,12 @@
                                     Yêu thích
                                 </div>
                                 <?php } ?>
-                                <div class="short_info"></div>
+                                <div class="short_info">
+                                    <?php 
+                                    is_have_deal($item->id);
+                                    ?>
+
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -782,9 +787,15 @@
                                 <?php } ?>
                                 <p class="grey RTL des"><?php echo character_limiter($item->desc, 100); ?></p>
                                 <ul class="itemlabel-info">
+                                    <?php if(is_have_deal($item->id, 2)) { ?>
                                     <li class="hs_cb">Combo</li>
+                                    <?php } ?>
+                                    <?php if(is_have_deal($item->id)) { ?>
                                     <li class="hs_deal">Deals - Giảm giá</li>
+                                    <?php } ?>
+                                    <?php if(is_have_deal($item->id, 3)) { ?>
                                     <li class="hs_hnm">Gói honeymoon</li>
+                                    <?php } ?>
                                     <?php if($item->salefrom) { ?>
                                     <li class="hs_prt">Đang khuyến mãi</li>
                                     <?php } ?>

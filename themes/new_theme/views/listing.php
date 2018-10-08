@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="<?php echo $theme_url; ?>plugins/jslider/css/jslider.round.css" type="text/css">
 <div class="listing-search">
 
-
+ddddddd
 <?php if($appModule == "ean"){ ?>
 <!-- EAN search form -->
    <form  class="container" action="<?php echo $baseUrl;?>search" method="GET" role="search">

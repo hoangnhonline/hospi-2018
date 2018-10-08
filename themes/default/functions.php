@@ -301,5 +301,17 @@ if (!function_exists('recentlyViewed')) {
  }
 
 }
+//Get more hotels
+if (!function_exists('is_have_deal')) {
 
+ function is_have_deal($hotel_id, $type = 1){
+    $phptravelsObj = phpTravelsObj();
+    $offers_lib = $phptravelsObj->load->model('admin/special_offers_model');
+    $result = $offers_lib->list_specialOffers_front(null, null, null, $type, $hotel_id);
+    //echo ($result['rows']);die;
+    return $result['rows'] > 0 ? true : false;
+
+ }
+
+}
 
