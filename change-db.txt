@@ -4,3 +4,4 @@ ALTER TABLE `pt_rooms_prices` ADD `min_night` TINYINT NOT NULL DEFAULT '1' AFTER
 ALTER TABLE `pt_rooms_prices` ADD `name_uudai` VARCHAR(255) NULL DEFAULT NULL AFTER `min_night`, ADD `detail_uudai` VARCHAR(500) NULL DEFAULT NULL AFTER `name_uudai`;
 
 
+ALTER TABLE `pt_rooms_prices` ADD `profit_money` VARCHAR(500) NULL DEFAULT NULL AFTER `profit`;

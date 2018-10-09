@@ -3,8 +3,9 @@
   Giá khuyến mãi
   </div>
   <div class="panel-body panel-collapse collapse <?php if(!empty($priceKmDetail)){ ?> in <?php } ?>" id="collapse2">
-  <form action="" method="POST" >
+  <form action="" method="POST" class="gia_main_div" style="padding-bottom: 15px">
     <input type="hidden" name="hotel_id" value="<?php echo $roomDetail->hotel_id; ?>">
+    <div class="clearfix" style="margin-bottom: 15px"></div>
     <div class="col-md-2">
         <div class="form-group">
           <label class="required">Kiểu khuyến mãi</label>
@@ -17,13 +18,13 @@
     <div class="col-md-3">
       <div class="form-group">
         <label class="required">Từ ngày</label>
-        <input type="text" placeholder="" name="fromdate" class="form-control input-sm dpd1" value="<?php echo empty($priceKmDetail) ? set_value('fromdate') : date('d/m/Y', strtotime($priceKmDetail->date_from)); ?>"/>
+        <input  autocomplete="off" type="text" placeholder="" name="fromdate" class="form-control input-sm dpd1" value="<?php echo empty($priceKmDetail) ? set_value('fromdate') : date('d/m/Y', strtotime($priceKmDetail->date_from)); ?>"/>
       </div>
     </div>
     <div class="col-md-3">
       <div class="form-group">
         <label class="required">Đến ngày</label>
-        <input type="text" placeholder="" name="todate" class="form-control input-sm dpd2" value="<?php echo empty($priceKmDetail) ? set_value('todate')  : date('d/m/Y', strtotime($priceKmDetail->date_to)); ?>"/>
+        <input  autocomplete="off" type="text" placeholder="" name="todate" class="form-control input-sm dpd2" value="<?php echo empty($priceKmDetail) ? set_value('todate')  : date('d/m/Y', strtotime($priceKmDetail->date_to)); ?>"/>
       </div>
     </div>
     

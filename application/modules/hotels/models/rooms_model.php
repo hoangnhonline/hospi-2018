@@ -738,20 +738,46 @@ class Rooms_model extends CI_Model
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         $datefrom = databaseDate($this->input->post('fromdate'));
         $dateto = databaseDate($this->input->post('todate'));
-        $mon = floatval($this->replaceCommas($this->input->post('mon'))) + floatval($this->replaceCommas($loinhuanArr[2])) ;
-        $tue = floatval($this->replaceCommas($this->input->post('tue')))+ floatval($this->replaceCommas($loinhuanArr[3])) ;
-        $wed = floatval($this->replaceCommas($this->input->post('wed')))+ floatval($this->replaceCommas($loinhuanArr[4])) ;
-        $thu = floatval($this->replaceCommas($this->input->post('thu')))+ floatval($this->replaceCommas($loinhuanArr[5])) ;
-        $fri = floatval($this->replaceCommas($this->input->post('fri')))+ floatval($this->replaceCommas($loinhuanArr[6])) ;
-        $sat = floatval($this->replaceCommas($this->input->post('sat')))+ floatval($this->replaceCommas($loinhuanArr[7])) ;
-        $sun = floatval($this->replaceCommas($this->input->post('sun')))+ floatval($this->replaceCommas($loinhuanArr[8])) ;
+        if($loinhuanArr[0] == 1){ // %
+            $profitBed = $loinhuanArr[1]*floatval($this->replaceCommas($this->input->post('bedcharges')))/100;
+            $profitMon = $loinhuanArr[2]*floatval($this->replaceCommas($this->input->post('mon')))/100;
+            $profitTue = $loinhuanArr[3]*floatval($this->replaceCommas($this->input->post('tue')))/100;
+            $profitWed = $loinhuanArr[4]*floatval($this->replaceCommas($this->input->post('wed')))/100;
+            $profitThu = $loinhuanArr[5]*floatval($this->replaceCommas($this->input->post('thu')))/100;
+            $profitFri = $loinhuanArr[6]*floatval($this->replaceCommas($this->input->post('fri')))/100;
+            $profitSat = $loinhuanArr[7]*floatval($this->replaceCommas($this->input->post('sat')))/100;
+            $profitSun = $loinhuanArr[8]*floatval($this->replaceCommas($this->input->post('sun')))/100;
+        }else{
+            $profitBed = floatval($this->replaceCommas($loinhuanArr[1]));
+            $profitMon = floatval($this->replaceCommas($loinhuanArr[2]));
+            $profitTue = floatval($this->replaceCommas($loinhuanArr[3]));
+            $profitWed = floatval($this->replaceCommas($loinhuanArr[4]));
+            $profitThu = floatval($this->replaceCommas($loinhuanArr[5]));
+            $profitFri = floatval($this->replaceCommas($loinhuanArr[6]));
+            $profitSat = floatval($this->replaceCommas($loinhuanArr[7]));
+            $profitSun = floatval($this->replaceCommas($loinhuanArr[8]));            
+        }
+        $profitArrMoney[1] = $profitBed;
+        $profitArrMoney[2] = $profitMon;
+        $profitArrMoney[3] = $profitTue;
+        $profitArrMoney[4] = $profitWed;
+        $profitArrMoney[5] = $profitThu;
+        $profitArrMoney[6] = $profitFri;
+        $profitArrMoney[7] = $profitSat;
+        $profitArrMoney[8] = $profitSun;
+        $mon = floatval($this->replaceCommas($this->input->post('mon'))) + $profitMon ;
+        $tue = floatval($this->replaceCommas($this->input->post('tue'))) + $profitTue ;
+        $wed = floatval($this->replaceCommas($this->input->post('wed'))) + $profitWed ;
+        $thu = floatval($this->replaceCommas($this->input->post('thu'))) + $profitThu ;
+        $fri = floatval($this->replaceCommas($this->input->post('fri'))) + $profitFri ;
+        $sat = floatval($this->replaceCommas($this->input->post('sat'))) + $profitSat ;
+        $sun = floatval($this->replaceCommas($this->input->post('sun'))) + $profitSun ;
         $type = $this->input->post('type');
         $hotel_id = $this->input->post('hotel_id');
-        $bed_price = floatval($this->replaceCommas($this->input->post('bedcharges')));
+        $bed_price = floatval($this->replaceCommas($this->input->post('bedcharges'))) + $profitBed;
         $name_uudai = $this->input->post('name_uudai');
         $detail_uudai = $this->input->post('detail_uudai');
-        $min_night = $this->input->post('min_night');
-        $loiNhuan = array(0,0,0,0,0,0,0,0,0);
+        $min_night = $this->input->post('min_night');        
         foreach($loinhuanArr as $tmp){
             $loiNhuan[] = str_replace(",", "", $tmp);
         }
@@ -772,6 +798,7 @@ class Rooms_model extends CI_Model
             'sat' => $sat,
             'sun' => $sun,
             'profit' => json_encode($loiNhuan),
+            'profit_money' => json_encode($profitArrMoney),
             'name_uudai' => $name_uudai,
             'detail_uudai' => $detail_uudai,
             'min_night' => $min_night,
@@ -913,20 +940,47 @@ class Rooms_model extends CI_Model
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         $datefrom = databaseDate($this->input->post('fromdate'));
         $dateto = databaseDate($this->input->post('todate'));
-        $mon = floatval($this->replaceCommas($this->input->post('mon'))) + floatval($this->replaceCommas($loinhuanArr[2])) ;
-        $tue = floatval($this->replaceCommas($this->input->post('tue')))+ floatval($this->replaceCommas($loinhuanArr[3])) ;
-        $wed = floatval($this->replaceCommas($this->input->post('wed')))+ floatval($this->replaceCommas($loinhuanArr[4])) ;
-        $thu = floatval($this->replaceCommas($this->input->post('thu')))+ floatval($this->replaceCommas($loinhuanArr[5])) ;
-        $fri = floatval($this->replaceCommas($this->input->post('fri')))+ floatval($this->replaceCommas($loinhuanArr[6])) ;
-        $sat = floatval($this->replaceCommas($this->input->post('sat')))+ floatval($this->replaceCommas($loinhuanArr[7])) ;
-        $sun = floatval($this->replaceCommas($this->input->post('sun')))+ floatval($this->replaceCommas($loinhuanArr[8])) ;
+        if($loinhuanArr[0] == 1){ // %
+            $profitBed = $loinhuanArr[1]*floatval($this->replaceCommas($this->input->post('bedcharges')))/100;
+            $profitMon = $loinhuanArr[2]*floatval($this->replaceCommas($this->input->post('mon')))/100;
+            $profitTue = $loinhuanArr[3]*floatval($this->replaceCommas($this->input->post('tue')))/100;
+            $profitWed = $loinhuanArr[4]*floatval($this->replaceCommas($this->input->post('wed')))/100;
+            $profitThu = $loinhuanArr[5]*floatval($this->replaceCommas($this->input->post('thu')))/100;
+            $profitFri = $loinhuanArr[6]*floatval($this->replaceCommas($this->input->post('fri')))/100;
+            $profitSat = $loinhuanArr[7]*floatval($this->replaceCommas($this->input->post('sat')))/100;
+            $profitSun = $loinhuanArr[8]*floatval($this->replaceCommas($this->input->post('sun')))/100;
+        }else{
+            $profitBed = floatval($this->replaceCommas($loinhuanArr[1]));
+            $profitMon = floatval($this->replaceCommas($loinhuanArr[2]));
+            $profitTue = floatval($this->replaceCommas($loinhuanArr[3]));
+            $profitWed = floatval($this->replaceCommas($loinhuanArr[4]));
+            $profitThu = floatval($this->replaceCommas($loinhuanArr[5]));
+            $profitFri = floatval($this->replaceCommas($loinhuanArr[6]));
+            $profitSat = floatval($this->replaceCommas($loinhuanArr[7]));
+            $profitSun = floatval($this->replaceCommas($loinhuanArr[8]));            
+        }
+        $profitArrMoney[1] = $profitBed;
+        $profitArrMoney[2] = $profitMon;
+        $profitArrMoney[3] = $profitTue;
+        $profitArrMoney[4] = $profitWed;
+        $profitArrMoney[5] = $profitThu;
+        $profitArrMoney[6] = $profitFri;
+        $profitArrMoney[7] = $profitSat;
+        $profitArrMoney[8] = $profitSun;
+        $mon = floatval($this->replaceCommas($this->input->post('mon'))) + $profitMon ;
+        $tue = floatval($this->replaceCommas($this->input->post('tue'))) + $profitTue ;
+        $wed = floatval($this->replaceCommas($this->input->post('wed'))) + $profitWed ;
+        $thu = floatval($this->replaceCommas($this->input->post('thu'))) + $profitThu ;
+        $fri = floatval($this->replaceCommas($this->input->post('fri'))) + $profitFri ;
+        $sat = floatval($this->replaceCommas($this->input->post('sat'))) + $profitSat ;
+        $sun = floatval($this->replaceCommas($this->input->post('sun'))) + $profitSun ;
         $type = $this->input->post('type');
         $room_id = $this->input->post('roomid');
         $type_apply = $this->input->post('type_apply');
         $name_uudai = $this->input->post('name_uudai');
         $detail_uudai = $this->input->post('detail_uudai');
         $min_night = $this->input->post('min_night');
-        $bed_price = floatval($this->replaceCommas($this->input->post('bedcharges')));        
+        $bed_price = floatval($this->replaceCommas($this->input->post('bedcharges'))) + $profitBed;        
         foreach($loinhuanArr as $tmp){
             $loiNhuan[] = str_replace(",", "", $tmp);
         }
@@ -950,9 +1004,10 @@ class Rooms_model extends CI_Model
             'detail_uudai' => $detail_uudai,
             'min_night' => $min_night,
             'profit' => json_encode($loiNhuan),
+            'profit_money' => json_encode($profitArrMoney),
             'updated_user' => $this->session->userdata('pt_logged_admin'),
             'updated_at' => date('Y-m-d H:i:s')
-        );
+        );       
         
         $this->db->where('id', $this->input->post('price_id'));
         $this->db->update('pt_rooms_prices', $data);

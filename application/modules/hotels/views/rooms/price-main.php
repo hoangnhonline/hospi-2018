@@ -9,13 +9,13 @@
     <div class="col-md-3">
       <div class="form-group">
         <label class="required">Từ ngày</label>
-        <input type="text" placeholder="" name="fromdate" class="form-control input-sm dpd1" value="<?php echo empty($priceMainDetail) ? set_value('fromdate') : date('d/m/Y', strtotime($priceMainDetail->date_from)); ?>"/>
+        <input  autocomplete="off"  type="text" placeholder="" name="fromdate" class="form-control input-sm dpd1" value="<?php echo empty($priceMainDetail) ? set_value('fromdate') : date('d/m/Y', strtotime($priceMainDetail->date_from)); ?>"/>
       </div>
     </div>
     <div class="col-md-3">
       <div class="form-group">
         <label class="required">Đến ngày</label>
-        <input type="text" placeholder="" name="todate" class="form-control input-sm dpd2" value="<?php echo empty($priceMainDetail) ? set_value('todate')  : date('d/m/Y', strtotime($priceMainDetail->date_to)); ?>"/>
+        <input  autocomplete="off" type="text" placeholder="" name="todate" class="form-control input-sm dpd2" value="<?php echo empty($priceMainDetail) ? set_value('todate')  : date('d/m/Y', strtotime($priceMainDetail->date_to)); ?>"/>
       </div>
     </div>
     
@@ -34,7 +34,7 @@
       <div class="col-md-3">
         <div class="form-group">
           <label class="required">Phí giường phụ</label>
-          <input  placeholder="" name="bedcharges" <?php if($roomDetail->extra_bed == 0) echo "readonly=readonly"; ?> class="form-control input-sm number" value="<?php echo empty($priceMainDetail) ? $roomDetail->extra_bed_charges : $priceMainDetail->extra_bed_charge - $loiNhuanArr[1];?>" <?php if($roomDetail->extra_bed < 1){ echo "readonly"; } ?> />
+          <input  placeholder="" name="bedcharges" <?php if($roomDetail->extra_bed == 0) echo "readonly=readonly"; ?> class="form-control input-sm number" value="<?php echo empty($priceMainDetail) ? $roomDetail->extra_bed_charges : $priceMainDetail->extra_bed_charge - $loiNhuanMoneyArr[1];?>" <?php if($roomDetail->extra_bed < 1){ echo "readonly"; } ?> />
         </div>
       </div>      
       
@@ -44,7 +44,7 @@
         <label class="required">Thứ 2</label>
       <div class="input-group" >
       
-      <input name="mon" id="new_mon" class="form-control input input-day-mon  input-sm number price-copy" placeholder="" style="width:120px;" value="<?php echo @($priceMainDetail->mon- $loiNhuanArr[2]); ?>" ><span class="input-group-addon pointer copyPrice"><i class="fa fa-angle-double-right"></i></span>
+      <input name="mon" id="new_mon" class="form-control input input-day-mon  input-sm number price-copy" placeholder="" style="width:120px;" value="<?php echo @($priceMainDetail->mon- $loiNhuanMoneyArr[2]); ?>" ><span class="input-group-addon pointer copyPrice"><i class="fa fa-angle-double-right"></i></span>
 
       </div>
 
@@ -53,37 +53,37 @@
       <div class="col-md-1">
         <div class="form-group">
           <label class="required">Thứ 3</label>
-          <input id="new_tue" name="tue" value="<?php echo @($priceMainDetail->tue - $loiNhuanArr[3]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
+          <input id="new_tue" name="tue" value="<?php echo @($priceMainDetail->tue - $loiNhuanMoneyArr[3]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
         </div>
       </div>
       <div class="col-md-1">
         <div class="form-group">
           <label class="required">Thứ 4</label>
-          <input id="new_wed" name="wed" value="<?php echo @($priceMainDetail->wed - $loiNhuanArr[4]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
+          <input id="new_wed" name="wed" value="<?php echo @($priceMainDetail->wed - $loiNhuanMoneyArr[4]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
         </div>
       </div>
       <div class="col-md-1">
         <div class="form-group">
           <label class="required">Thứ 5</label>
-          <input id="new_thu" name="thu" value="<?php echo @($priceMainDetail->thu - $loiNhuanArr[5]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
+          <input id="new_thu" name="thu" value="<?php echo @($priceMainDetail->thu - $loiNhuanMoneyArr[5]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
         </div>
       </div>
       <div class="col-md-1">
         <div class="form-group">
           <label class="required">Thứ 6</label>
-          <input id="new_fri" name="fri" value="<?php echo @($priceMainDetail->fri - $loiNhuanArr[6]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
+          <input id="new_fri" name="fri" value="<?php echo @($priceMainDetail->fri - $loiNhuanMoneyArr[6]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
         </div>
       </div>
       <div class="col-md-1">
         <div class="form-group">
           <label class="required">Thứ 7</label>
-          <input id="new_sat" name="sat" value="<?php echo @($priceMainDetail->sat - $loiNhuanArr[7]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
+          <input id="new_sat" name="sat" value="<?php echo @($priceMainDetail->sat - $loiNhuanMoneyArr[7]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
         </div>
       </div>
       <div class="col-md-1">
         <div class="form-group">
           <label class="required">Chủ nhật</label>
-          <input id="new_sun" name="sun" value="<?php echo @($priceMainDetail->sun - $loiNhuanArr[8]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
+          <input id="new_sun" name="sun" value="<?php echo @($priceMainDetail->sun - $loiNhuanMoneyArr[8]); ?>" placeholder="" class="form-control input input-day input-sm number week"/>
         </div>
       </div>
       <div class="clearfix"></div>
@@ -185,8 +185,7 @@
           <th class="text-right">Thứ 5</th>
           <th class="text-right">Thứ 6</th>
           <th class="text-right">Thứ 7</th>
-          <th class="text-right">Chủ nhật</th>
-          <th class="text-right">Cập nhật</th>    
+          <th class="text-right">Chủ nhật</th>           
           <th ></th>
         </tr>
       </thead>
@@ -194,9 +193,23 @@
       <?php foreach($prices as $p): 
       if($p->type == 1):
         $loiNhuan = json_decode($p->profit, true);
+        $loiNhuanMoney = json_decode($p->profit_money, true);
         if(empty($loiNhuan)){
           $loiNhuan = array(0,0,0,0,0,0,0,0,0);
         }
+        if(empty($loiNhuanMoney)){
+          $loiNhuanMoney = array(
+            '1' => 0,
+            '2' => 0,
+            '3' => 0,
+            '4' => 0,
+            '5' => 0,
+            '6' => 0,
+            '7' => 0,
+            '8' => 0,
+          );
+        }
+        
       	?>
         <tr id="tr_<?php echo $p->id;?>">
           <td style="white-space:nowrap"><span style="color: #660033;font-weight: bold"><?php echo date('d/m/Y', strtotime($p->date_from)); ?> - <?php echo date('d/m/Y', strtotime($p->date_to)); ?></span><br>
@@ -205,42 +218,43 @@
             
 
           </td>          
-          <td class="text-right"><?php echo number_format($p->extra_bed_charge  - $loiNhuan[1]);?><br>
-            <?php echo number_format($loiNhuan[1]); ?><br>
+          <td class="text-right"><?php echo number_format($p->extra_bed_charge  - $loiNhuanMoney[1]);?><br>
+            <?php echo number_format($loiNhuan[1]); ?><?php if($loiNhuan[0]==1) echo " %"; ?><br>
             <strong><?php echo number_format($p->extra_bed_charge); ?></strong>
           </td>
          
-          <td style="width:120px;" class="text-right"><?php echo number_format($p->mon - $loiNhuan[2]);?><br>
-            <?php echo number_format($loiNhuan[2]); ?><br>
+          <td style="width:120px;" class="text-right">            
+            <?php echo number_format($p->mon - $loiNhuanMoney[2]);?><br>
+            <?php echo number_format($loiNhuan[2]); ?><?php if($loiNhuan[0]==1) echo " %"; ?><br>
             <strong><?php echo number_format($p->mon); ?></strong>
             </td>
-          <td style="width:120px;" class="text-right"><?php echo number_format($p->tue - $loiNhuan[3]);?><br>
-            <?php echo number_format($loiNhuan[3]); ?><br>
+          <td style="width:120px;" class="text-right"><?php echo number_format($p->tue - $loiNhuanMoney[3]);?><br>
+            <?php echo number_format($loiNhuan[3]); ?><?php if($loiNhuan[0]==1) echo " %"; ?><br>
             <strong><?php echo number_format($p->tue); ?></strong>
             </td>
-          <td style="width:120px;" class="text-right"><?php echo number_format($p->wed - $loiNhuan[4]);?><br>
-            <?php echo number_format($loiNhuan[4]); ?><br>
+          <td style="width:120px;" class="text-right"><?php echo number_format($p->wed - $loiNhuanMoney[4]);?><br>
+            <?php echo number_format($loiNhuan[4]); ?><?php if($loiNhuan[0]==1) echo " %"; ?><br>
             <strong><?php echo number_format($p->wed); ?></strong>
             </td>
-          <td style="width:120px;" class="text-right"><?php echo number_format($p->thu - $loiNhuan[5]);?><br>
-            <?php echo number_format($loiNhuan[5]); ?><br>
+          <td style="width:120px;" class="text-right"><?php echo number_format($p->thu - $loiNhuanMoney[5]);?><br>
+            <?php echo number_format($loiNhuan[5]); ?><?php if($loiNhuan[0]==1) echo " %"; ?><br>
             <strong><?php echo number_format($p->thu); ?></strong>
             </td>
-          <td style="width:120px;" class="text-right"><?php echo number_format($p->fri - $loiNhuan[6]);?><br>
-            <?php echo number_format($loiNhuan[6]); ?><br>
+          <td style="width:120px;" class="text-right"><?php echo number_format($p->fri - $loiNhuanMoney[6]);?><br>
+            <?php echo number_format($loiNhuan[6]); ?><?php if($loiNhuan[0]==1) echo " %"; ?><br>
             <strong><?php echo number_format($p->fri); ?></strong>
             </td>
-          <td style="width:120px;" class="text-right"><?php echo number_format($p->sat - $loiNhuan[7]);?><br>
-            <?php echo number_format($loiNhuan[7]); ?><br>
+          <td style="width:120px;" class="text-right"><?php echo number_format($p->sat - $loiNhuanMoney[7]);?><br>
+            <?php echo number_format($loiNhuan[7]); ?><?php if($loiNhuan[0]==1) echo " %"; ?><br>
             <strong><?php echo number_format($p->sat); ?></strong>
             </td>
-          <td style="width:120px;" class="text-right"><?php echo number_format($p->sun - $loiNhuan[8]);?><br>
-            <?php echo number_format($loiNhuan[8]); ?><br>
+          <td style="width:120px;" class="text-right"><?php echo number_format($p->sun - $loiNhuanMoney[8]);?><br>
+            <?php echo number_format($loiNhuan[8]); ?><?php if($loiNhuan[0]==1) echo " %"; ?><br>
             <strong><?php echo number_format($p->sun); ?></strong>
-            </td>
-          <td style="white-space:nowrap"><?php echo date('d/m/Y H:i', strtotime($p->updated_at)); ?><br>
-          <?php echo $p->ai_first_name. " ". $p->ai_last_name; ?></td>  
-          <td style="white-space:nowrap">
+            </td>          
+          <td style="white-space:nowrap;text-align: center;">
+            <?php echo date('d/m/Y H:i', strtotime($p->updated_at)); ?><br>
+          <?php echo $p->ai_first_name. " ". $p->ai_last_name; ?><br>
           <a href="<?php echo base_url() . 'admin/hotels/rooms/prices/'.$roomDetail->room_id; ?>?price_id=<?php echo $p->id; ?>#p_main" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
           <span class="btn btn-sm btn-danger delete" id="<?php echo $p->id;?>"><i class="fa fa-trash-o fa-lg"></i></span>
           </td>

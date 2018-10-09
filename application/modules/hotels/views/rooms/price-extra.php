@@ -3,7 +3,7 @@
   Giá phụ thu
   </div>
   <div class="panel-body panel-collapse collapse <?php if(!empty($priceExtraDetail)){ ?> in <?php } ?>" id="collapse3">
-  <form action="" method="POST" >
+  <form action="" method="POST" class="gia_main_div" >
     <input type="hidden" name="hotel_id" value="<?php echo $roomDetail->hotel_id; ?>">
     <div class="col-md-2">
         <div class="form-group">
@@ -17,13 +17,13 @@
     <div class="col-md-3">
       <div class="form-group">
         <label class="required">Từ ngày</label>
-        <input type="text" placeholder="" name="fromdate" class="form-control input-sm dpd1" value="<?php echo empty($priceExtraDetail) ? set_value('fromdate') : date('d/m/Y', strtotime($priceExtraDetail->date_from)); ?>"/>
+        <input  autocomplete="off" type="text" placeholder="" name="fromdate" class="form-control input-sm dpd1" value="<?php echo empty($priceExtraDetail) ? set_value('fromdate') : date('d/m/Y', strtotime($priceExtraDetail->date_from)); ?>"/>
       </div>
     </div>
     <div class="col-md-3">
       <div class="form-group">
         <label class="required">Đến ngày</label>
-        <input type="text" placeholder="" name="todate" class="form-control input-sm dpd2" value="<?php echo empty($priceExtraDetail) ? set_value('todate')  : date('d/m/Y', strtotime($priceExtraDetail->date_to)); ?>"/>
+        <input  autocomplete="off" type="text" placeholder="" name="todate" class="form-control input-sm dpd2" value="<?php echo empty($priceExtraDetail) ? set_value('todate')  : date('d/m/Y', strtotime($priceExtraDetail->date_to)); ?>"/>
       </div>
     </div>
     
