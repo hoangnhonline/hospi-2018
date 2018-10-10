@@ -1,6 +1,8 @@
-<div class="panel panel-default" id="p_uudai">
-    <div class="panel-heading" data-toggle="collapse" href="#collapse4">
-        ưu đãi khác
+<div class="panel panel-default" id="p_uudai">    
+    <div class="panel-heading" role="tab">     
+        <a role="button" data-toggle="collapse" href="#collapse4">
+          GIá phòng
+        </a>     
     </div>
     <div class="panel-body panel-collapse collapse <?php if(!empty($priceUudaiDetail)){ ?> in <?php } ?>" id="collapse4">
         <form action="" method="POST">

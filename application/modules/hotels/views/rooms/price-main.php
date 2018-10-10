@@ -1,7 +1,9 @@
-<div class="panel panel-default" id="p-main">
-  <div class="panel-heading" data-toggle="collapse" href="#collapse1">
-  GIá phòng
-  </div>  
+<div class="panel panel-default" id="p-main">    
+  <div class="panel-heading" role="tab">     
+      <a role="button" data-toggle="collapse" href="#collapse1">
+        GIá phòng
+      </a>     
+  </div>
   <div class="panel-body panel-collapse <?php if(empty($priceExtraDetail) && empty($priceKmDetail)){ ?> in <?php }else{ echo "collapse"; } ?>" id="collapse1">
   <form action="" method="POST" >  
     <h4 style="color: #660033;padding-bottom: 10px;margin-bottom: 10px;border-bottom: 1px solid #660033">THÊM GIÁ NET</h4>

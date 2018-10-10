@@ -28,6 +28,9 @@ if(!empty($detailPrice)){
 <?php include 'application/modules/hotels/views/rooms/price-uudai.php'; ?>
 
 <style>
+ .panel-body h4{
+    font-size: 14px;
+  }
   .col-md-1{
     width: 122px !important;
   }
@@ -56,9 +59,52 @@ if(!empty($detailPrice)){
   .panel-body{
     padding-top: 0px !important;
   }
+  .panel-heading  a{
+    color: #FFF !important;
+    text-decoration: none;
+  }
+  .panel-heading  a:before {
+     font-family: 'Glyphicons Halflings';
+     content: "\e114";
+     float: right;
+     transition: all 0.5s;
+  }
+  .panel-heading.active a:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+  } 
 </style>
 <script type="text/javascript">
 $(function(){
+   var nowTemp = new Date();
+      var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+  var checkin = $('.dpd1').datepicker({
+          format: fmt,
+          language: 'vi',
+          onRender: function(date) {
+              return date.valueOf() < now.valueOf() ? 'disabled' : '';
+          }
+      }).on('changeDate', function(ev) {          
+          checkin.hide();
+          //checkin.parents('form').find('.dpd2').focus();          
+      }).data('datepicker');
+      var checkout = $('.dpd2').datepicker({
+          format: fmt,
+          onRender: function(date) {
+              return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+          }
+      }).on('changeDate', function(ev) {
+          checkout.hide();          
+
+      }).data('datepicker');
+   $('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
+
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
   $(".delete").click(function(){
       var id =  $(this).attr('id');
       $.alert.open('confirm', 'Bạn chắc chắn muốn xóa?', function(answer) {
@@ -81,6 +127,13 @@ $(function(){
       parent = obj.parents('.loi_nhuan_div');
       parent.find('.week').val(value);
     });
+  });
+ $('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
+
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
   });
 
 </script>
