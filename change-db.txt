@@ -5,3 +5,6 @@ ALTER TABLE `pt_rooms_prices` ADD `name_uudai` VARCHAR(255) NULL DEFAULT NULL AF
 
 
 ALTER TABLE `pt_rooms_prices` ADD `profit_money` VARCHAR(500) NULL DEFAULT NULL AFTER `profit`;
+
+ALTER TABLE `pt_room_prices_detail` ADD `price_uudai` INT NULL DEFAULT '0' AFTER `bed_total`;
+ALTER TABLE `pt_room_prices_detail` ADD `bed_uudai` INT NULL DEFAULT '0' AFTER `price_uudai`;

@@ -819,6 +819,7 @@ class Rooms_model extends CI_Model
 
     public function insertPriceDetail($hotel_id, $room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price)
     {
+        
         $arrDate = $this->createDateRangeArray($datefrom, $dateto);
         foreach ($arrDate as $date) {
             $thuOfDate = strtolower(date('D', strtotime($date)));
@@ -856,7 +857,8 @@ class Rooms_model extends CI_Model
             } elseif ($type == 3) {
                 $arrUpdate['extra'] = $price;
             } elseif ($type == 4) {
-                $arrUpdate['uudai'] = $price;
+                $arrUpdate['price_uudai'] = $price;
+                $arrUpdate['bed_uudai'] = $bed_price;
             }
             //check exist
             $check = $this->db->where('room_id', $room_id)->where('date_use', $date)->get('pt_room_prices_detail')->result();
@@ -885,6 +887,7 @@ class Rooms_model extends CI_Model
                     $arrUpdate['total'] = $price_current - $sale + $check[0]->extra;
                     $arrUpdate['bed_total'] = $bed_current - $bed_sale + $check[0]->bed_extra;
                 } elseif ($type == 3) { // gia phu thu
+                    var_dump($bed_price);die;
                     $price_total = $check[0]->total;
                     $price_current = $check[0]->price;
                     $bed_current = $check[0]->bed_price;
@@ -894,7 +897,7 @@ class Rooms_model extends CI_Model
                         $bed_extra = $bed_current * $bed_price / 100;
                     } else {
                         $extra = $price;
-                        $bed_extra = $bed_extra;
+                        $bed_extra = $bed_price;
                     }
                     $arrUpdate['extra'] = $extra;
                     $arrUpdate['bed_extra'] = $bed_extra;
@@ -1058,6 +1061,9 @@ class Rooms_model extends CI_Model
                 $arrUpdate['sale'] = $price;
             } elseif ($type == 3) {
                 $arrUpdate['extra'] = $price;
+            }elseif($type == 4){
+                $arrUpdate['price_uudai'] = $price;
+                $arrUpdate['bed_uudai'] = $bed_price;
             }
             //check exist
             $check = $this->db->where('room_id', $room_id)->where('date_use', $date)->get('pt_room_prices_detail')->result();
@@ -1093,7 +1099,7 @@ class Rooms_model extends CI_Model
                         $bed_extra = $bed_current * $bed_price / 100;
                     } else { // thanh tien
                         $extra = $price;
-                        $bed_extra = $bed_extra;
+                        $bed_extra = $bed_price;
                     }
                     $arrUpdate['extra'] = $extra;
                     $arrUpdate['bed_extra'] = $bed_extra;
