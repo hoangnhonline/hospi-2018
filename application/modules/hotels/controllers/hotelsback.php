@@ -714,8 +714,10 @@ class hotelsback extends MX_Controller
             } elseif ($args == "prices" && !empty($editroom)) {
                 $this->data['delurl'] = base_url() . 'admin/hotelajaxcalls/deleteRoomPrice';
                 $action = $this->input->post('action');
+              
+                $tab_active = $this->input->get('tab') ? $this->input->get('tab') : "main";
                 $this->data['errormsg'] = '';
-                if ($action == "add") {
+                if ($action == "add") { //them-gia-phong
                     $this->form_validation->set_rules('fromdate', 'From Date', 'trim|required');
                     $this->form_validation->set_rules('todate', 'To Date', 'trim|required');
                     if ($this->form_validation->run() == FALSE) {
@@ -723,11 +725,33 @@ class hotelsback extends MX_Controller
                     } else {
                         $roomid = $this->input->post('roomid');                        
                         $this->rooms_model->addRoomPrices($roomid);
-                        redirect(base_url() . $this->data['adminsegment'] . '/hotels/rooms/prices/' . $roomid);
+                        $typePost = $this->input->post('type');
+                        if($typePost == 1){
+                            $addUrl = "?tab=main#p_main";
+                        }elseif($typePost == 2){
+                            $addUrl = "?tab=km#p_km";
+                        }elseif($typePost == 3){
+                            $addUrl = "?tab=phuthu#p_extra";
+                        }elseif($typePost == 4){
+                            $addUrl = "?tab=uudai#p_uudai";
+                        }
+                        
+                        redirect(base_url() . $this->data['adminsegment'] . '/hotels/rooms/prices/' . $roomid.$addUrl);
                     }
-                } elseif ($action == "update") {
+                } elseif ($action == "update") { //cap-nhat-gia-phong
                     $this->rooms_model->updateRoomPrices();
-                    redirect(base_url() . $this->data['adminsegment'] . '/hotels/rooms/prices/' . $editroom);
+                    $typePost = $this->input->post('type');
+                    if($typePost == 1){
+                        $addUrl = "?tab=main#p_main";
+                    }elseif($typePost == 2){
+                        $addUrl = "?tab=km#p_km";
+                    }elseif($typePost == 3){
+                        $addUrl = "?tab=phuthu#p_extra";
+                    }elseif($typePost == 4){
+                        $addUrl = "?tab=uudai#p_uudai";
+                    }
+        
+                    redirect(base_url() . $this->data['adminsegment'] . '/hotels/rooms/prices/' . $editroom.$addUrl);
                 }
                 $price_id = isset($_GET['price_id']) ? (int)$_GET['price_id'] : 0;
                 $detailPrice = array();                            
@@ -745,6 +769,7 @@ class hotelsback extends MX_Controller
                 $this->data['roomid'] = $editroom;
                 $this->data['main_content'] = 'hotels/rooms/prices';
                 $this->data['page_title'] = 'Gía phòng';
+                $this->data['tab_active'] = $tab_active;
                 $this->load->view('admin/template', $this->data);
             } else {
                 $params = [];

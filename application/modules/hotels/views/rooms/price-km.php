@@ -4,7 +4,7 @@
          Giá khuyến mãi
       </a>     
   </div>
-  <div class="panel-body panel-collapse collapse <?php if(!empty($priceKmDetail)){ ?> in <?php } ?>" id="collapse2">
+  <div class="panel-body panel-collapse collapse <?php if($tab_active == 'km'){ ?> in <?php } ?>" id="collapse2">
   <form action="" method="POST" class="gia_main_div" style="padding-bottom: 15px">
     <input type="hidden" name="hotel_id" value="<?php echo $roomDetail->hotel_id; ?>">
     <div class="clearfix" style="margin-bottom: 15px"></div>
@@ -20,13 +20,13 @@
     <div class="col-md-3">
       <div class="form-group">
         <label class="required">Từ ngày</label>
-        <input  autocomplete="off" type="text" placeholder="" name="fromdate" class="form-control input-sm dpd1" value="<?php echo empty($priceKmDetail) ? set_value('fromdate') : date('d/m/Y', strtotime($priceKmDetail->date_from)); ?>"/>
+        <input id="fromdate2" autocomplete="off" type="text" placeholder="" name="fromdate" class="form-control input-sm" value="<?php echo empty($priceKmDetail) ? set_value('fromdate') : date('d/m/Y', strtotime($priceKmDetail->date_from)); ?>"/>
       </div>
     </div>
     <div class="col-md-3">
       <div class="form-group">
         <label class="required">Đến ngày</label>
-        <input  autocomplete="off" type="text" placeholder="" name="todate" class="form-control input-sm dpd2" value="<?php echo empty($priceKmDetail) ? set_value('todate')  : date('d/m/Y', strtotime($priceKmDetail->date_to)); ?>"/>
+        <input id="todate2"  autocomplete="off" type="text" placeholder="" name="todate" class="form-control input-sm" value="<?php echo empty($priceKmDetail) ? set_value('todate')  : date('d/m/Y', strtotime($priceKmDetail->date_to)); ?>"/>
       </div>
     </div>
     
@@ -152,7 +152,7 @@
           <td style="white-space:nowrap;text-align: center;">
             <?php echo date('d/m/Y H:i', strtotime($p->updated_at)); ?><br>
           <?php echo $p->ai_first_name. " ". $p->ai_last_name; ?><br>
-          <a href="<?php echo base_url() . 'admin/hotels/rooms/prices/'.$roomDetail->room_id; ?>?price_id=<?php echo $p->id; ?>#p_km" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
+          <a href="<?php echo base_url() . 'admin/hotels/rooms/prices/'.$roomDetail->room_id; ?>?price_id=<?php echo $p->id; ?>&tab=km#p_km" class="btn btn-warning btn-sm" ><i class="fa fa-edit"></i></a>
           <span class="btn btn-sm btn-danger delete" id="<?php echo $p->id;?>"><i class="fa fa-trash-o fa-lg"></i></span>
           </td>
         </tr>

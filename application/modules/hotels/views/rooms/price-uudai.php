@@ -1,23 +1,23 @@
 <div class="panel panel-default" id="p_uudai">    
     <div class="panel-heading" role="tab">     
         <a role="button" data-toggle="collapse" href="#collapse4">
-          GIá phòng
+          Ưu đãi khác
         </a>     
     </div>
-    <div class="panel-body panel-collapse collapse <?php if(!empty($priceUudaiDetail)){ ?> in <?php } ?>" id="collapse4">
+    <div class="panel-body panel-collapse collapse <?php if($tab_active == 'uudai'){ ?> in <?php } ?>" id="collapse4">
         <form action="" method="POST">
             <h4 style="color: #660033;padding-bottom: 10px;margin-bottom: 10px;border-bottom: 1px solid #660033">THÊM GIÁ NET</h4>
             <input type="hidden" name="hotel_id" value="<?php echo $roomDetail->hotel_id; ?>">
             <div class="col-md-2">
                 <div class="form-group">
                     <label class="required">Từ ngày</label>
-                    <input type="text" placeholder="" name="fromdate" class="form-control input-sm dpd1" value="<?php echo empty($priceUudaiDetail) ? set_value('fromdate') : date('d/m/Y', strtotime($priceUudaiDetail->date_from)); ?>" autocomplete="off"/>
+                    <input id="fromdate4" type="text" placeholder="" name="fromdate" class="form-control input-sm" value="<?php echo empty($priceUudaiDetail) ? set_value('fromdate') : date('d/m/Y', strtotime($priceUudaiDetail->date_from)); ?>" autocomplete="off"/>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-group">
                     <label class="required">Đến ngày</label>
-                    <input type="text" placeholder="" name="todate" class="form-control input-sm dpd2" value="<?php echo empty($priceUudaiDetail) ? set_value('todate')  : date('d/m/Y', strtotime($priceUudaiDetail->date_to)); ?>" autocomplete="off"/>
+                    <input id="todate4" type="text" placeholder="" name="todate" class="form-control input-sm" value="<?php echo empty($priceUudaiDetail) ? set_value('todate')  : date('d/m/Y', strtotime($priceUudaiDetail->date_to)); ?>" autocomplete="off"/>
                 </div>
             </div>
             <div class="col-md-2">
@@ -303,7 +303,7 @@
                              <?php echo date('d/m/Y H:i', strtotime($p->updated_at)); ?>
                                 <br>
                                 <?php echo $p->ai_first_name. " ". $p->ai_last_name; ?><br>
-                            <a href="<?php echo base_url() . 'admin/hotels/rooms/prices/'.$roomDetail->room_id; ?>?price_id=<?php echo $p->id; ?>#p_uudai" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                            <a href="<?php echo base_url() . 'admin/hotels/rooms/prices/'.$roomDetail->room_id; ?>?price_id=<?php echo $p->id; ?>&tab=uudai#p_uudai" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                             <span class="btn btn-sm btn-danger delete" id="<?php echo $p->id;?>"><i class="fa fa-trash-o fa-lg"></i></span>
                         </td>
                     </tr>
