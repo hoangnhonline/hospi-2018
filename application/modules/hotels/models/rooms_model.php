@@ -781,12 +781,13 @@ class Rooms_model extends CI_Model
         foreach($loinhuanArr as $tmp){
             $loiNhuan[] = str_replace(",", "", $tmp);
         }
+        $type_apply = ($type == 1 || $type == 4) ? $loinhuanArr[0] : $this->input->post('type_apply');
         $data = array(
             'room_id' => $roomid,
             'date_from' => $datefrom,
             'date_to' => $dateto,
             'type' => $type,
-            'type_apply' => ($type == 1 || $type == 4) ? $loinhuanArr[0] : $this->input->post('type_apply'),
+            'type_apply' => $type_apply,
             'adults' => intval($this->input->post('adult')),
             'children' => intval($this->input->post('child')),
             'extra_bed_charge' => $bed_price,
@@ -807,8 +808,6 @@ class Rooms_model extends CI_Model
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         );
-      echo "<pre>";
-    //  print_r($data);die;
 
         if(!($this->db->insert('pt_rooms_prices', $data))){
             $this->db->_error_message();
@@ -856,6 +855,8 @@ class Rooms_model extends CI_Model
                 $arrUpdate['sale'] = $price;
             } elseif ($type == 3) {
                 $arrUpdate['extra'] = $price;
+            } elseif ($type == 4) {
+                $arrUpdate['uudai'] = $price;
             }
             //check exist
             $check = $this->db->where('room_id', $room_id)->where('date_use', $date)->get('pt_room_prices_detail')->result();
@@ -866,7 +867,6 @@ class Rooms_model extends CI_Model
                     $arrUpdate['bed_total'] = $bed_price;
                 }
                 $this->db->insert('pt_room_prices_detail', $arrUpdate);
-
             } else {
                 if ($type == 2) { // gia khuyen mai
                     $price_total = $check[0]->total;
@@ -987,11 +987,12 @@ class Rooms_model extends CI_Model
         foreach($loinhuanArr as $tmp){
             $loiNhuan[] = str_replace(",", "", $tmp);
         }
+        $type_apply = ($type == 1 || $type == 4) ? $loinhuanArr[0] : $this->input->post('type_apply');
         $data = array(
             'room_id' => $room_id,
             'date_from' => $datefrom,
             'type' => $type,
-            'type_apply' => ($type == 1 || $type == 4) ? $loinhuanArr[0] : $this->input->post('type_apply'),
+            'type_apply' => $type_apply,
             'date_to' => $dateto,
             'adults' => intval($this->input->post('adult')),
             'children' => intval($this->input->post('child')),

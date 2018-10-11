@@ -12,8 +12,9 @@
         <div class="form-group">
           <label class="required">Kiểu áp dụng</label>
           <select name="type_apply" class="form-control input-sm" id="type_apply" style="width: 100%">
+            <option value="2" <?php echo (!empty($priceExtraDetail) && $priceExtraDetail->type_apply == 2) ? "selected" : ""; ?>>Thành tiền</option> 
             <option value="1" <?php echo (!empty($priceExtraDetail) && $priceExtraDetail->type_apply == 1) ? "selected" : ""; ?>>%</option>
-            <option value="2" <?php echo (!empty($priceExtraDetail) && $priceExtraDetail->type_apply == 2) ? "selected" : ""; ?>>Thành tiền</option>              
+                         
           </select>
         </div>
       </div>            

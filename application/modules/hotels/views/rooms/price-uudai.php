@@ -116,9 +116,10 @@
                         <div class="form-group">
                           <label class="required">Kiểu áp dụng</label>
                           <select name="loi_nhuan[]" class="form-control input-sm" id="p_type_apply" style="width: 100%">
-                            <option value="0">--</option>
+                           
+                            <option value="2" <?php echo ($loiNhuanArr[0] == 2) ? "selected" : ""; ?>>Thành tiền</option> 
                           <option value="1" <?php echo ($loiNhuanArr[0] == 1) ? "selected" : ""; ?>>%</option>
-                          <option value="2" <?php echo ($loiNhuanArr[0] == 2) ? "selected" : ""; ?>>Thành tiền</option>              
+                                       
                         </select>
                         </div>
                       </div>      
