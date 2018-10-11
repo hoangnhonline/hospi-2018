@@ -786,7 +786,7 @@ class Rooms_model extends CI_Model
             'date_from' => $datefrom,
             'date_to' => $dateto,
             'type' => $type,
-            'type_apply' => $loinhuanArr[0],
+            'type_apply' => ($type == 1 || $type == 4) ? $loinhuanArr[0] : $this->input->post('type_apply'),
             'adults' => intval($this->input->post('adult')),
             'children' => intval($this->input->post('child')),
             'extra_bed_charge' => $bed_price,
@@ -807,9 +807,12 @@ class Rooms_model extends CI_Model
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         );
-      
+      echo "<pre>";
+    //  print_r($data);die;
 
-        $this->db->insert('pt_rooms_prices', $data);
+        if(!($this->db->insert('pt_rooms_prices', $data))){
+            $this->db->_error_message();
+        }
         //insert price detail
         $this->insertPriceDetail($hotel_id, $roomid, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $this->input->post('type_apply'), $bed_price);
         $this->session->set_flashdata('flashmsgs', "Thêm giá thành công.");
@@ -987,8 +990,8 @@ class Rooms_model extends CI_Model
         $data = array(
             'room_id' => $room_id,
             'date_from' => $datefrom,
-            'type' => $this->input->post('type'),
-            'type_apply' => $loinhuanArr[0],
+            'type' => $type,
+            'type_apply' => ($type == 1 || $type == 4) ? $loinhuanArr[0] : $this->input->post('type_apply'),
             'date_to' => $dateto,
             'adults' => intval($this->input->post('adult')),
             'children' => intval($this->input->post('child')),
