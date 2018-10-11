@@ -299,13 +299,17 @@
                                     <br>
                                     <strong><?php echo number_format($p->sun); ?></strong>
                         </td>                        
-                        <td style="white-space:nowrap;text-align: center;">
+                        <td style="white-space:nowrap;text-align: center;" rowspan="2">
                              <?php echo date('d/m/Y H:i', strtotime($p->updated_at)); ?>
                                 <br>
                                 <?php echo $p->ai_first_name. " ". $p->ai_last_name; ?><br>
                             <a href="<?php echo base_url() . 'admin/hotels/rooms/prices/'.$roomDetail->room_id; ?>?price_id=<?php echo $p->id; ?>&tab=uudai#p_uudai" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                             <span class="btn btn-sm btn-danger delete" id="<?php echo $p->id;?>"><i class="fa fa-trash-o fa-lg"></i></span>
                         </td>
+                    </tr>
+                    <tr>
+                      <td><strong><?php echo $p->name_uudai; ?></strong></td>
+                      <td colspan="8"><?php echo $p->detail_uudai; ?></td>
                     </tr>
                     <?php 
              endif;
