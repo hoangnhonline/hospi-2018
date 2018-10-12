@@ -126,7 +126,7 @@
                       <div class="col-md-3">
                         <div class="form-group">
                           <label class="required">Giường phụ</label>
-                          <input  placeholder="" name="loi_nhuan[]" <?php if($roomDetail->extra_bed == 0) echo "readonly=readonly"; ?> class="form-control input-sm number" value="<?php echo empty($loiNhuanArr[1]) ? $roomDetail->extra_bed_charges : $loiNhuanArr[1];?>" <?php if($roomDetail->extra_bed < 1){ echo "readonly"; } ?> />
+                          <input  placeholder="" name="loi_nhuan[]" <?php if($roomDetail->extra_bed == 0) echo "readonly=readonly"; ?> class="form-control input-sm number" value="<?php echo @$loiNhuanArr[1];?>" <?php if($roomDetail->extra_bed < 1){ echo "readonly"; } ?> />
                         </div>
                       </div>      
                     </div>
