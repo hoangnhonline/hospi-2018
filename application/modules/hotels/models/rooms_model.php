@@ -886,8 +886,7 @@ class Rooms_model extends CI_Model
                     $arrUpdate['bed_sale'] = $bed_sale;
                     $arrUpdate['total'] = $price_current - $sale + $check[0]->extra;
                     $arrUpdate['bed_total'] = $bed_current - $bed_sale + $check[0]->bed_extra;
-                } elseif ($type == 3) { // gia phu thu
-                    var_dump($bed_price);die;
+                } elseif ($type == 3) { // gia phu thu                    
                     $price_total = $check[0]->total;
                     $price_current = $check[0]->price;
                     $bed_current = $check[0]->bed_price;
