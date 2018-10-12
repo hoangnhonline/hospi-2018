@@ -174,7 +174,11 @@
                 return date.valueOf() < now.valueOf() ? 'disabled' : '';
             }
         }).on('changeDate', function (ev) {
-               
+              if (ev.date.valueOf() > checkout.date.valueOf()) {
+                  var newDate = new Date(ev.date)
+                  newDate.setDate(newDate.getDate() + 1);
+                  checkout.setValue(newDate);              
+              } 
             checkin.hide();
             $('#todate1')[0].focus();
         
@@ -185,6 +189,7 @@
                 return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
             }
         }).on('changeDate', function (ev) {
+
             checkout.hide();           
         }).data('datepicker');
 
@@ -196,7 +201,11 @@
                 return date.valueOf() < now.valueOf() ? 'disabled' : '';
             }
         }).on('changeDate', function (ev) {          
-          
+           if (ev.date.valueOf() > checkout2.date.valueOf()) {
+                  var newDate = new Date(ev.date)
+                  newDate.setDate(newDate.getDate() + 1);
+                  checkout2.setValue(newDate);              
+              }
             checkin2.hide();
             $('#todate2')[0].focus();
         }).data('datepicker');
@@ -216,7 +225,11 @@
                 return date.valueOf() < now.valueOf() ? 'disabled' : '';
             }
         }).on('changeDate', function (ev) {          
-          
+           if (ev.date.valueOf() > checkout3.date.valueOf()) {
+                  var newDate = new Date(ev.date)
+                  newDate.setDate(newDate.getDate() + 1);
+                  checkout3.setValue(newDate);              
+              }
             checkin3.hide();
             $('#todate3')[0].focus();
         }).data('datepicker');
@@ -237,7 +250,11 @@
                 return date.valueOf() < now.valueOf() ? 'disabled' : '';
             }
         }).on('changeDate', function (ev) {          
-          
+           if (ev.date.valueOf() > checkout4.date.valueOf()) {
+                  var newDate = new Date(ev.date)
+                  newDate.setDate(newDate.getDate() + 1);
+                  checkout4.setValue(newDate);              
+              }
             checkin4.hide();
             $('#todate4')[0].focus();
         }).data('datepicker');
