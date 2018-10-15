@@ -813,11 +813,11 @@ class Rooms_model extends CI_Model
             $this->db->_error_message();
         }
         //insert price detail
-        $this->insertPriceDetail($hotel_id, $roomid, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $this->input->post('type_apply'), $bed_price);
+        $this->insertPriceDetail($hotel_id, $roomid, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $this->input->post('type_apply'), $bed_price, $name_uudai, $detail_uudai, $min_night);
         $this->session->set_flashdata('flashmsgs', "Thêm giá thành công.");
     }
 
-    public function insertPriceDetail($hotel_id, $room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price)
+    public function insertPriceDetail($hotel_id, $room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price, $name_uudai = null, $detail_uudai = null, $min_night = 0)
     {
         
         $arrDate = $this->createDateRangeArray($datefrom, $dateto);
@@ -903,7 +903,9 @@ class Rooms_model extends CI_Model
                     $arrUpdate['total'] = $price_current + $extra - $check[0]->sale;
                     $arrUpdate['bed_total'] = $bed_current + $bed_extra - $check[0]->bed_sale;
                 }
-
+                $arrUpdate['name_uudai'] = $name_uudai;
+                $arrUpdate['detail_uudai'] = $detail_uudai;
+                $arrUpdate['min_nights'] = $min_night;
                 $this->db->where('room_id', $room_id)->where('date_use', $date)->update('pt_room_prices_detail', $arrUpdate);
             }
         }
@@ -1018,12 +1020,12 @@ class Rooms_model extends CI_Model
         $this->db->where('id', $this->input->post('price_id'));
         $this->db->update('pt_rooms_prices', $data);
         //update price detail
-        $this->updatePriceDetail($room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price);
+        $this->updatePriceDetail($room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price, $name_uudai, $detail_uudai, $min_night);
 
         $this->session->set_flashdata('flashmsgs', "Cập nhật giá thành công.");
     }
 
-    public function updatePriceDetail($room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price)
+    public function updatePriceDetail($room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price, $name_uudai = null, $detail_uudai = null, $min_night = 0)
     {
         $arrDate = $this->createDateRangeArray($datefrom, $dateto);
         foreach ($arrDate as $date) {
@@ -1105,7 +1107,9 @@ class Rooms_model extends CI_Model
                     $arrUpdate['total'] = $price_current + $extra - $check[0]->sale;
                     $arrUpdate['bed_total'] = $bed_current + $bed_extra - $check[0]->bed_sale;
                 }
-
+                $arrUpdate['name_uudai'] = $name_uudai;
+                $arrUpdate['detail_uudai'] = $detail_uudai;
+                $arrUpdate['min_nights'] = $min_night;
                 $this->db->where('room_id', $room_id)->where('date_use', $date)->update('pt_room_prices_detail', $arrUpdate);
             }
         }
@@ -1367,17 +1371,20 @@ class Rooms_model extends CI_Model
         $date_from = $checkin;
         $date_to = $checkout;
         $arrDate = $this->createDateRangeArray($date_from, $date_to);
-        $price_total = 0;
+        $price_total = $price_uudai = 0;
         unset($arrDate[count($arrDate) - 1]);
         foreach ($arrDate as $date_use) {
             $priceTmp = $this->db->query("SELECT * FROM pt_room_prices_detail WHERE date_use = '" . $date_use . "' AND room_id = $room_id")->row(0);
             if (!empty($priceTmp)) {
-                $price_total += $priceTmp->total;
+                $price_total += $priceTmp->total;                
+                $price_uudai += $priceTmp->price_uudai;
+                $name_uudai = $priceTmp->name_uudai;
+                $detail_uudai = $priceTmp->detail_uudai;
+                $min_nights = $priceTmp->min_nights;
             }
             $priceDetail[$date_use] = $priceTmp;
-        }
-        return ['total' => $price_total, 'detail' => $priceDetail];
-
+        }        
+        return ['total' => $price_total, 'price_uudai' => $price_uudai, 'detail' => $priceDetail, 'detail_uudai' => $detail_uudai, 'name_uudai' => $name_uudai, 'min_nights' => $min_nights];
     }
 
     /**
@@ -1398,7 +1405,7 @@ class Rooms_model extends CI_Model
         $i = 0;
         foreach ($allprice as $row) {
             $i++;
-            $this->insertPriceDetail($hotel_id, $row->room_id, $row->date_from, $row->date_to, $row->mon, $row->tue, $row->wed, $row->thu, $row->fri, $row->sat, $row->sun, $row->type, $row->type_apply, $row->extra_bed_charge);
+            $this->insertPriceDetail($hotel_id, $row->room_id, $row->date_from, $row->date_to, $row->mon, $row->tue, $row->wed, $row->thu, $row->fri, $row->sat, $row->sun, $row->type, $row->type_apply, $row->extra_bed_charge, null, null, 0);
             echo $i . "--" . $row->room_id;
         }
     }

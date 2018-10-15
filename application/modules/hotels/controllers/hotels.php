@@ -70,7 +70,7 @@ class Hotels extends MX_Controller
             $this->data['module'] = $this->hotels_lib->hotel_details();
             $this->data['hasRooms'] = $this->hotels_lib->totalRooms($this->data['module']->id);
             $this->data['rooms'] = $this->hotels_lib->hotel_rooms($this->data['module']->id);
-
+            //var_dump("<pre>", $this->data['rooms']);die;
             // Availability Calender settings variables
 
             $this->data['from1'] = date("F Y");
