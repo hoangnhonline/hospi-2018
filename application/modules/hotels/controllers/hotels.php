@@ -69,8 +69,7 @@ class Hotels extends MX_Controller
             $this->hotels_lib->set_hotelid($hotelname);
             $this->data['module'] = $this->hotels_lib->hotel_details();
             $this->data['hasRooms'] = $this->hotels_lib->totalRooms($this->data['module']->id);
-            $this->data['rooms'] = $this->hotels_lib->hotel_rooms($this->data['module']->id);
-            //var_dump("<pre>", $this->data['rooms']);die;
+            $this->data['rooms'] = $this->hotels_lib->hotel_rooms($this->data['module']->id);            
             // Availability Calender settings variables
 
             $this->data['from1'] = date("F Y");
@@ -523,6 +522,7 @@ class Hotels extends MX_Controller
         $child = (int)$this->input->get('child');
         $room_quantity = $this->input->get('room_quantity');
         $extra_beds = $this->input->get('extra_beds');
+        $price = $this->input->get('price');
         $totalRooms = 0;
         if (!empty($room_quantity)) {
             foreach ($room_quantity as $tmp) {
@@ -594,6 +594,7 @@ class Hotels extends MX_Controller
             $this->data['room_id'] = json_encode(array_keys($bookInfo));
             $this->data['room_quantity'] = json_encode($room_quantity);
             $this->data['extra_beds'] = json_encode($extra_beds);
+            $this->data['room_price'] = json_encode($price);
 
             // var_dump($detailHotel->hotel_title);die;
 

@@ -30,10 +30,7 @@
                             <span class="hs_cl_show_info" href="javascript:;">Xem chi tiết</span>
                         </div>
                     </div>
-                </div>
-                <div class="clearfix">
-                    <p class="hs_cl_show_info"><span class="purple" style="font-weight: bold">Thông tin phòng</span> <span class="grey">(chỉ mang tính chất tham khảo)</span></p>
-                </div>
+                </div>                
             </td>
             <td>
                 <div class="item-countroom">

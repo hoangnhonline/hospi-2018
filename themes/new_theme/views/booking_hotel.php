@@ -324,11 +324,17 @@
 
                       $priceExtraBedTotal = 0;
                       foreach ($room as $roomId => $rDetail) {
+                   
                           $priceOne = 0;
                           $priceExtraBed = 0;
-                          foreach ($rDetail->Info['detail'] as $tmp) {
-                              $priceOne += $tmp->total;
-                              $priceExtraBed += $tmp->bed_total;
+                          foreach ($rDetail->Info['detail'] as $tmp) {                              
+                              if($stay >= $rDetail->min_nights && $tmp->price_uudai > 0){
+                                $priceOne += $tmp->price_uudai;
+                                $priceExtraBed += $tmp->bed_uudai;
+                              }else{
+                                $priceOne += $tmp->total;
+                                $priceExtraBed += $tmp->bed_total;
+                              }                           
                           }
                           $priceOne = $priceOne / count($rDetail->Info['detail']);
                           $priceExtraBedTotal += $priceExtraBed * $extra_beds[$roomId];
@@ -336,6 +342,7 @@
 
 
                           $quantity = $room_quantity[$roomId];
+                          $thanhtien = ($priceOne * $quantity * $stay);
                           ?>
                           <div class="clearfix"></div>
                             <div class="col-lg-12 col-xs-12 cl-tim">
@@ -344,10 +351,10 @@
                             <div class="col-lg-12 col-xs-12 cl-grey">
                               <span><?php echo number_format($priceOne); ?> x <?php echo $stay; ?> (đêm)
                                   x <?php echo $quantity; ?> (phòng)
-                                  = <?php echo number_format($rDetail->Info['total'] * $quantity); ?> VND</span>
+                                  = <?php echo number_format($thanhtien); ?> VND</span>
                           </div>
                           <?php
-                          $priceTotal += $rDetail->Info['total'] * $quantity;
+                          $priceTotal += $thanhtien;
                          }
                   } ?>
                   

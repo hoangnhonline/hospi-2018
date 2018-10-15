@@ -206,6 +206,12 @@
     </div>
 </section>
 <script type="text/javascript">
+    $('select.room_quantity').change(function(){
+        $(this).parents('table.room-multi').find('.room_quantity_hidden').val($(this).val());
+    });
+    $('select.extra_beds').change(function(){
+        $(this).parents('table.room-multi').find('.extra_beds_hidden').val($(this).val());
+    });
     $('.hs_cl_show_info').on('click', function(){
         $(this).parents('table').find('.hs_show_info').slideToggle();
     });

@@ -136,7 +136,7 @@
                             </div>
                             <p style="border-top: 1px solid #ccc; padding: 4px 8px;">
                                 <span class="grey">Thời gian</span>
-                                <span class="blue02 size14">Thời gian</span>
+                                <span class="blue02 size14"><?php echo $r->price['duration']; ?></span>
                             </p>
                         </div>
                     </div>
