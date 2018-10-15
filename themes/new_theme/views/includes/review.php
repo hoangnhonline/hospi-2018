@@ -1,9 +1,10 @@
 <!-- End row -->
-<div id="ADDREVIEW" class="panel-collapse collapse">
+<div id="ADDREVIEW" class="panel-collapse collapse in">
     <div class="panel panel-default">
-        <div class="panel-heading"><?php echo trans('083'); ?> <a href="#ADDREVIEW" data-toggle="collapse"
-                                                                  data-parent="#accordion"><span
-                        class="badge badge-default pull-right">x</span></a></div>
+        <button type="button" class="collapsebtn last go-text-right collapsed collapsed_C" data-toggle="collapse" data-target="#ADDREVIEW" aria-expanded="false">
+           <span class="purple"><?php echo trans('083'); ?></span>
+           <a href="#ADDREVIEW" data-toggle="collapse" data-parent="#accordion" class="Close__ADDREVIEW">x</a>
+        </button>
         <div class="panel-body">
             <span class="RTL">
                 <p>Chào bạn!</p>
@@ -46,8 +47,23 @@
                     <div class="block-review">
                         <p>Qua việc sử dụng dịch vụ tại khách sạn, Cảm nhận của bạn thế nào hãy cho chúng tôi biết thông
                             quan điểm đánh giá. Bằng chác đưa chuột vào khung màu tím và kéo ra</p>
+                        <div style="margin-top: 15px; margin-bottom: 15px;">
+                            <span class="andes">Điểm đánh giá : </span>
+                            <span>Tuyệt vời</span>
+                            <span class="purple andes">9+ </span>;
+                            <span>Rất tốt</span>
+                            <span class="purple andes">8 - 9 </span>;
+                            <span>Tốt</span>
+                            <span class="purple andes">6 - 9 </span>;
+                            <span>Tạm được</span>
+                            <span class="purple andes">5 - 6 </span>;
+                            <span>Kém</span>
+                            <span class="purple andes">3 - 5 </span>;
+                            <span>Rất kém</span>
+                            <span class="purple andes">1 - 3</span>
+                        </div>
                         <div class="form-horizontal row">
-                            <div class="col-sm-4 col-sm-push-4 col-xs-12">
+                            <div class="col-sm-3 col-xs-12">
                                 <div class="block-process-evaluate block-process-evaluate2">
                                     <div class="clearfix">
                                         <div class="circle-evaluate c100 p10">
@@ -62,55 +78,241 @@
                                             </div>
                                         </div><!-- circle-evaluate -->
                                         <div class="clearfix"></div>
-                                        <p class="andes purple size25 text-center" style="margin-top: 10px;" id="overall_text"></p>
+                                        <p class="andes purple size20 text-center" style="margin-top: 10px;" id="overall_text">
+                                            “Rất tốt”
+                                        </p>
                                         <p class="text-center">(Điểm đánh giá của bạn)</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-md-pull-4 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label"><?php echo trans('030'); ?></label>
-                                    <input id="reviews_clean" data-slider-id='reviews' type="text" name="reviews_clean"
-                                           data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
-                                           data-slider-step="1" data-slider-value="1"/>
-                                    <!--<span class="txt txt2">7.9</span>-->
+                            <div class="col-md-9 col-xs-12">
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label andes"><?php echo trans('030'); ?></label>
+                                            <!-- <input id="reviews_clean" data-slider-id='reviews' type="text" name="reviews_clean"
+                                                   data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
+                                                   data-slider-step="1" data-slider-value="1"/> -->
+                                            <!--<span class="txt txt2">7.9</span>-->
+                                            <div class="star-rating__wrap">
+                                                <div class="starRating">
+                                                    <input id="rating1" type="radio" name="rating" value="1">
+                                                    <label for="rating1"></label>
+                                                    <input id="rating2" type="radio" name="rating" value="2">
+                                                    <label for="rating2"></label>
+                                                    <input id="rating3" type="radio" name="rating" value="3">
+                                                    <label for="rating3"></label>
+                                                    <input id="rating4" type="radio" name="rating" value="4">
+                                                    <label for="rating4"></label>
+                                                    <input id="rating5" type="radio" name="rating" value="5">
+                                                    <label for="rating5"></label>
+                                                    <input id="rating6" type="radio" name="rating" value="6">
+                                                    <label for="rating6"></label>
+                                                    <input id="rating7" type="radio" name="rating" value="7">
+                                                    <label for="rating7"></label>
+                                                    <input id="rating8" type="radio" name="rating" value="8">
+                                                    <label for="rating8"></label>
+                                                    <input id="rating9" type="radio" name="rating" value="9">
+                                                    <label for="rating9"></label>
+                                                    <input id="rating10" type="radio" name="rating" value="10">
+                                                    <label for="rating10"></label>
+                                                </div>
+                                            </div>
+                                            <div class="start-rating_wrap_comment">
+                                                <span class="andes">8/10</span>
+                                                <span class="andes">(Rất tốt)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label andes"><?php echo trans('0722'); ?></label>
+                                            <!-- <input id="reviews_comfort" type="text" name="reviews_comfort"
+                                                   data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
+                                                   data-slider-step="1" data-slider-value="1"/> -->
+                                            <!--<span class="txt txt2">7.9</span>-->
+                                            <div class="star-rating__wrap">
+                                                <div class="starRating">
+                                                    <input id="rating1" type="radio" name="rating" value="1">
+                                                    <label for="rating1"></label>
+                                                    <input id="rating2" type="radio" name="rating" value="2">
+                                                    <label for="rating2"></label>
+                                                    <input id="rating3" type="radio" name="rating" value="3">
+                                                    <label for="rating3"></label>
+                                                    <input id="rating4" type="radio" name="rating" value="4">
+                                                    <label for="rating4"></label>
+                                                    <input id="rating5" type="radio" name="rating" value="5">
+                                                    <label for="rating5"></label>
+                                                    <input id="rating6" type="radio" name="rating" value="6">
+                                                    <label for="rating6"></label>
+                                                    <input id="rating7" type="radio" name="rating" value="7">
+                                                    <label for="rating7"></label>
+                                                    <input id="rating8" type="radio" name="rating" value="8">
+                                                    <label for="rating8"></label>
+                                                    <input id="rating9" type="radio" name="rating" value="9">
+                                                    <label for="rating9"></label>
+                                                    <input id="rating10" type="radio" name="rating" value="10">
+                                                    <label for="rating10"></label>
+                                                </div>
+                                            </div>
+                                            <div class="start-rating_wrap_comment">
+                                                <span class="andes">8/10</span>
+                                                <span class="andes">(Rất tốt)</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label"><?php echo trans('0722'); ?></label>
-                                    <input id="reviews_comfort" type="text" name="reviews_comfort"
-                                           data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
-                                           data-slider-step="1" data-slider-value="1"/>
-                                    <!--<span class="txt txt2">7.9</span>-->
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label andes"><?php echo trans('032'); ?></label>
+                                            <!-- <input id="reviews_location" type="text" name="reviews_location"
+                                                   data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
+                                                   data-slider-step="1" data-slider-value="1"/> -->
+                                            <!--<span class="txt txt2">7.9</span>-->
+                                            <div class="star-rating__wrap">
+                                                <div class="starRating">
+                                                    <input id="rating1" type="radio" name="rating" value="1">
+                                                    <label for="rating1"></label>
+                                                    <input id="rating2" type="radio" name="rating" value="2">
+                                                    <label for="rating2"></label>
+                                                    <input id="rating3" type="radio" name="rating" value="3">
+                                                    <label for="rating3"></label>
+                                                    <input id="rating4" type="radio" name="rating" value="4">
+                                                    <label for="rating4"></label>
+                                                    <input id="rating5" type="radio" name="rating" value="5">
+                                                    <label for="rating5"></label>
+                                                    <input id="rating6" type="radio" name="rating" value="6">
+                                                    <label for="rating6"></label>
+                                                    <input id="rating7" type="radio" name="rating" value="7">
+                                                    <label for="rating7"></label>
+                                                    <input id="rating8" type="radio" name="rating" value="8">
+                                                    <label for="rating8"></label>
+                                                    <input id="rating9" type="radio" name="rating" value="9">
+                                                    <label for="rating9"></label>
+                                                    <input id="rating10" type="radio" name="rating" value="10">
+                                                    <label for="rating10"></label>
+                                                </div>
+                                            </div>
+                                            <div class="start-rating_wrap_comment">
+                                                <span class="andes">8/10</span>
+                                                <span class="andes">(Rất tốt)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label andes"><?php echo trans('033'); ?></label>
+                                            <!-- <input id="reviews_facilities" type="text" name="reviews_facilities"
+                                                   data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
+                                                   data-slider-step="1" data-slider-value="1"/> -->
+                                            <!--<span class="txt txt2">7.9</span>-->
+                                            <div class="star-rating__wrap">
+                                                <div class="starRating">
+                                                    <input id="rating1" type="radio" name="rating" value="1">
+                                                    <label for="rating1"></label>
+                                                    <input id="rating2" type="radio" name="rating" value="2">
+                                                    <label for="rating2"></label>
+                                                    <input id="rating3" type="radio" name="rating" value="3">
+                                                    <label for="rating3"></label>
+                                                    <input id="rating4" type="radio" name="rating" value="4">
+                                                    <label for="rating4"></label>
+                                                    <input id="rating5" type="radio" name="rating" value="5">
+                                                    <label for="rating5"></label>
+                                                    <input id="rating6" type="radio" name="rating" value="6">
+                                                    <label for="rating6"></label>
+                                                    <input id="rating7" type="radio" name="rating" value="7">
+                                                    <label for="rating7"></label>
+                                                    <input id="rating8" type="radio" name="rating" value="8">
+                                                    <label for="rating8"></label>
+                                                    <input id="rating9" type="radio" name="rating" value="9">
+                                                    <label for="rating9"></label>
+                                                    <input id="rating10" type="radio" name="rating" value="10">
+                                                    <label for="rating10"></label>
+                                                </div>
+                                            </div>
+                                            <div class="start-rating_wrap_comment">
+                                                <span class="andes">8/10</span>
+                                                <span class="andes">(Rất tốt)</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label"><?php echo trans('032'); ?></label>
-                                    <input id="reviews_location" type="text" name="reviews_location"
-                                           data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
-                                           data-slider-step="1" data-slider-value="1"/>
-                                    <!--<span class="txt txt2">7.9</span>-->
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label"><?php echo trans('033'); ?></label>
-                                    <input id="reviews_facilities" type="text" name="reviews_facilities"
-                                           data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
-                                           data-slider-step="1" data-slider-value="1"/>
-                                    <!--<span class="txt txt2">7.9</span>-->
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label"><?php echo trans('034'); ?></label>
-                                    <input id="reviews_staff" type="text" name="reviews_staff"
-                                           data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
-                                           data-slider-step="1" data-slider-value="1"/>
-                                    <!--<span class="txt txt2">7.9</span>-->
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label"><?php echo trans('0720'); ?></label>
-                                    <input id="reviews_anuong" type="text" name="reviews_anuong"
-                                           data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
-                                           data-slider-step="1" data-slider-value="1"/>
-                                    <!--<span class="txt txt2">7.9</span>-->
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label andes"><?php echo trans('034'); ?></label>
+                                            <!-- <input id="reviews_staff" type="text" name="reviews_staff"
+                                                   data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
+                                                   data-slider-step="1" data-slider-value="1"/> -->
+                                            <!--<span class="txt txt2">7.9</span>-->
+                                            <div class="star-rating__wrap">
+                                                <div class="starRating">
+                                                    <input id="rating1" type="radio" name="rating" value="1">
+                                                    <label for="rating1"></label>
+                                                    <input id="rating2" type="radio" name="rating" value="2">
+                                                    <label for="rating2"></label>
+                                                    <input id="rating3" type="radio" name="rating" value="3">
+                                                    <label for="rating3"></label>
+                                                    <input id="rating4" type="radio" name="rating" value="4">
+                                                    <label for="rating4"></label>
+                                                    <input id="rating5" type="radio" name="rating" value="5">
+                                                    <label for="rating5"></label>
+                                                    <input id="rating6" type="radio" name="rating" value="6">
+                                                    <label for="rating6"></label>
+                                                    <input id="rating7" type="radio" name="rating" value="7">
+                                                    <label for="rating7"></label>
+                                                    <input id="rating8" type="radio" name="rating" value="8">
+                                                    <label for="rating8"></label>
+                                                    <input id="rating9" type="radio" name="rating" value="9">
+                                                    <label for="rating9"></label>
+                                                    <input id="rating10" type="radio" name="rating" value="10">
+                                                    <label for="rating10"></label>
+                                                </div>
+                                            </div>
+                                            <div class="start-rating_wrap_comment">
+                                                <span class="andes">8/10</span>
+                                                <span class="andes">(Rất tốt)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label andes"><?php echo trans('0720'); ?></label>
+                                            <!-- <input id="reviews_anuong" type="text" name="reviews_anuong"
+                                                   data-slider-handle="custom" data-slider-min="1" data-slider-max="10"
+                                                   data-slider-step="1" data-slider-value="1"/> -->
+                                            <!--<span class="txt txt2">7.9</span>-->
+                                            <div class="star-rating__wrap">
+                                                <div class="starRating">
+                                                    <input id="rating1" type="radio" name="rating" value="1">
+                                                    <label for="rating1"></label>
+                                                    <input id="rating2" type="radio" name="rating" value="2">
+                                                    <label for="rating2"></label>
+                                                    <input id="rating3" type="radio" name="rating" value="3">
+                                                    <label for="rating3"></label>
+                                                    <input id="rating4" type="radio" name="rating" value="4">
+                                                    <label for="rating4"></label>
+                                                    <input id="rating5" type="radio" name="rating" value="5">
+                                                    <label for="rating5"></label>
+                                                    <input id="rating6" type="radio" name="rating" value="6">
+                                                    <label for="rating6"></label>
+                                                    <input id="rating7" type="radio" name="rating" value="7">
+                                                    <label for="rating7"></label>
+                                                    <input id="rating8" type="radio" name="rating" value="8">
+                                                    <label for="rating8"></label>
+                                                    <input id="rating9" type="radio" name="rating" value="9">
+                                                    <label for="rating9"></label>
+                                                    <input id="rating10" type="radio" name="rating" value="10">
+                                                    <label for="rating10"></label>
+                                                </div>
+                                            </div>
+                                            <div class="start-rating_wrap_comment">
+                                                <span class="andes">8/10</span>
+                                                <span class="andes">(Rất tốt)</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -119,18 +321,6 @@
                         <div class="col-md-12">
                             <hr>
                             <p><strong><?php echo trans('0371'); ?></strong> : <?php echo trans('085'); ?></p>
-                            <div class="row" style="margin-top: 15px; margin-bottom: 15px;">
-                                <div class="col-sm-3">
-                                    <p>Tuyệt vời: <span class="purple">9+</span></p>
-                                    <p>Rất tốt:: <span class="purple">8 - 9</span></p>
-                                    <p>Tốt: <span class="purple">6 - 8</span></p>
-                                </div>
-                                <div class="col-sm-3">
-                                    <p>Tạm được: <span class="purple">5 - 6</span></p>
-                                    <p>Kém: <span class="purple">3 - 5</span></p>
-                                    <p>Rất tệ: <span class="purple">1 - 3</span></p>
-                                </div>
-                            </div>
                             <button type="button" class="btn btn-primary addreview" id="<?php echo $module->id; ?>"
                                     style="display: none; width: 300px; border-radius: 5px; font-weight: bold;"><?php echo trans('086'); ?></button>
                         </div>
