@@ -14697,3 +14697,17 @@ textarea {
     padding: 8px;
     margin-right: 10px;
 }
+span.hs_cl_show_info{
+    color: #666666;
+    display: inline-block;
+    position: relative;
+    padding-left: 15px;
+}
+span.hs_cl_show_info:before{
+    content: url(../../assets/img/arrow_grey.png);
+    position: absolute;
+    left: 0;
+}
+p.hs_cl_show_info{
+    margin-bottom: 15px;
+}
