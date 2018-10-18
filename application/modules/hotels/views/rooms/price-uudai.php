@@ -34,6 +34,18 @@
             </div>
             <div class="col-md-2">
                 <div class="form-group">
+                    <label class="required">Số ngày đặt trước</label>
+                    <select name="min_day" class="form-control input-sm" id="min_day" style="width: 100%">
+                        <?php for($minN = 1; $minN <= 100; $minN++){ ?>
+                            <option value="<?php echo $minN; ?>" <?php echo @$priceUudaiDetail->min_day == $minN ? "selected" : ""; ?>>
+                                <?php echo $minN; ?>
+                            </option>
+                            <?php } ?>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
                     <label class="required">Giường phụ</label>
                     <select name="isExtraBed" class="form-control input-sm" id="isExtraBed" style="width: 100%">
                         <?php if($roomDetail->extra_bed == 0){ ?>
@@ -44,7 +56,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="form-group">
                   <label class="required">Phí giường phụ</label>
                   <input  placeholder="" name="bedcharges" <?php if($roomDetail->extra_bed == 0) echo "readonly=readonly"; ?> class="form-control input-sm number" value="<?php echo empty($priceUudaiDetail) ? $roomDetail->extra_bed_charges : $priceUudaiDetail->extra_bed_charge - $loiNhuanMoneyArr[1];?>" <?php if($roomDetail->extra_bed < 1){ echo "readonly"; } ?> />

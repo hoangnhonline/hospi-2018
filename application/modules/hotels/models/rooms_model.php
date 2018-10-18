@@ -778,7 +778,8 @@ class Rooms_model extends CI_Model
         if($type == 4){
             $name_uudai = $this->input->post('name_uudai');
             $detail_uudai = $this->input->post('detail_uudai');
-            $min_night = $this->input->post('min_night');        
+            $min_night = $this->input->post('min_night'); 
+            $min_day = $this->input->post('min_day');        
         }
         foreach($loinhuanArr as $tmp){
             $loiNhuan[] = str_replace(",", "", $tmp);
@@ -812,14 +813,13 @@ class Rooms_model extends CI_Model
             $data['name_uudai'] = $name_uudai;
             $data['detail_uudai'] = $detail_uudai;
             $data['min_night'] = $min_night;
+            $data['min_day'] = $min_day;
         }
-
-        if(!($this->db->insert('pt_rooms_prices', $data))){
-            $this->db->_error_message();
-        }
+        $this->db->insert('pt_rooms_prices', $data);        
+        $detail_id = $this->db->insert_id();        
         //insert price detail
         if($type == 4){
-            $this->insertPriceDetail($hotel_id, $roomid, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $this->input->post('type_apply'), $bed_price, $name_uudai, $detail_uudai, $min_night);
+            $this->insertPriceUuDai($hotel_id, $roomid, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $this->input->post('type_apply'), $bed_price, $name_uudai, $detail_uudai, $min_night, $detail_id, $min_day);
         }else{
             $this->insertPriceDetail($hotel_id, $roomid, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $this->input->post('type_apply'), $bed_price);
         }
@@ -866,8 +866,14 @@ class Rooms_model extends CI_Model
             } elseif ($type == 3) {
                 $arrUpdate['extra'] = $price;
             } elseif ($type == 4) {
-                $arrUpdate['price_uudai'] = $price;
-                $arrUpdate['bed_uudai'] = $bed_price;
+                $arrUudai['price'] = $price;
+                $arrUudai['bed'] = $bed_price;                
+                $arrUudai['name'] = $name_uudai;
+                $arrUudai['detail'] = $detail_uudai;
+                $arrUudai['min_night'] = $min_night;
+                $arrUudai['min_day'] = $min_day;
+                $uudai = json_encode($arrUudai);
+                $arrUpdate['uudai'] = $uudai;
             }
             //check exist
             $check = $this->db->where('room_id', $room_id)->where('date_use', $date)->get('pt_room_prices_detail')->result();
@@ -876,6 +882,7 @@ class Rooms_model extends CI_Model
                 if ($type == 1) {
                     $arrUpdate['total'] = $price;
                     $arrUpdate['bed_total'] = $bed_price;
+
                 }
                 $this->db->insert('pt_room_prices_detail', $arrUpdate);
             } else {
@@ -893,8 +900,12 @@ class Rooms_model extends CI_Model
 
                     $arrUpdate['sale'] = $sale;
                     $arrUpdate['bed_sale'] = $bed_sale;
-                    $arrUpdate['total'] = $price_current - $sale + $check[0]->extra;
-                    $arrUpdate['bed_total'] = $bed_current - $bed_sale + $check[0]->bed_extra;
+                    $arrUpdate['total'] = $price_current + $check[0]->extra;
+                    $arrUpdate['bed_total'] = $bed_current + $check[0]->bed_extra;
+
+                    $arrUpdate['price_bed_sale'] = $bed_current - $bed_sale + $check[0]->bed_extra;
+                    $arrUpdate['price_sale'] = $price_current - $sale + $check[0]->extra;
+
                 } elseif ($type == 3) { // gia phu thu                    
                     $price_total = $check[0]->total;
                     $price_current = $check[0]->price;
@@ -911,12 +922,62 @@ class Rooms_model extends CI_Model
                     $arrUpdate['bed_extra'] = $bed_extra;
                     $arrUpdate['total'] = $price_current + $extra - $check[0]->sale;
                     $arrUpdate['bed_total'] = $bed_current + $bed_extra - $check[0]->bed_sale;
+                }elseif($type == 4){
+
                 }
-                $arrUpdate['name_uudai'] = $name_uudai;
-                $arrUpdate['detail_uudai'] = $detail_uudai;
-                $arrUpdate['min_nights'] = $min_night;
-                $arrUpdate['duration'] = date('d/m/Y', strtotime($datefrom))."-".date('d/m/Y', strtotime($dateto));
+                $arrUpdate['duration'] = date('d/m/Y', strtotime($datefrom))."-".date('d/m/Y', strtotime($dateto)); 
                 $this->db->where('room_id', $room_id)->where('date_use', $date)->update('pt_room_prices_detail', $arrUpdate);
+            }
+        }
+
+    }
+    public function insertPriceUuDai($hotel_id, $room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price, $name_uudai, $detail_uudai, $min_night, $detail_id, $min_day)
+    {        
+        $arrDate = $this->createDateRangeArray($datefrom, $dateto);
+        foreach ($arrDate as $date) {
+            $thuOfDate = strtolower(date('D', strtotime($date)));
+            switch ($thuOfDate) {
+                case 'mon':
+                    $price = $mon;
+                    break;
+                case 'tue':
+                    $price = $tue;
+                    break;
+                case 'wed':
+                    $price = $wed;
+                    break;
+                case 'thu':
+                    $price = $thu;
+                    break;
+                case 'fri':
+                    $price = $fri;
+                    break;
+                case 'sat':
+                    $price = $sat;
+                    break;
+                case 'sun':
+                    $price = $sun;
+                    break;
+            }
+            $arrUpdate['room_id'] = $room_id;
+            $arrUpdate['hotel_id'] = $hotel_id;
+            $arrUpdate['date_use'] = $date;           
+            $arrUpdate['price_uudai'] = $price;
+            $arrUpdate['bed_uudai'] = $bed_price;                
+            $arrUpdate['name_uudai'] = $name_uudai;
+            $arrUpdate['detail_uudai'] = $detail_uudai;
+            $arrUpdate['min_night'] = (int) $min_night;
+            $arrUpdate['min_day'] = (int) $min_day;            
+            $arrUpdate['detail_id'] = $detail_id;
+            $arrUpdate['duration'] = date('d/m/Y', strtotime($datefrom))."-".date('d/m/Y', strtotime($dateto));   
+            //check exist
+            $check = $this->db->where('detail_id', $detail_id)->where('room_id', $room_id)->where('date_use', $date)->get('pt_room_prices_uudai')->result();
+
+            if (empty($check)) {                
+                $this->db->insert('pt_room_prices_uudai', $arrUpdate);
+            } else {                
+                $arrUpdate['duration'] = date('d/m/Y', strtotime($datefrom))."-".date('d/m/Y', strtotime($dateto));
+                $this->db->where('room_id', $room_id)->where('date_use', $date)->update('pt_room_prices_uudai', $arrUpdate);
             }
         }
 
@@ -1082,11 +1143,14 @@ class Rooms_model extends CI_Model
             } elseif ($type == 3) {
                 $arrUpdate['extra'] = $price;
             }elseif($type == 4){
-                $arrUpdate['price_uudai'] = $price;
-                $arrUpdate['bed_uudai'] = $bed_price;
-                $arrUpdate['name_uudai'] = $name_uudai;
-                $arrUpdate['detail_uudai'] = $detail_uudai;
-                $arrUpdate['min_nights'] = $min_night;
+                $arrUudai['price'] = $price;
+                $arrUudai['bed'] = $bed_price;                
+                $arrUudai['name'] = $name_uudai;
+                $arrUudai['detail'] = $detail_uudai;
+                $arrUudai['min_night'] = $min_night;
+                $arrUudai['min_day'] = $min_day;
+                $uudai = json_encode($arrUudai);
+                $uudai1;
             }
             //check exist
             $check = $this->db->where('room_id', $room_id)->where('date_use', $date)->get('pt_room_prices_detail')->result();
@@ -1391,21 +1455,44 @@ class Rooms_model extends CI_Model
         $date_from = $checkin;
         $date_to = $checkout;
         $arrDate = $this->createDateRangeArray($date_from, $date_to);
-        $price_total = $price_uudai = 0;
+        $price_total = $price_sale = 0;
         unset($arrDate[count($arrDate) - 1]);
+        $uuDaiArr = $uuDaiTotalArr = [];
         foreach ($arrDate as $date_use) {
             $priceTmp = $this->db->query("SELECT * FROM pt_room_prices_detail WHERE date_use = '" . $date_use . "' AND room_id = $room_id")->row(0);
+            $priceUuDaiTmp = $this->db->query("SELECT * FROM pt_room_prices_uudai WHERE date_use = '" . $date_use . "' AND room_id = $room_id GROUP BY detail_uudai")->result_array();
+           // var_dump("<pre>", $priceUuDaiTmp);die;
+           // var_dump($priceTmp);die;
             if (!empty($priceTmp)) {
                 $price_total += $priceTmp->total;                
-                $price_uudai += $priceTmp->price_uudai;
-                $name_uudai = $priceTmp->name_uudai;
-                $detail_uudai = $priceTmp->detail_uudai;
-                $min_nights = $priceTmp->min_nights;
-                $duration = $priceTmp->duration;
+                $price_sale += $priceTmp->price_sale;  
+                $price_bed_sale += $priceTmp->price_bed_sale; 
+                $duration = $priceTmp->duration;              
+                $min_night = $priceTmp->min_night;              
             }
+            if(!empty($priceUuDaiTmp)){
+                foreach($priceUuDaiTmp as $uudai){
+                    $uuDaiArr[$uudai['detail_id']][$date_use]['price'] = $uudai['price_uudai'];
+                    $uuDaiArr[$uudai['detail_id']][$date_use]['bed_price'] = $uudai['bed_uudai'];
+                    $uuDaiArr[$uudai['detail_id']][$date_use]['name_uudai'] = $uudai['name_uudai'];
+                    $uuDaiArr[$uudai['detail_id']][$date_use]['detail_uudai'] = $uudai['detail_uudai'];
+                    $uuDaiArr[$uudai['detail_id']][$date_use]['duration'] = $uudai['duration'];
+                    $uuDaiTotalArr[$uudai['detail_id']]['total'] += $uudai['price_uudai'];
+                    $uuDaiTotalArr[$uudai['detail_id']]['bed'] += $uudai['bed_uudai'];
+                }
+            }            
             $priceDetail[$date_use] = $priceTmp;
-        }        
-        return ['total' => $price_total, 'price_uudai' => $price_uudai, 'detail' => $priceDetail, 'detail_uudai' => $detail_uudai, 'name_uudai' => $name_uudai, 'min_nights' => $min_nights, 'duration' => $duration];
+
+        }
+        return [    'total' => $price_total, 
+                    'price_sale' => $price_sale, 
+                    'detail' => $priceDetail,
+                    'uuDaiDetail' => $uuDaiArr,
+                    'uuDaiTotalArr' => $uuDaiTotalArr,
+                    'price_bed_sale' => $price_bed_sale,
+                    'duration' => $duration,
+                    'min_night' => $min_night
+                ];
     }
 
     /**

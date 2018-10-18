@@ -51,6 +51,7 @@
                     $i = 0;
                     ?>
                 <?php foreach ($rooms as $r) { 
+                   // echo "<pre>", var_dump($r->price);die;
                     $i++;               
                     ?>
                 <input type="hidden" name="room_id[]" value="<?php echo $r->id; ?>" />
@@ -189,15 +190,10 @@
                     <?php foreach ($rooms as $r) {                        
                         $i++;               
                         //var_dump("<pre>",$r->price);die;
+                        //var_dump($r->price['price_sale']);
                     ?>
                     <?php 
-                    //include 'prices/three.php';
-                    //var_dump($modulelib->stay);die;
-                    if($r->price['price_uudai'] > 0 && $r->price['min_nights'] >= $modulelib->stay){
-                        include 'prices/two.php';
-                    }else{
-                        include 'prices/one.php';
-                    }
+                    include 'prices/three.php';
                     ?>
                     <?php } ?>
                 <?php } ?>
