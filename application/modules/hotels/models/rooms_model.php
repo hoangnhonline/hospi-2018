@@ -781,6 +781,7 @@ class Rooms_model extends CI_Model
             $min_night = $this->input->post('min_night'); 
             $min_day = $this->input->post('min_day');        
         }
+
         foreach($loinhuanArr as $tmp){
             $loiNhuan[] = str_replace(",", "", $tmp);
         }
@@ -802,8 +803,7 @@ class Rooms_model extends CI_Model
             'sat' => $sat,
             'sun' => $sun,
             'profit' => json_encode($loiNhuan),
-            'profit_money' => json_encode($profitArrMoney),
-            
+            'profit_money' => json_encode($profitArrMoney),            
             'created_user' => $this->session->userdata('pt_logged_admin'),
             'updated_user' => $this->session->userdata('pt_logged_admin'),
             'created_at' => date('Y-m-d H:i:s'),
@@ -815,6 +815,7 @@ class Rooms_model extends CI_Model
             $data['min_night'] = $min_night;
             $data['min_day'] = $min_day;
         }
+        //var_dump($data);die;
         $this->db->insert('pt_rooms_prices', $data);        
         $detail_id = $this->db->insert_id();        
         //insert price detail
@@ -959,6 +960,7 @@ class Rooms_model extends CI_Model
                     $price = $sun;
                     break;
             }
+
             $arrUpdate['room_id'] = $room_id;
             $arrUpdate['hotel_id'] = $hotel_id;
             $arrUpdate['date_use'] = $date;           
@@ -970,13 +972,13 @@ class Rooms_model extends CI_Model
             $arrUpdate['min_day'] = (int) $min_day;            
             $arrUpdate['detail_id'] = $detail_id;
             $arrUpdate['duration'] = date('d/m/Y', strtotime($datefrom))."-".date('d/m/Y', strtotime($dateto));   
+            $arrUpdate['duration'] = date('d/m/Y', strtotime($datefrom))."-".date('d/m/Y', strtotime($dateto));
+            //var_dump($arrUpdate);die;
             //check exist
-            $check = $this->db->where('detail_id', $detail_id)->where('room_id', $room_id)->where('date_use', $date)->get('pt_room_prices_uudai')->result();
-
+            $check = $this->db->where('detail_id', $detail_id)->where('room_id', $room_id)->where('date_use', $date)->get('pt_room_prices_uudai')->result();            
             if (empty($check)) {                
                 $this->db->insert('pt_room_prices_uudai', $arrUpdate);
-            } else {                
-                $arrUpdate['duration'] = date('d/m/Y', strtotime($datefrom))."-".date('d/m/Y', strtotime($dateto));
+            } else {
                 $this->db->where('room_id', $room_id)->where('date_use', $date)->update('pt_room_prices_uudai', $arrUpdate);
             }
         }
@@ -1055,10 +1057,12 @@ class Rooms_model extends CI_Model
         $type = $this->input->post('type');
         $room_id = $this->input->post('roomid');
         $type_apply = $this->input->post('type_apply');
+        $hotel_id = $this->input->post('hotel_id');
         if($type == 4){
             $name_uudai = $this->input->post('name_uudai');
             $detail_uudai = $this->input->post('detail_uudai');
             $min_night = $this->input->post('min_night');
+            $min_day = $this->input->post('min_day');
         }
         $bed_price = floatval($this->replaceCommas($this->input->post('bedcharges'))) + $profitBed;        
         foreach($loinhuanArr as $tmp){
@@ -1092,11 +1096,17 @@ class Rooms_model extends CI_Model
             $data['name_uudai'] = $name_uudai;
             $data['detail_uudai'] = $detail_uudai;
             $data['min_night'] = $min_night;
+            $data['min_day'] = $min_day;
         }
         $this->db->update('pt_rooms_prices', $data);
         //update price detail
         if($type == 4){
-            $this->updatePriceDetail($room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price, $name_uudai, $detail_uudai, $min_night);
+
+            $detail_id = $this->input->post('detail_id');
+
+            $this->insertPriceUuDai($hotel_id, $room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price, $name_uudai, $detail_uudai, $min_night, $detail_id, $min_day);
+
+
         }else{
             $this->updatePriceDetail($room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price);
         }
@@ -1196,6 +1206,51 @@ class Rooms_model extends CI_Model
                 $arrUpdate['duration'] = date('d/m/Y', strtotime($datefrom))."-".date('d/m/Y', strtotime($dateto));                
                 $this->db->where('room_id', $room_id)->where('date_use', $date)->update('pt_room_prices_detail', $arrUpdate);
             }
+        }
+
+    }
+
+    public function updatePriceUuDai($room_id, $datefrom, $dateto, $mon, $tue, $wed, $thu, $fri, $sat, $sun, $type, $type_apply, $bed_price, $name_uudai = null, $detail_uudai = null, $min_night = 0, $min_day = 0, $detail_id)
+    {
+        $arrDate = $this->createDateRangeArray($datefrom, $dateto);
+        foreach ($arrDate as $date) {
+            $thuOfDate = strtolower(date('D', strtotime($date)));
+            switch ($thuOfDate) {
+                case 'mon':
+                    $price = $mon;
+                    break;
+                case 'tue':
+                    $price = $tue;
+                    break;
+                case 'wed':
+                    $price = $wed;
+                    break;
+                case 'thu':
+                    $price = $thu;
+                    break;
+                case 'fri':
+                    $price = $fri;
+                    break;
+                case 'sat':
+                    $price = $sat;
+                    break;
+                case 'sun':
+                    $price = $sun;
+                    break;
+            }
+            $arrUpdate['room_id'] = $room_id;
+            $arrUpdate['date_use'] = $date;
+            
+            $arrUudai['price'] = $price;
+            $arrUudai['bed'] = $bed_price;                
+            $arrUudai['name'] = $name_uudai;
+            $arrUudai['detail'] = $detail_uudai;
+            $arrUudai['min_night'] = $min_night;
+            $arrUudai['min_day'] = $min_day;
+            $uudai = json_encode($arrUudai);
+                
+            
+            
         }
 
     }

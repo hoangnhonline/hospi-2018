@@ -4,6 +4,9 @@
           Ưu đãi khác
         </a>     
     </div>
+    <?php 
+  //  var_dump($priceUudaiDetail);die;
+    ?>
     <div class="panel-body panel-collapse collapse <?php if($tab_active == 'uudai'){ ?> in <?php } ?>" id="collapse4">
         <form action="" method="POST">
             <h4 style="color: #660033;padding-bottom: 10px;margin-bottom: 10px;border-bottom: 1px solid #660033">THÊM GIÁ NET</h4>
@@ -32,6 +35,7 @@
                     </select>
                 </div>
             </div>
+
             <div class="col-md-2">
                 <div class="form-group">
                     <label class="required">Số ngày đặt trước</label>
@@ -199,6 +203,7 @@
                             <?php } ?>
                           <input type="hidden" name="roomid" value="<?php echo $roomid;?>" />
                           <input type="hidden" name="type" value="4" />
+                          <input type="hidden" name="detail_id" value="<?php echo @$priceUudaiDetail->id; ?>">
                           <input type="hidden" name="dateformat" value="<?php echo $appSettings->dateFormat;?>" />
                           
                           <button class="btn btn-primary btn-sm" type="submit" style="margin-top:4px"><?php  echo empty($priceUudaiDetail) ? "Thêm" : "Cập nhật" ;?></button>
