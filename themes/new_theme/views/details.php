@@ -320,9 +320,7 @@
             <div class="clearfix"></div>
             <?php if($appModule != "cars" && $appModule != "ean"){ include 'includes/review.php'; } ?>
             <div class="clearfix"></div>
-            <div class="clearfix"></div>
-            <?php if($appModule != "cars" && $appModule != "ean"){ include 'includes/review.php'; } ?>
-            <div class="clearfix"></div>
+            
         </div>
         <!-- slider -->
         <!-- aside -->

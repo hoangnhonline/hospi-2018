@@ -87,7 +87,8 @@ class Hotels extends MX_Controller
 
             // End Availability Calender settings variables
 
-            $this->data['tripadvisorinfo'] = tripAdvisorInfo($this->data['module']->tripadvisorid);
+            $this->data['tripadvisorinfo'] = $tripadvisorinfo = tripAdvisorInfo($this->data['module']->tripadvisorid);
+            
             if (pt_is_module_enabled('reviews')) {
                 $this->data['reviews'] = $this->hotels_lib->hotelReviews($this->data['module']->id);
                 $this->data['avgReviews'] = $this->hotels_lib->hotelReviewsAvg($this->data['module']->id);
