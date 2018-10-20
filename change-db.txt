@@ -8,3 +8,8 @@ ALTER TABLE `pt_rooms_prices` ADD `profit_money` VARCHAR(500) NULL DEFAULT NULL 
 
 ALTER TABLE `pt_room_prices_detail` ADD `price_uudai` INT NULL DEFAULT '0' AFTER `bed_total`;
 ALTER TABLE `pt_room_prices_detail` ADD `bed_uudai` INT NULL DEFAULT '0' AFTER `price_uudai`;
+
+ALTER TABLE `pt_room_prices_detail` ADD `price_sale` INT NULL AFTER `price_uudai`;
+
+
+ALTER TABLE `pt_room_prices_detail` ADD `bed_sale_total` INT NULL AFTER `price_uudai`;
