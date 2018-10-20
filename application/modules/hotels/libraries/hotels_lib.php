@@ -1758,6 +1758,7 @@ class Hotels_lib
     //make a result object limited data of hotels array
     function getLimitedResultObject($hotels)
     {
+        
         $this->ci->load->library('currconverter');
         $result = array();
         $curr = $this->ci->currconverter;

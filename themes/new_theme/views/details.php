@@ -908,12 +908,15 @@
                         <div class="collapsebtn_Style2"><?php if($appModule == "hotels" || $appModule == "ean"){ echo trans('0290'); }else if($appModule == "tours"){ echo trans('0453'); }else if($appModule == "cars"){ echo trans('0493'); } ?></div>
                         <?php foreach($module->relatedItems as $item) { ?>
                             <div class="featured">
-                                <a href="<?php echo $item->slug;?>" class="col-md-12 col-sm-12 col-xs-12 go-right" >
+                                <div class="desc col-md-12 col-sm-12">
+                                    <h4 style="margin-bottom: 0px !important;" class="go-text-right purple"><a href="<?php echo $item->slug;?>" ><?php echo character_limiter($item->title,100);?></a></h4>
+                                    <div><span class="go-right RTL" style="font-size: 12px"><i style='margin-left:-5px; ' class='icon-location-6'></i><?php echo $item->location;?></span> <?php echo $item->stars;?></div>
+                                </div>
+                                <a href="<?php echo $item->slug;?>" class="col-md-7 col-sm-7 col-xs-7 go-right" >
                                 <img class="img-responsive post-img img-fade" src="<?php echo $item->thumbnail;?>" alt="<?php echo character_limiter($item->title,15);?>" />
                                 </a>
-                                <div class="desc col-md-12 col-sm-12 col-xs-12 go-left">
-                                    <h4 style="margin-top: 0px;" class="go-text-right purple"><a href="<?php echo $item->slug;?>" ><?php echo character_limiter($item->title,15);?></a></h4>
-                                    <div><?php echo $item->location;?> <?php echo $item->stars;?></div>
+                                <div class="desc col-md-5 col-sm-5 col-xs-5 go-left">
+                                   
                                     <span class="pull-right">
                                     <?php  if($item->price > 0){ ?>
                                     <?php echo trans('0561');?><?php echo $item->price;?><?php echo $item->currSymbol; ?>
@@ -941,7 +944,7 @@
                                 <?php
                                     $results = recentlyViewed($recent);
                                 ?>
-                                <span class="go-right RTL"><i style="margin-left:-5px" class="icon-location-6"></i><?php echo $module->location; ?> </span>
+                                
                                 <?php
                                     foreach ($results as $row) {
                                         $locationInfoUrl = pt_LocationsInfo($row->hotel_city);
@@ -950,10 +953,15 @@
                                         $cityName = url_title($locationInfoUrl->city, 'dash', true);
 
                                         $slug = $countryName.'/'.$cityName.'/'.$row->hotel_slug;
-                                        echo "<div><a href='".base_url()."hotels/".$slug."'>" . $row->hotel_title . "</a></div>" .pt_create_stars($row->hotel_stars);
+                                        ?>
+                                        <div>
+                                            
+                                        <?php
+                                        echo "<a href='".base_url()."hotels/".$slug."'>" . $row->hotel_title . "</a></div><span style='margin-right:5px;font-size:12px' class='go-right RTL'><i style='margin-left:-5px; ' class='icon-location-6'></i>".$module->location."</span> " .pt_create_stars($row->hotel_stars);
 
                                     }
                                 ?>
+                                
                             </div>
                         </div>
                         <hr style="margin-top:10px;margin-bottom:10px">
