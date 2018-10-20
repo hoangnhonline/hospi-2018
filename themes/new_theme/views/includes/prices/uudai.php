@@ -2,15 +2,16 @@
         if(!empty($r->price['uuDaiTotalArr'])){
         ?>
         <?php 
+        $countUuDai = 0;
         foreach($r->price['uuDaiTotalArr'] as $detail_id => $uuDaiTotal){            
             $priceUuDaiDetail = $r->price['uuDaiDetail'][$detail_id];
-            //echo "<pre>"; print_r($priceUuDaiDetail);die;
+            $countUuDai++;
 
         ?>
         <tr>
             <?php if($r->price['price_sale']==0){ 
                 $rowspan = 1 + count($r->price['uuDaiTotalArr']);
-
+                if($countUuDai == 1){
                 ?>
 
             <td rowspan="<?php echo $rowspan; ?>">
@@ -34,7 +35,7 @@
                     </div>
                 </div>                
             </td>
-            <?php } ?>
+            <?php } } ?>
             <?php 
                 $tmpUuDaiFirst = reset($priceUuDaiDetail);                
                 ?>
@@ -111,6 +112,7 @@
             </td>
             <?php 
             if($r->price['price_sale'] == 0){
+                if($countUuDai == 1){
             ?>
             <td rowspan="<?php echo $rowspan; ?>">
                 <p><button style="margin-bottom:5px" type="submit" class="btn btn-action btn-block chk">Đặt phòng</button></p>
@@ -120,7 +122,7 @@
                 <p class="size13 text-center"><label class="radio-inline"><input type="checkbox" name="radiobeds" value="1">1 giường</label></p>
                 <p class="size13 text-center"><label class="radio-inline"><input type="checkbox" name="radiobeds" value="2">2 giường</label></p>
             </td>
-            <?php } ?>
+            <?php }} ?>
         </tr>    
         <?php } // end foreach ?>
         <?php } // end if ?>
