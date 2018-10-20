@@ -522,7 +522,13 @@ class Hotels extends MX_Controller
         $child = (int)$this->input->get('child');
         $room_quantity = $this->input->get('room_quantity');
         $extra_beds = $this->input->get('extra_beds');
-        $price = $this->input->get('price');
+        $p = $this->input->get('p'); // price
+        $pb = $this->input->get('pb'); // price extra beds
+        $ptype = $this->input->get('ptype'); // 1 : normal 2 sale 3 uu dai
+
+        $name_uudai = $this->input->get('name_uudai'); // 1 :  2 Gia khuyen mai 3 Ten uu dai
+        $detail_id = $this->input->get('detail_id'); // price detail id
+        
         $totalRooms = 0;
         if (!empty($room_quantity)) {
             foreach ($room_quantity as $tmp) {
@@ -557,7 +563,12 @@ class Hotels extends MX_Controller
 
              echo "<pre>";
             print_r($bookInfo);
-            echo "</pre>";*/
+            echo "</pre>";*/           
+            $this->data['detail_id'] = $detail_id;
+            $this->data['priceChoose'] = $p;
+            $this->data['priceBedChoose'] = $pb;
+            $this->data['typeChoose'] = $ptype;
+            $this->data['name_uudai'] = $name_uudai;
 
             $this->data['module'] = $detailHotel;
             $this->data['stay'] = $stay;

@@ -204,9 +204,14 @@
 <script type="text/javascript">
     $('select.room_quantity').change(function(){
         $(this).parents('table.room-multi').find('.room_quantity_hidden').val($(this).val());
+        $(this).parents('table.room-multi').find('.ptype_hidden').val($(this).data('type'));
+        $(this).parents('table.room-multi').find('.p_hidden').val($(this).data('p'));
+        $(this).parents('table.room-multi').find('.name_uudai').val($(this).data('name'));
+        $(this).parents('table.room-multi').find('.detail_id').val($(this).data('detail-id'));
     });
     $('select.extra_beds').change(function(){
         $(this).parents('table.room-multi').find('.extra_beds_hidden').val($(this).val());
+        $(this).parents('table.room-multi').find('.pb_hidden').val($(this).data('p'));
     });
     $('.hs_cl_show_info').on('click', function(){
         $(this).parents('table').find('.hs_show_info').slideToggle();

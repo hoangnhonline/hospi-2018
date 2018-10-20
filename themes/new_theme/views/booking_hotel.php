@@ -327,14 +327,11 @@
                    
                           $priceOne = 0;
                           $priceExtraBed = 0;
+                         
                           foreach ($rDetail->Info['detail'] as $tmp) {                              
-                              if($stay >= $rDetail->min_nights && $tmp->price_uudai > 0){
-                                $priceOne += $tmp->price_uudai;
-                                $priceExtraBed += $tmp->bed_uudai;
-                              }else{
-                                $priceOne += $tmp->total;
-                                $priceExtraBed += $tmp->bed_total;
-                              }                           
+                              $priceOne += $tmp->total;
+                              $priceExtraBed += $tmp->bed_total;
+                                                         
                           }
                           $priceOne = $priceOne / count($rDetail->Info['detail']);
                           $priceExtraBedTotal += $priceExtraBed * $extra_beds[$roomId];
@@ -342,19 +339,28 @@
 
 
                           $quantity = $room_quantity[$roomId];
-                          $thanhtien = ($priceOne * $quantity * $stay);
+                          
+                          $priceOne = $priceChoose[$roomId];
+                          $priceBedOne = $priceBedChoose[$roomId];
+                          $thanh_tien_phong = $priceOne * $quantity * $stay;
+                          $thanh_tien_giuong = $priceBedOne * $quantity * $stay;
                           ?>
                           <div class="clearfix"></div>
                             <div class="col-lg-12 col-xs-12 cl-tim">
+                              <?php 
+                              if($name_uudai[$roomId]){
+                              ?>
+                              <span><?php echo $name_uudai[$roomId]; ?></span><br>
+                            <?php } ?>
                               <span><?php echo $rDetail->title; ?></span>
                             </div>
                             <div class="col-lg-12 col-xs-12 cl-grey">
                               <span><?php echo number_format($priceOne); ?> x <?php echo $stay; ?> (đêm)
                                   x <?php echo $quantity; ?> (phòng)
-                                  = <?php echo number_format($thanhtien); ?> VND</span>
+                                  = <?php echo number_format($thanh_tien_phong); ?> VND</span>
                           </div>
                           <?php
-                          $priceTotal += $thanhtien;
+                          $priceTotal += $rDetail->Info['total'] * $quantity;
                          }
                   } ?>
                   
@@ -366,7 +372,7 @@
                     <span>* Giường phụ</span>
                   </div>
                   <div class="col-lg-12 col-xs-12 cl-grey">
-                    <span><?php echo number_format($priceExtraBedTotal); ?></span>
+                    <span><?php echo number_format($thanh_tien_giuong); ?></span>
                   </div>
                 </div>
                 <input type="hidden" name="so_giuong_phu" value="<?php echo $so_giuong_phu; ?>">
@@ -374,7 +380,7 @@
                 <div class="col-lg-12 col-xs-12 content-item-text no-padding">
                   <div class="col-lg-12 col-xs-12 cl-grey no-padding">
                     <div class="col-lg-6 col-xs-6 text-left"><span>Thành tiền</span></div>
-                    <div class="col-lg-6 col-xs-6 text-right"><span><?php echo number_format($priceTotal + $priceExtraBedTotal ); ?> VND</span></div>
+                    <div class="col-lg-6 col-xs-6 text-right"><span><?php echo number_format($thanh_tien_phong + $thanh_tien_giuong ); ?> VND</span></div>
                   </div>
                   <?php
                   $phi_vat = $phi_dich_vu = 0;
@@ -405,8 +411,8 @@
                   </div>
                   <div class="col-lg-12 col-xs-12 no-padding cl-grey">
                     <div class="col-lg-6 col-xs-6 text-left "><span>Thanh toán</span></div>
-                    <div class="col-lg-6 col-xs-6 text-right"><span><b><?php echo number_format($priceTotal + $priceExtraBedTotal + $phi_vat + $phi_dich_vu); ?> VND</b></span></div>
-                    <input type="hidden" name="tong_chua_giam" id="tong_chua_giam"   value="<?php echo $priceTotal + $priceExtraBedTotal + $phi_vat + $phi_dich_vu; ?>">
+                    <div class="col-lg-6 col-xs-6 text-right"><span><b><?php echo number_format($thanh_tien_giuong + $thanh_tien_phong + $phi_vat + $phi_dich_vu); ?> VND</b></span></div>
+                    <input type="hidden" name="tong_chua_giam" id="tong_chua_giam"   value="<?php echo $thanh_tien_giuong + $thanh_tien_phong + $phi_vat + $phi_dich_vu; ?>">
                   </div>
                 </div>
                 <div class="col-lg-12 col-xs-12 content-giam-gia no-padding padding-top-10">
@@ -434,8 +440,8 @@
                   </div>
                   <div class="col-lg-12 col-xs-12 no-padding cl-tim clss-tongthanhtoan">
                     <div class="col-lg-6 col-xs-6 text-left "><span>Tổng thanh toán </span></div>
-                    <div class="col-lg-6 col-xs-6 text-right"><span id="tong_thanh_toan_span"><b><?php echo number_format($priceTotal + $priceExtraBedTotal); ?> VND</b></span></div>
-                    <input type="hidden" name="tong_thanh_toan" id="tong_thanh_toan" value="<?php echo($priceTotal + $priceExtraBedTotal); ?>">
+                    <div class="col-lg-6 col-xs-6 text-right"><span id="tong_thanh_toan_span"><b><?php echo number_format($thanh_tien_phong + $thanh_tien_giuong); ?> VND</b></span></div>
+                    <input type="hidden" name="tong_thanh_toan" id="tong_thanh_toan" value="<?php echo($thanh_tien_giuong + $thanh_tien_phong); ?>">
                   </div>
                   <div class="col-lg-12 col-xs-12 no-padding cl-grey clss-finish">
                     <div class="col-lg-12 col-xs-12 text-left ">
@@ -473,8 +479,8 @@
             <input type="hidden" name="roomscount" value='<?php echo json_encode($room_quantity); ?>'/>
             <input type="hidden" name="bedscount" value='<?php echo json_encode($extra_beds); ?>'/>
             <input type="hidden" name="checkin" value="<?php echo $checkin; ?>"/>
-             <input type="hidden" name="adults" value= 0 />
-            <input type="hidden" name="child" value= 0 />
+             <!-- <input type="hidden" name="adults" value= 0 />
+            <input type="hidden" name="child" value= 0 /> -->
           </form>
         </div>
       </div>

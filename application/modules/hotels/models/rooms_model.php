@@ -1510,7 +1510,7 @@ class Rooms_model extends CI_Model
         $date_from = $checkin;
         $date_to = $checkout;
         $arrDate = $this->createDateRangeArray($date_from, $date_to);
-        $price_total = $price_sale = 0;
+        $price_total = $price_bed_total = $price_sale = 0;
         unset($arrDate[count($arrDate) - 1]);
         $uuDaiArr = $uuDaiTotalArr = [];
         foreach ($arrDate as $date_use) {
@@ -1519,7 +1519,8 @@ class Rooms_model extends CI_Model
            // var_dump("<pre>", $priceUuDaiTmp);die;
            // var_dump($priceTmp);die;
             if (!empty($priceTmp)) {
-                $price_total += $priceTmp->total;                
+                $price_total += $priceTmp->total;   
+                $price_bed_total += $priceTmp->bed_total;               
                 $price_sale += $priceTmp->price_sale;  
                 $price_bed_sale += $priceTmp->price_bed_sale; 
                 $duration = $priceTmp->duration;              
@@ -1540,6 +1541,7 @@ class Rooms_model extends CI_Model
 
         }
         return [    'total' => $price_total, 
+                    'price_bed_total' => $price_bed_total,
                     'price_sale' => $price_sale, 
                     'detail' => $priceDetail,
                     'uuDaiDetail' => $uuDaiArr,
