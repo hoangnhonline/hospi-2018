@@ -915,13 +915,41 @@
                                 <a href="<?php echo $item->slug;?>" class="col-md-7 col-sm-7 col-xs-7 go-right" >
                                 <img class="img-responsive post-img img-fade" src="<?php echo $item->thumbnail;?>" alt="<?php echo character_limiter($item->title,15);?>" />
                                 </a>
-                                <div class="desc col-md-5 col-sm-5 col-xs-5 go-left">
-                                   
-                                    <span class="pull-right">
-                                    <?php  if($item->price > 0){ ?>
-                                    <?php echo trans('0561');?><?php echo $item->price;?><?php echo $item->currSymbol; ?>
+                                <div class="desc col-md-5 col-sm-5 col-xs-5 go-left" style="padding:0px">
+                                   <div class="purple size18 text-center item-book-hotels" style="margin:0 auto;">
+                                      <?php if ($item->price > 0) {
+                                        if ($item->price_status != 'Yes') { ?>
+                                            
+                                         <div class="click-2get-price col-xs-4 item-gia-tot">
+                                                 <a id="popoverData" href="#emailme38" data-toggle="modal" data-content="Vì giá tốt nhất không được công bố lên website, Bạn vui lòng click vào để nhận giá tốt nhất qua email hoặc qua điện thoại" rel="popover" data-placement="top" data-original-title="<?php echo $item->title; ?>" data-trigger="hover">
+                                               <div class="click-a">Click lấy giá tốt</div>
+                                               <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                 </a>
+                                            </div>
+                                     <?php } ?>
                                     <?php } ?>
-                                    </span>
+
+                                   <div class="clearfix"></div>
+                                    <div class="line-right"></div>
+                                  <?php if (pt_is_module_enabled('reviews')) { ?>
+                                        <?php if ($item->avgReviews->overall > 0) { ?>
+                                                <div class=" text-center size18 col-xs-4 item-like">
+                                                   <i class="icon-thumbs-up-4"></i><?php echo $item->avgReviews->overall; ?>
+                                                </div>
+                                        <?php } ?>
+                                    <?php } ?>                                  
+                                 
+                                 <div class="line-right-tow"></div>
+                                 <div class="clearfix"></div>
+                                  <div class=" text-center size18 item-xem-ngay">
+                                     <a href="<?php echo $item->slug; ?>">
+                                       <button type="submit" class="btn btn-action2">Xem ngay</button>
+                                    </a>
+                                 </div>
+                                 <!--2-->
+                                
+                               
+                              </div>
                                 </div>
                                 <!--//desc-->
                             </div>
@@ -975,6 +1003,18 @@
         </div>
     </div>
 </div>
+<style type="text/css">
+    .click-2get-price{
+        margin-bottom: 5px;
+        padding-bottom: 0px !important;
+        font-size: 10px !important;
+        width: 90%;
+    }
+    .item-xem-ngay .btn-action2{
+        font-size: 13px !important;
+        margin-left: -10px;
+    }
+</style>
 <script>
     //------------------------------
     // Write Reviews
