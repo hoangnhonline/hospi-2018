@@ -1,0 +1,1053 @@
+1539014744TS--->
+<!DOCTYPE html>
+<html ng-app="phptravelsApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="HOSPI">
+    <meta property="fb:app_id" content="159189514584032" />
+    <title>Ưu đãi thu đông 2018 tại Sanctuary Hồ Tràm Resort </title>
+    <link rel="shortcut icon" href="http://hospi.local/uploads/global/favicon.png">
+    <link href="http://hospi.local/themes/new_theme/assets/css/bootstrap-modal.css" rel="stylesheet" media="screen">
+    <link href="http://hospi.local/themes/new_theme/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="http://hospi.local/themes/new_theme/assets/css/bootstrap-slider.css" rel="stylesheet" media="screen">
+    <link href="http://hospi.local/themes/new_theme/assets/css/custom.css" rel="stylesheet" media="screen">
+
+  <!-- Duc add css file -->
+    <link href="http://hospi.local/themes/new_theme/style.css" rel="stylesheet" media="screen">
+    <link href="http://hospi.local/themes/new_theme/asset/css/styleNews.css" rel="stylesheet">
+    <link href="http://hospi.local/themes/new_theme/asset/css/Menu.css" rel="stylesheet">
+    <link href="http://hospi.local/themes/new_theme/asset/css/timkiem.css" rel="stylesheet">
+    <link href="http://hospi.local/themes/new_theme/asset/css/responsive-honeymoon.css" rel="stylesheet" media="screen">
+     <link href="http://hospi.local/themes/new_theme/asset/css/book.css" rel="stylesheet">
+   
+    <link href="http://hospi.local/themes/new_theme/asset/css/responsive-cookbook.css" rel="stylesheet">
+    <link href="http://hospi.local/themes/new_theme/asset/css/responsive.css" rel="stylesheet">
+<!--     <link href="http://hospi.local/themes/new_theme/asset/css/responsive-khachsan.css" rel="stylesheet">
+ -->    <link href="http://hospi.local/themes/new_theme/asset/css/responsive-combo.css" rel="stylesheet">
+    <!-- facebook --------> 
+    <meta property="og:title" content="Ưu đãi thu đông 2018 tại Sanctuary Hồ Tràm Resort "/>
+    <meta property="og:site_name" content="HOSPI - Đặt phòng khách sạn"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:publisher" content="https://www.facebook.com/HOSPI - Đặt phòng khách sạn"/>
+    <script type="application/ld+json">{"@context":"http://schema.org/","@type":"Organization","name":"HOSPI - Đặt phòng khách sạn","url":"https://www.hospi.vn/","logo":"http://hospi.local/uploads/global/favicon.png","sameAs":"https://www.facebook.com/HOSPI - Đặt phòng khách sạn","sameAs":"https://twitter.com/HOSPI - Đặt phòng khách sạn","sameAs":"https://www.pinterest.com/HOSPI - Đặt phòng khách sạn/","sameAs":"https://plus.google.com/u/0/HOSPI - Đặt phòng khách sạn/posts","contactPoint":{"@type":"ContactPoint","telephone":"028 3826 8797","contactType":"Customer Service"}}{"@context":"http://schema.org","@type":"WebSite","name":"HOSPI - Đặt phòng khách sạn","url":"https://www.hospi.vn"}  </script>
+    <!--[if lt IE 9]>        <script src="http://hospi.local/themes/new_theme/assets/js/html5shiv.js"></script> <script src="http://hospi.local/themes/new_theme/assets/js/respond.min.js"></script><![endif]-->
+    <!-- BASE CSS ---------> 
+    <link href="http://hospi.local/themes/new_theme/style.css" rel="stylesheet">
+    <style> @import "http://hospi.local/themes/new_theme/childtheme/childstyle.css"; </style>
+    <!-- Google Maps ------> <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyAAgXXrHR9Rf4DY_zdtfkhlqplUtfaOonk&libraries=places"></script>
+    <!-- jQuery -----------> <script src="http://hospi.local/themes/new_theme/assets/js/jquery-1.11.2.min.js"></script> <script src="http://hospi.local/themes/new_theme/assets/js/wow.min.js"></script>
+    <!-- RTL CSS ---------->     <!-- Mobile Redirect -->     <!--[if lt IE 7]>        
+    <link rel="stylesheet" type="text/css" href="http://hospi.local/themes/new_theme/assets/css/font-awesome-ie7.css" media="screen" />
+    <![endif]-->
+    <link rel="stylesheet" href="http://hospi.local/themes/new_theme/assets/css/jquery-ui.css" />
+  </head>
+
+  <body id="top">
+    <div id="wait">
+      <div class="lds-css ng-scope">
+        <div style="width:100%;height:100%" class="lds-flickr">
+          <!-- <div class="rotatingwait"></div> -->
+          <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=159189514584032";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+<!--hoangnhonline    <script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",59360]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>-->
+
+        <!-- Duc add html header-top -->
+    <header class="block-header">
+      <div class="header-top">
+        <div class="container">
+          <div class="col-sm-6 col-xs-12">
+            <div class="row">
+              <p class="col-sm-6 text-right col-xs-6 no-padding-right-mobile">
+                <a id="doan" href="#datphongdoan" data-toggle="modal" data-content="Đặt vé nhanh" rel="popover" data-placement="top" data-original-title="Đặt vé nhanh" data-trigger="hover">
+                  Đặt vé nhanh <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Giá trên hệ thống HOSPI là giá dành cho khách lẻ để lấy giá đoàn rẻ nhất(Áp dụng từ 10 phòng trở lên) vui lòng gửi yêu cầu cho chúng tôi"></i></a>
+              </p>
+              <p class="col-sm-6 text-center col-xs-6 no-padding-right-mobile">
+                <a id="nhanh" href="#datphongnhanh" data-toggle="modal" data-content="Đặt phòng nhanh ?" rel="popover" data-placement="top" data-original-title="Đặt phòng nhanh ?" data-trigger="hover">Đặt phòng nhanh <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Bạn không muốn thời gian để tìm kiếm khách sạn với giá tốt nhất hãy gửi yêu cầu để được báo giá nhanh trong vòng 30 phút"></i></a>
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 hidden-xs">
+            <div class="row">
+              <p class="col-sm-4 text-right"><i class="fa fa-phone-square"></i> (028) 3826 8797</p>
+              <p class="col-sm-4 text-right">Hotline: 09 6868 0106</p>
+              <p class="col-sm-4 text-right">Zalo: 090 345 5152</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="navbar navbar-static-top navbar-default navbar-custom ">
+      <div class="container">
+        <div class="navbar">
+          <!-- Navigation-->
+                      <div class="col-md-2">
+                            <div class="navbar-header go-right logo-mobile">
+                <!-- <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button> -->
+                                <a href="http://hospi.local/" class="navbar-brand"><img src="http://hospi.local/themes/new_theme/assets/img/logo.png" alt="HOSPI - Đặt phòng khách sạn" class="logo"/></a>
+                              </div>
+              <div class="menu-section clearfix" id="menumobilemain">
+            <div class="slicknav_menu">
+                 <a href="#menumobile" data-type="menu" data-toggle="collapse" class="slicknav_btn">
+                      <span class="icon-bar icon-1"></span>
+                      <span class="icon-bar icon-2"></span>
+                      <span class="icon-bar icon-3"></span>
+                    <span class="slicknav_menutxt">MENU</span>
+                    <span class="icon-down-menu ">
+                      <i class="fa fa-caret-down"></i>
+                    </span>
+                     
+                  </a>
+                  <ul class="slicknav_nav" aria-hidden="true" role="menu" id="menumobile" class="collapse out">
+                    <li><a data-type="menu" data-toggle="collapse" href="#menu-child-mobile" class="show-menu"><i class="fa fa-angle-right"></i> Khách sạn</a>
+                      <ul class="menu-child" id="menu-child-mobile" class="collapse in">
+                          <li>
+                            <a href="">Deal - Giảm giá</a>
+                          </li>
+                            <li>
+                              <a href="">Khuyến mãi</a>
+                          </li>
+                          <li>
+                            <a href="">Combo</a>
+                          </li>
+                      </ul>
+                    </li>
+                    <li><a data-type="menu" href="http://hospi.local/tours"><i class="fa fa-angle-right"></i> Tours</a></li>
+                    <li><a data-type="menu" href="http://hospi.local/hotels/honeymoon"><i class="fa fa-angle-right"></i> Honeymoon</a></li>
+                    <li><a data-type="menu" href="http://hospi.local/blog"><i class="fa fa-angle-right"></i> Tôi yêu du lịch</a></li>
+                    <li><a data-type="menu" href="#"><i class="fa fa-angle-right"></i> Giao diện đầy đủ</a></li>
+                    <li>
+                        <div class="block-user menu-mb">
+                          <div class="block-content">
+                            <p class="user-img">
+                              <img alt="" src="https://www.hospi.vn/themes/default/assets/img/user.jpg">
+                            </p>
+                            <div class="user-menu">
+                              <p>
+                                <a href="http://hospi.local/login">Đăng nhập</a>
+                              </p>
+                              <p>
+                                <a href="http://hospi.local/register">  Đăng ký</a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li>
+                      <div class="text-left item-contact">
+                          <div class="number-mobile"><i class="fa fa-phone-square"></i> (028) 3826 8797</div> 
+                          <div>Email: bookinghospi.vn</div> 
+                         <div>Hotline: 09 6868 0106</div> 
+                          <div>Zalo: 090 345 5152</div> 
+                      </div>
+                    </li>
+                  </ul>
+             </div>
+           </div>
+
+            </div>
+            <div class="col-md-8">            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right go-left top-menu">
+                                <!--<li class="dropdown  go-right">
+                  <a class="dropdown-toggle" href="http://hospi.local/"> Trang chủ </a>
+                  </li>-->
+                                <li class="main-menu go-right active ">
+                                    <a href="http://hospi.local/offers" class="active"   target="_blank" >
+                    <!--<i class='fa fa-gift'></i>--> Khuyến mãi                         <div class="current-page"></div>
+                  </a>
+                                                    </li>
+                                <li class="main-menu go-right  ">
+                                    <a href="http://hospi.local/hotels" class=""   target="_self" >
+                    <!--<i class='fa fa-building'></i>--> Khách sạn                         <div class="current-page"></div>
+                  </a>
+                                                    </li>
+                                <li class="main-menu go-right  ">
+                                    <a href="http://hospi.local/tours" class=""   target="_self" >
+                    <!--<i class='fa fa-briefcase'></i>--> Tours                          <div class="current-page"></div>
+                  </a>
+                                                    </li>
+                                <li class="main-menu go-right  ">
+                                    <a href="http://hospi.local/hotels/honeymoon" class=""   target="" >
+                  <!--<i class='fa fa-heart'></i>--> Honey Moon                      <div class="current-page"></div>
+                  </a>
+                                                    </li>
+                                <li class="main-menu go-right  ">
+                                    <a href="http://hospi.local/blog" class=""   target="_self" >
+                    <!--<i class='fa fa-building'></i>--> Tôi yêu du lịch                           <div class="current-page"></div>
+                  </a>
+                                                    </li>
+                                                                                                <!-- <li class="menu-mb">
+                  <a href="#" title="Giao dien đầy đử" class="menu-item-mb">Giao dien đầy đử</a>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+                    
+                    <div class="col-sm-2 hidden-xs">
+            <div class="block-user menu-mb">
+              <div class="block-content">
+                <p class="user-img">
+                  <img alt="" src="http://hospi.local/themes/new_theme/assets/img/user.jpg">
+                </p>
+                <div class="user-menu">
+                                    <p>
+                    <a href="http://hospi.local/login">Đăng nhập</a>
+                  </p>
+                  <p>
+                    <a href="http://hospi.local/register">  Đăng ký</a>
+                  </p>
+                                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container visible-xs">
+      <div style="margin-top:0">
+        <p class="text-center" style="margin: 0; line-height: 40px; color: #6f1040; font-size: 15px;"><i class="fa fa-phone-square"></i> (028) 3826 8797</p>
+      </div>
+    </div>
+
+    <div id="checkbookingform" class="modal fade checkbooking-modal" tabindex="-1" data-focus-on="input:first" style="display: none;">
+      <div class="modal-dialog click-2email">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="hotel-name">
+              Check booking
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="panel-body">
+              <form class="checkbooking-form" action="http://hospi.local/invoice/" method="GET">
+                <div class="type-select">
+                  <input type="radio" id="ck-hotel" class="booking-type" name="booking-type"><label for="ck-hotel" class="lb-hotel">Kiểm tra booking phòng</label>
+                </div>
+                <div class="type-select">
+                  <input type="radio" id="ck-tour" class="booking-type" name="booking-type"><label for="ck-tour" class="lb-hotel">Kiểm tra booking tour</label>
+                </div>
+                <div class="white-line"></div>
+                <input type="text" class="form-control" name="sessid" placeholder="Nhập mã booking">
+                <button type="submit" class="btn-ck purple" name="do" value="check-booking">Kiểm tra</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   <link href="http://hospi.local/themes/new_theme/asset/css/responsive-combo.css" rel="stylesheet">
+
+<link href="http://hospi.local/themes/new_theme/assets/include/slider/slider.min.css" rel="stylesheet" />
+<script src="http://hospi.local/themes/new_theme/assets/js/single.js"></script>
+<script src="http://hospi.local/themes/new_theme/assets/js/jquery.nicescroll.min.js"></script>
+<script src="http://hospi.local/themes/new_theme/assets/include/slider/slider.js"></script>
+<script src="http://hospi.local/themes/new_theme/assets/js/infobox.js"></script>
+<div class="mtslide2 sliderbg2">
+  
+</div>
+<div class="container offer-banners no-padding test">
+  <div id="carousel-banner" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class='item active'><img alt="" src="https://www.hospi.vn/uploads/cms/images/1513311094_Six-senses-Con-Dao-Resort.png" /></div><div class='item'><img alt="" height="323" src="https://www.hospi.vn/uploads/cms/images/1513206591_Sapa-jade-hill.png" width="1140" /></div><div class='item'><img alt="" height="323" src="https://www.hospi.vn/uploads/cms/images/1514540448_Combo-ictoria-Núi-Sam-Châu-Đốc.jpg" width="1140" /></div><div class='item'><img alt="" height="323" src="https://www.hospi.vn/uploads/cms/images/1513215826_Sea-Shell-phu-quoc-hotel-&amp;-Spa.png" width="1140" /></div>        </div>
+        <!-- Indicators -->
+        <ol class="carousel-indicators hidden-xs">
+                        <li data-target='#carousel-banner' data-slide-to='0' class='active'></li><li data-target='#carousel-banner' data-slide-to='1'></li><li data-target='#carousel-banner' data-slide-to='2'></li><li data-target='#carousel-banner' data-slide-to='3'></li>        </ol>
+    </div>
+      <div class="clearfix"></div>
+     <div class="visible-xs col-xs-12 offer-content-menu-promotion no-padding-mobile text-center">
+       <ul class="">
+          <li class="active"><a href="#">Deals - Ưu đãi</a></li>
+          <li ><a href="http://hospi.local/bestchoice">Best choice</a></li>
+          <li><a href="http://hospi.local/combo">Combo</a></li>
+      </ul>
+    </div>
+</div>
+
+    
+<!-- map -->
+<div class="container block-breadcrumb hidden-xs">
+    <div class="container">
+        <ol id="breadcrumb" class="breadcrumb"><li><a href="http://hospi.local/">Trang chủ</a></li><li class="active"><span>Ưu đãi thu đông 2018 tại Sanctuary Hồ Tràm Resort </span></li></ol>
+    </div>
+</div>
+<div class="visible-xs col-xs-12 breambun">
+      <div class="breadcrumb">
+            <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="/" itemprop="url">
+                <span itemprop="title">Trang chủ</span>
+              </a>
+            </span> <i class="fa fa-angle-right"></i>
+
+            <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="/" itemprop="url"><span itemprop="title">Best choice</span></a>
+          </span> <i class="fa fa-angle-right"></i>
+          <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="/" itemprop="url" class="active">
+              <span itemprop="title">Ưu đãi thu đông 2018 tại Sanctuary Hồ Tràm Resort </span>
+            </a>
+          </span> 
+        </div>
+
+       
+</div>
+    <div class="clearfix"></div>
+<div class="container pagecontainer offset-0 offset-0-padding-15">
+    <div class="offer-page rightcontent col-md-12 offset-0">
+        <div class="itemscontainer offset-1">
+            <div class="page-dt-cb">
+                <div class="row">
+                    <div class="col-sm-9 col-xs-12">
+                        <h1 class="h1-offers">Ưu đãi thu đông 2018 tại Sanctuary Hồ Tràm Resort </h1>
+                        <ul class="information">
+                            <li>
+                                <p class="address">
+                                    <i style="margin-left:-5px; display: inline-block;">
+                                        <img src="http://hospi.local/themes/new_theme/assets/img/location-icon2.png" alt="">
+                                    </i>
+                                    Vũng Tàu                                </p>
+                            </li>
+                                                            <li class="dots">
+                                    Ngày bắt đầu: <strong>26/08/2018</strong>
+                                </li>
+                                <li class="dots">
+                                    Ngày kết thúc: <strong>30/12/2018</strong>
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o go-right"></i>
+                                    <span>Còn lại</span>
+                                    <span href="#" class="phone"><span class="wow fadeInLeft animated" id="countdown"></span></span>
+                                </li>
+                                                    </ul>
+                        <!-- /.infomation -->
+                        <div class="block-tabs-2">
+                          <div class="col-xs-12 visible-xs uu-dai-chi-tiet ">Ưu đãi chi tiết</div>
+                          <div class="col-xs-12 hidden-xs uu-dai-chi-tiet no-padding">
+                            <div class="col-lg-4 no-padding uu-dai-chi-tiet-desktop">Ưu đãi chi tiết</div>
+                          </div>
+                            <!-- Nav tabs -->
+                            
+                            <!-- Tab panes -->
+                             <div class="wysiwyg">
+                                       
+                                           <p><strong>Sanctuary Hồ Tr&agrave;m Resort&nbsp;</strong>với gam m&agrave;u trắng chủ đạo tạo n&ecirc;n sự trang nh&atilde; v&agrave; tinh tế. Kiến tr&uacute;c hiện đại của resort&nbsp;phối hợp h&agrave;i h&ograve;a với thi&ecirc;n nhi&ecirc;n. tất cả khu biệt thự đều hướng biển v&agrave; mỗi ph&ograve;ng được trang tr&iacute; theo từng phong c&aacute;ch ri&ecirc;ng mang đến cho bạn nhiều sự lựa chọn.<br />
+Khi dừng ch&acirc;n tại đ&acirc;y bạn c&oacute; thể thưởng thức nhiều m&oacute;n ăn mang hương vị &Aacute; &Acirc;u, những bữa tiệc ngo&agrave;i trời đầy thư gi&atilde;n. HOSPI đang c&oacute; gi&aacute; <strong>ưu&nbsp;đ&atilde;i thu đ&ocirc;ng 2018 tại Sanctuary Hồ Tr&agrave;m Resort</strong><br />
+- Thời gian ở: 04/09&nbsp;- 31/12/2018&nbsp;<br />
+- &Aacute;p dụng: CN - Thứ 5.&nbsp;</p>
+
+<p style="text-align:center"><img alt="" src="https://www.hospi.vn/uploads/images/hotels/slider/836178_Sanctuary-Ho-Tram-Resort---Hospi-(9).jpg" /></p>
+
+<p><strong>Gi&aacute; ph&ograve;ng/đ&ecirc;m/Villa.</strong><br />
+<br />
+* Riverfront Pool Villa (430m2): 8.299.000 VND/đ&ecirc;m / 6 người lớn + 2 trẻ em<br />
+* Deluxe Riverfront Pool Residence (650m2): 11.500.000 VND/đ&ecirc;m / 7 người lớn + 2 trẻ em<br />
+* Premium Riverfront Pool Residence (790m2) :&nbsp;12.600.000 VND/đ&ecirc;m / 7 người lớn + 2 trẻ em</p>
+
+<p><strong>Bao gồm:</strong><br />
+Nước uống ch&agrave;o đ&oacute;n kh&aacute;ch l&uacute;c nhận ph&ograve;ng<br />
+Ăn s&aacute;ng tại nh&agrave; h&agrave;ng<br />
+Sử dụng wifi, hồ bơi, Miễn ph&iacute; sử dụng xe đạp<br />
+Miễn ph&iacute; sử dụng s&acirc;n tennis &amp; s&acirc;n b&oacute;ng rổ<br />
+Giảm 10% c&aacute;c dịch vụ ăn uống tại nh&agrave; h&agrave;ng Sandalss10%, Ph&iacute; Dịch Vụ 5%</p>
+
+<p><strong>Lưu &yacute;: </strong><br />
+Khuyến m&atilde;i &aacute;p dụng cho c&aacute;c đặt ph&ograve;ng trong tuần (Chủ nhật - Thứ 5), phụ thu th&ecirc;m cuối tuần ( Thứ 6, Thứ 7)&nbsp; theo từng hạng villas li&ecirc;n hệ HOSPI: 028 3826 8797 hoặc email: <a href="mailto:booking@hospi.vn">booking@hospi.vn</a></p>
+
+<p>Quy định phụ thu:<br />
+Phụ thu người lớn từ 12 tuổi trở l&ecirc;n: 1.550.000 VND/đ&ecirc;m<br />
+Phụ thu trẻ em từ 6 đến dưới 12 tuổi: 750.000 VND/đ&ecirc;m</p>                                                                           </div>
+                        </div>
+                        <!-- /.block-tab-2 -->
+                    </div>
+                                            <div class="col-sm-3 col-xs-12">
+                            <div class="block-content">
+                                <div class="block-cb-detail">
+                                    <p class="title">Giá trọn gói</p>
+                                    <div class="price">
+                                        <img src="http://hospi.local/themes/new_theme/assets/img/triangle_cb.png">
+                                        <p>0 <span>(VNĐ/0 Khách)</span></p>
+                                    </div>
+                                    <div class="detail">
+                                        <p><strong>Phụ thu</strong></p>
+                                        <ul>
+                                                                                    </ul>
+                                        <button type="button" class="btn btn-combo2" data-toggle="modal" data-target="#book-combo">Đặt honeymoon</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Modal -->
+    <div class="modal fade" id="book-combo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="  background: #666;text-align: center;color: #fff;">
+                    <h4 class="modal-title" id="myModalLabel">Xác nhận thông tin</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="http://hospi.local/offers/book/uu-dai-thu-dong-2018-tai-sanctuary-ho-tram-resort-" method="get" role="search">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <p class="title">Ngày đi</p>
+                                <div class="block-mySelectCalendar">
+                                    <input type="text" placeholder="Ngày đi" name="checkin" class="form-control mySelectCalendar dpd1 go-text-left" value="30/12/2018" required >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-inline checkbox-style2">
+                                    <input type="checkbox" name="note" value="Mua trước đi sau">
+                                    <span></span>
+                                    Bạn mua trước đi sau
+                                    <div class="block-question-info" style="display: inline-block;">
+                                        <i class="fa fa-question-circle"></i>
+                                        <div class="block-info">
+                                            <p>Nếu bạn chưa xác định được ngày đi. Bạn có thể mua trước đi sau ....</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-inline ">
+                            <div class="form-group cls-poup">
+                                <p class="title">Giá trọn gói</p>
+                                <p class="price-sm"><strong>0 VNĐ</strong></p>
+                            </div>
+                            <div class="form-group cls-right-poup">
+                                <p class="title">Số lượng</p>
+                                <select class="form-control" name="quantity">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                          <div class="form-inline">
+                                    <div class="form-group cls-poup">
+                                        <p class="title">Phụ thu lễ</p>
+                                        <p class="price-sm"><strong> VNĐ</strong></p>
+                                    </div>
+                                    <div class="form-group cls-right-poup">
+                                        <p class="title">Số lượng</p>
+                                        <select class="form-control" name="surcharge[]">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                  <div class="clearfix"></div>
+                                   <div class="form-inline">
+                                    <div class="form-group cls-poup">
+                                        <p class="title">Nâng cấp Beachfront</p>
+                                        <p class="price-sm"><strong>9,999,000 VNĐ</strong></p>
+                                    </div>
+                                    <div class="form-group cls-right-poup">
+                                        <p class="title">Số lượng</p>
+                                        <select class="form-control" name="surcharge[203]">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                 <div class="clearfix"></div>
+                                    <div class="form-inline ">
+                                    <div class="form-group cls-poup">
+                                        <p class="title">Ăn tối lễ (người lớn)</p>
+                                        <p class="price-sm"><strong>2,300,000 VNĐ</strong></p>
+                                    </div>
+                                    <div class="form-group cls-right-poup">
+                                        <p class="title">Số lượng</p>
+                                        <select class="form-control" name="surcharge[204]">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                    <div class="form-inline">
+                                    <div class="form-group cls-poup">
+                                        <p class="title">Ăn tối lễ (trẻ em)</p>
+                                        <p class="price-sm"><strong>1,150,000 VNĐ</strong></p>
+                                    </div>
+                                    <div class="form-group cls-right-poup">
+                                        <p class="title">Số lượng</p>
+                                        <select class="form-control" name="surcharge[205]">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                                    <div class="form-inline text-center">
+                            <button type="submit" class="btn btn-combo2 btn-combo22">Xác nhận</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    // set the date we're counting down to
+    var target_date = new Date('December 30 2018').getTime();
+
+    // variables for time units
+    var days, hours, minutes, seconds;
+
+    // get tag element
+    var countdown = document.getElementById('countdown');
+
+    // update the tag with id "countdown" every 1 second
+    setInterval(function () {
+
+        // find the amount of "seconds" between now and target
+        var current_date = new Date().getTime();
+        var seconds_left = (target_date - current_date) / 1000;
+
+        // do some time calculations
+        days = parseInt(seconds_left / 86400);
+        seconds_left = seconds_left % 86400;
+
+        hours = parseInt(seconds_left / 3600);
+        seconds_left = seconds_left % 3600;
+
+        minutes = parseInt(seconds_left / 60);
+        seconds = parseInt(seconds_left % 60);
+
+        // format countdown string + set tag value
+        countdown.innerHTML = '<span class="days">' + days + ' <b>Ngày</b></span> <span class="hours">' + hours + ' <b>Giờ</b></span> <span class="minutes">'
+            + minutes + ' <b>Phút</b></span> <span class="seconds">' + seconds + ' <b>Giây</b></span>';
+
+    }, 1000);
+
+    $(function () {
+        setTimeout(function () {
+            $(".successMsg").fadeOut("slow");
+        }, 7000);
+    });
+</script>    <div class="block-newsletter_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 text-center newsletter_footer"> Đăng ký nhận tin  ưu đãi để không bỏ lỡ những ưu đãi lên tới 79% từ HOSPI</div>
+                <div class="col-md-5">
+                    <div class="relative input">
+                        <input type="email" name="email" class="form-control fccustom2 sub_email" id="exampleInputEmail1" placeholder="Nhập email của bạn" required>
+                        <div style="color:white" class="subscriberesponse"></div>
+                        <button type="submit" class="btn btn-default btncustom sub_newsletter">Đăng Ký</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- block-newsletter_footer -->
+        <div id="footer" class="clearfix  footerbg" >
+        <div class="back-ft-po hidden-xs"></div>
+        <div class="footer-link not-blog"></div>
+        <div class="container">
+            <a class="hidden-xs" href="http://hospi.local/" style="display: block;margin-bottom: 5px;margin-top: 5px;"><img src="http://hospi.local/themes/new_theme/asset/img/logo-ft.png" class="img-responsive logo"/></a>
+             <!-- <div class="row"></div> -->
+            <div class="row">
+                <!-- Hotels -->
+                <div class="col-md-4 go-right col-xs-12 hidden-xs" id="contact">
+                    <div class="footer-brand">
+                        <div style="color: #fff;">HOSPI.vn: Đặt phòng khách sạn giá rẻ, combo khách sạn</div>
+                        <div class="ftitle go-text-right">Lầu 1, Số 124 Khánh Hội, P.6, Quận 4, Tp. Hồ Chí Minh</div>
+                        <div class="ftitle go-text-right">Tel: 028 3826 8797 - Fax: (08) 3826 8798</div>
+                        <div class="ftitle go-text-right"><a class="purple" target="_blank" href="https://www.google.com/maps/place/124+Kh%C3%A1nh+H%E1%BB%99i,+ph%C6%B0%E1%BB%9Dng+6,+Qu%E1%BA%ADn+4,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7572978,106.6982959,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f6d4faf461f:0xcf0c2485be1d0fdc!8m2!3d10.7572925!4d106.7004846"><i style="margin-left: -3px;" class="icon-location-6 go-right"></i>Bản đồ đến văn phòng Hospi</a></div>
+                        <p style="color: #fff;">&copy; Bản quyền của Hospi Travel Co., Ltd</p>
+                    </div>
+                    <div class="scont">
+                        <div class="clearfix"></div>
+                        <div id="social_footer go-right">
+                                                        <a href="https://www.facebook.com/hospi.vn/" target="_blank"><img src="http://hospi.local/uploads/images/social/14mwk4qrczfkcw4g44.png" class="social-icons-footer" /></a>
+                                                        <a href="https://plus.google.com/u/0/104246180420952281462" target="_blank"><img src="http://hospi.local/uploads/images/social/nmuccodyt00cs88k4g.png" class="social-icons-footer" /></a>
+                                                        <a href="https://www.youtube.com/channel/UCxfzWdfkaDPWGIVrI2vKchg" target="_blank"><img src="http://hospi.local/uploads/images/social/g0xrz89bm7sw08848.png" class="social-icons-footer" /></a>
+                                                        <a href="https://www.linkedin.com/in/hospi/" target="_blank"><img src="http://hospi.local/uploads/images/social/1iodmuvjtwys0ook8.png" class="social-icons-footer" /></a>
+                                                        <a href="https://twitter.com/HOSPITRAVEL" target="_blank"><img src="http://hospi.local/uploads/images/social/2kvq766k0qm8oskkk8.png" class="social-icons-footer" /></a>
+                                                    </div>
+                        <img src="http://hospi.local/themes/new_theme//assets/img/bocongthuong.png" width="152" height="57" data-retina="true" class="congthuong img-responsive">
+                        <span class="">Xem thông tin tại đây !</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="row col-md-8 col-xs-12 ">
+                    <!-- End of column 1-->
+                    <div class="col-xs-12 col-md-4 go-right">
+                        <h2 class="ftitle go-text-right" style="margin-top: 15px"><strong>Hỗ trợ khách hàng</strong></h2>
+                                                <div class="phone_footer go-right"><i class="fa fa-phone-square"></i> 028 3826 8797</div>
+                                                <!-- <div class="working-time">(8:00AM - 21:00PM)</div> -->
+                        <a class="go-right ftitle " href="mailto:booking@hospi.vn" id="email_footer"><i style="font-size:18px" class="icon-email"></i> <span >booking@hospi.vn</span></a>
+                                    <div class="ho-tro" >
+              <!--<h2 class="ftitle go-text-right"><strong>Support</strong></h2>-->
+              <ul class="footerlist go-right go-text-right">
+                                <li><a href="http://hospi.local/cau-hoi-thuong-gap" target="" title="">Câu hỏi thường gặp?</a></li>
+                                <li><a href="http://hospi.local/goi-yeu-cau-ho-tro" target="" title="">Gởi yêu cầu hỗ trợ</a></li>
+                                <li><a href="http://hospi.local/huong-dan-dat-phong" target="" title="">Hướng dẫn đặt phòng</a></li>
+                                <li><a href="http://hospi.local/chinh-sach-huy-doi-hoan-tien" target="" title="">Chính sách huỷ đổi, hoàn tiền</a></li>
+                                <li><a href="http://hospi.local/phuong-thuc-thanh-toan" target="" title="">Phương thức thanh toán</a></li>
+                                <li><a href="http://hospi.local/quy-che-hoat-dong" target="" title="">Quy chế hoạt động</a></li>
+                              </ul>
+            </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 go-right menu-link-ft hidden-xs">
+                        <h2 class="ftitle go-text-right"><strong>Về Hospi.vn</strong></h2>
+                                    <div class="about-us" >
+              <!--<h2 class="ftitle go-text-right"><strong>About Us</strong></h2>-->
+              <ul class="footerlist go-right go-text-right">
+                                <li><a href="http://hospi.local/chung-toi-la-ai" target="" title="">Chúng tôi là ai ?</a></li>
+                                <li><a href="http://hospi.local/tuyen-dung" target="" title="">Tuyển dụng</a></li>
+                                <li><a href="http://hospi.local/chinh-sach-bao-mat" target="" title="">Chính sách bảo mật</a></li>
+                                <li><a href="http://hospi.local/dieu-khoan-su-dung" target="" title="">Điều khoản sử dụng</a></li>
+                                <li><a href="http://hospi.local/qua-tang-voucher" target="" title="">Quà tặng voucher</a></li>
+                                <li><a href="http://www.hospi.vn/blog" target="_self" title="">Hợp tác với Hospi</a></li>
+                                <li><a href="http://hospi.local/quy-che-hoat-dong" target="" title="">Quy chế hoạt động</a></li>
+                              </ul>
+            </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 go-right menu-link-ft hidden-xs">
+                        <h2 class="ftitle go-text-right"><strong>Liên kết nhanh</strong></h2>
+                        <div class="about-us">
+                            <!--<h2 class="ftitle go-text-right"><strong>About Us</strong></h2>-->
+                            <ul class="footerlist go-right go-text-right">
+                                <li><a href="http://hospi.local/bestchoice"  title="Khuyến mãi">Khuyến mãi</a></li>
+                                <li><a href="http://hospi.local/offers" title="Deals - Giảm giá">Deals - Giảm giá</a></li>
+                                <li><a href="http://hospi.local/offers/bestchoice" title="Voucher">Voucher</a></li>
+                                <li><a href="http://hospi.local/hotels/honeymoon" title="Honeymoon">Honeymoon</a></li>
+                                <li><a href="http://hospi.local/tours" title="Tours">Tours</a></li>
+                                <li><a href="http://hospi.local/blog" title="Tôi yêu du lịch">Tôi yêu du lịch</a></li>
+                                <li>
+                                    <a href="#checkbookingform" data-toggle="modal" data-content="Kiểm tra booking" rel="popover" data-placement="top" data-original-title="Kiểm tra booking" data-trigger="hover">Kiểm tra booking</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                                
+                <div class="visible-xs" style="width: 100%;clear: left;height: 25px"></div>
+                <a href="http://hospi.local/themes/new_theme/index.html" class="visible-xs" style="display: block;margin-bottom: 5px;margin-top: 5px;margin-left: 15px"><img src="https://www.hospi.vn/themes/default/assets/img/logo-ft.png" class="img-responsive logo"/></a>
+                <div class="col-md-4 go-right col-xs-12 visible-xs" id="contact">
+                  <div class="footer-brand">
+                    <div style="color: #fff;">HOSPI.vn: Đặt phòng khách sạn giá rẻ, combo khách sạn</div>
+                    <div class="ftitle go-text-right">Lầu 1, Số 124 Khánh Hội, P.6, Quận 4, Tp. Hồ Chí Minh</div>
+                    <div class="ftitle go-text-right">Tel: 028 3826 8797 - Fax: (028) 3826 8798</div>
+                    <div class="ftitle go-text-right"><a class="purple" target="_blank" href="https://www.google.com/maps/place/124+Khánh+Hội,+phường+6,+Quận+4,+Hồ+Chí+Minh,+Việt+Nam/@10.7572978,106.6982959,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f6d4faf461f:0xcf0c2485be1d0fdc!8m2!3d10.7572925!4d106.7004846"><i style="margin-left: -3px;" class="icon-location-6 go-right"></i>Bản đồ đến văn phòng Hospi</a></div>
+                    <p style="color: #fff;">&copy; Bản quyền của Hospi Travel Co., Ltd</p>
+                  </div>
+                  <div class="scont">
+                    <div class="clearfix"></div>
+                    <div id="social_footer go-right">
+                      <a href="https://www.facebook.com/hospi.vn/" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/14mwk4qrczfkcw4g44.png" class="social-icons-footer" /></a>
+                      <a href="https://plus.google.com/u/0/104246180420952281462" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/nmuccodyt00cs88k4g.png" class="social-icons-footer" /></a>
+                      <a href="https://www.youtube.com/channel/UCxfzWdfkaDPWGIVrI2vKchg" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/g0xrz89bm7sw08848.png" class="social-icons-footer" /></a>
+                      <a href="https://www.linkedin.com/in/hospi/" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/1iodmuvjtwys0ook8.png" class="social-icons-footer" /></a>
+                      <a href="https://twitter.com/HOSPITRAVEL" target="_blank"><img src="https://www.hospi.vn/uploads/images/social/2kvq766k0qm8oskkk8.png" class="social-icons-footer" /></a>
+                    </div>
+                    <img src="https://www.hospi.vn/themes/default//assets/img/bocongthuong.png" width="152" height="57" data-retina="true" class="congthuong img-responsive">
+                    <span class="">Xem thông tin tại đây !</span>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="container">
+                    <div class="clearfix">
+                        <a href="http://hospi.local/" title="Về Trang Chủ" style="  display: block;margin-top: 30px;margin-bottom: 30px;color: #fff;">
+                            <i class="fa fa-angle-double-right"></i> Về Trang Chủ
+                        </a>
+                    </div>
+                    <!-- clearfix -->
+                   <!--  <div class="row hidden-xs">
+                        <div class="col-sm-7 col-xs-12 wg-bt">
+                            <div class="row link-ft-bt">
+                                <div class="col-sm-3 col-xs-6">
+                                    <a href="http://hospi.local/themes/new_theme/hotels" title="Khách Sạn">Khách Sạn</a>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <a href="http://hospi.local/themes/new_theme/tours" title="Tours">Tours</a>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <a href="http://hospi.local/themes/new_theme/hotels/honeymoon" title="HoneyMoon">HoneyMoon</a>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <a href="http://hospi.local/themes/new_theme/blog" title="Tôi Yêu Du Lịch">Tôi Yêu Du Lịch</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-sm-6 
+                        <div class="col-sm-5 col-xs-12 wg-bt">
+                            <div class="social-wg">
+                                <ul class="list-inline">
+                                    <li>KẾT NỐI VỚI CHÚNG TÔI:</li>
+                                    <li class="icon"><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="icon"><a href="#" title="google"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="icon"><a href="#" title="youtube"><i class="fa fa-youtube"></i></a></li>
+                                    <li class="icon"><a href="#" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                                    <li class="icon"><a href="#" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- col-sm-6 
+                    </div> -->
+                </div>
+                <!-- End Hotels -->
+            </div>
+        </div>
+    </div>
+    <!-- Angular Data -->
+
+<script src='//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+
+ <link rel="stylesheet" href="http://hospi.local/themes/new_theme/asset/include/angucomplete/angucomplete.css" />
+<script src="http://hospi.local/themes/new_theme/asset/include/angucomplete/angucomplete.js"></script>
+<script type="text/javascript"> (function () {
+  'use strict';
+  var app = angular.module('phptravelsApp',['ngSanitize','angucomplete-alt']);
+  app.controller('appCtrl', ['$scope', '$http', function appCtrl ($scope, $http) { var self = this; var url = "http://hospi.local/tours/featuredTours/"; $scope.lg = "6"; $scope.md = "6"; $scope.items = []; $http.get(url).success(function(data) { $scope.items = data; $scope.setClasses($scope.items); }); $scope.getData = function(loc){ $http.get(url+loc).success(function(data) { $scope.items = data; $scope.setClasses($scope.items); }); }; $scope.setClasses = function(data){ var totalItems = data.length; if(totalItems == 1){ $scope.lg = "6 tours12"; $scope.md = "6 tours12"; }else if(totalItems == 2){ $scope.lg = "6"; $scope.md = "6"; }else if(totalItems > 2){ $scope.lg = "6"; $scope.md = "6"; } }; } ]);
+  app.filter('strLimit', function() { 'use strict'; return function(input, limit) { if (input) { if (limit > input.length) { return input.slice(0, limit); } else { return input.slice(0, limit) + '...'; } } }; });
+  app.controller('autoSuggest', ['$scope','$http', function autoSuggest ($scope, $http) {
+   $scope.searching = "";
+   $scope.modType = "";
+   $scope.txtSearch = "";
+ $scope.remoteUrlRequestFn = function(str) {
+      return {q: str};
+    };
+  $scope.selectedItem = function(selected) {
+    $scope.searching = selected.originalObject.id;
+    $scope.modType = selected.originalObject.module;
+
+    };
+
+
+    } ]);
+
+})(); </script>
+
+<!-- End Angular Data -->
+
+<link href="http://hospi.local/themes/new_theme/assets/include/select2/select2.css" rel="stylesheet" />
+<script src="http://hospi.local/themes/new_theme/assets/include/select2/select2.min.js"></script>
+<!-- This page JS -->
+<!-- Custom functions -->
+<script src="http://hospi.local/themes/new_theme/assets/js/functions.js"></script>
+<!-- Picker UI-->
+<!--<script src="http://hospi.local/themes/new_theme/assets/js/jquery-ui.js"></script>-->
+<script type="text/javascript" src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+<!-- Easing -->
+<script src="http://hospi.local/themes/new_theme/assets/js/jquery.easing.js"></script>
+<!-- Nicescroll  -->
+<!--<script src="http://hospi.local/themes/new_theme/assets/js/jquery.nicescroll.min.js"></script>-->
+<!-- CarouFredSel -->
+<script src="http://hospi.local/themes/new_theme/assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="http://hospi.local/themes/new_theme/assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="http://hospi.local/themes/new_theme/assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="http://hospi.local/themes/new_theme/assets/js/helper-plugins/jquery.transit.min.js"></script>
+<script type="text/javascript" src="http://hospi.local/themes/new_theme/assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+<!-- Custom Select -->
+<script type='text/javascript' src='http://hospi.local/themes/new_theme/assets/js/jquery.customSelect.js'></script>
+<script src="http://hospi.local/themes/new_theme/assets/js/bootstrap.min.js"></script>
+<script src="http://hospi.local/themes/new_theme/assets/js/bootstrap-slider.js"></script>
+<script src="http://hospi.local/themes/new_theme/assets/include/datepicker/datepicker.js"></script>
+<link rel="stylesheet" href="http://hospi.local/themes/new_theme/assets/include/datepicker/datepicker.css" />
+<link rel="stylesheet" href="http://hospi.local/themes/new_theme/assets/include/datepicker/dp2.css" />
+<script>
+  $('#popoverData').popover();
+  $('#popoverOption').popover({ trigger: "hover" });
+</script>
+
+<!-- WOWJs -->
+<script>
+  //new WOW().init();
+</script>
+<!-- WOWJs -->
+
+<script>
+  var fmt = "dd/mm/yyyy";
+  var baseURL = "http://hospi.local/";
+
+  $(function() {
+
+   /* Wish list global function */
+   $(".wishlistcheck").on("click",function(){
+     var id = $(this).prop('id');
+     var module = $(this).data('module');
+     var userid = "";
+     var action = "add";
+     var thisdiv = $(this);
+     if($(this).hasClass('fav')){
+         action = "remove";
+     }
+
+
+  $.post(baseURL+'account/wishlist/'+action,{module: module, itemid: id, loggedin: userid},function(resp){
+    var response = $.parseJSON(resp);
+
+    if(response.isloggedIn){
+
+      if(action == "remove"){
+      $("."+module+"wishsign"+id).html("+");
+      //$("."+module+"wishtext"+id).html("Add to Wishlist");
+      $("."+module+"wishtext"+id).tooltip('hide').attr('data-original-title', "Add to Wishlist").tooltip('fixTitle').tooltip('show');
+      $("."+module+"wishsign"+id).removeClass("fav");
+      thisdiv.removeClass('fav');
+
+     }else{
+
+      thisdiv.addClass('fav');
+      $("."+module+"wishsign"+id).addClass("fav");
+      $("."+module+"wishsign"+id).html("-");
+      //$("."+module+"wishtext"+id).html("Remove From Wishlist");
+      $("."+module+"wishtext"+id).tooltip('hide').attr('data-original-title', "Remove From Wishlist").tooltip('fixTitle').tooltip('show');
+
+     }
+
+     }else{
+      alert("Please Login to add to wishlist.");
+     }
+     console.log(response);
+   });
+
+   })
+   /* End Wish list global function */
+
+  /* select2 */
+  $('.chosen-select').select2({ width: '100%', maximumSelectionSize: 1  });
+
+  /* homepage main search auto detector */
+  $('.nav-tabs li:first-child').addClass('active');  var t  = $('.nav-tabs li:first-child').data('title'); $("#"+t).addClass("active in"); $('.feat li:first-child').addClass('active'); var t  = $('.feat li:first-child').data('title'); $("#"+t).addClass("active in");
+
+  /* tours ajax categories loader */
+    $('#location').on('change',function(){ var location = $(this).val(); $.post(baseURL+'tours/tourajaxcalls/onChangeLocation',{location: location},function(resp){ var response = $.parseJSON(resp); console.log(response); if(response.hasResult){ $("#tourtype").html(response.optionsList); }else{ $("#tourtype").html(response.optionsList); } mySelectUpdate(); }) });
+  
+   /* cars ajax types loader */
+  function parseDate(str) {
+    var mdy = str.split('/')
+    return new Date(mdy[2],  mdy[1], mdy[0]-1);
+}
+
+function daydiff(first, second) {
+    return (second-first)/(1000*60*60*24);
+}
+function Padder(len, pad) {
+  if (len === undefined) {
+    len = 1;
+  } else if (pad === undefined) {
+    pad = '0';
+  }
+
+  var pads = '';
+  while (pads.length < len) {
+    pads += pad;
+  }
+
+  this.pad = function (what) {
+    var s = what.toString();
+    return pads.substring(0, pads.length - s.length) + s;
+  };
+}
+
+
+
+   /* tooltip */
+  $('[data-toggle=tooltip]').tooltip();
+
+  /* datepicker */
+  window.prettyPrint&&prettyPrint(),$(".dob").datepicker({format:fmt,autoclose:!0}).on("changeDate",function(){$(this).datepicker("hide")}),$("#dp1").datepicker(),$("#dp2").datepicker();
+  window.prettyPrint&&prettyPrint(),$(".dob").datepicker({format:fmt,autoclose:!0}).on("changeDate",function(){$(this).datepicker("hide")}),$("#dp3").datepicker(),$("#dp4").datepicker();
+
+  /* disabling dates */
+      var nowTemp = new Date();
+      var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+      var checkin = $('.dpd1').datepicker({
+          format: fmt,
+          language: 'vi',
+          onRender: function(date) {
+              return date.valueOf() < now.valueOf() ? 'disabled' : '';
+          }
+      }).on('changeDate', function(ev) {
+          if (ev.date.valueOf() > checkout.date.valueOf()) {
+              var newDate = new Date(ev.date)
+              newDate.setDate(newDate.getDate() + 1);
+              checkout.setValue(newDate);              
+          }
+          checkin.hide();
+          $('.dpd2')[0].focus();
+          if($('.dpd2').val() != '' && $('.dpd1').val() != '' ){
+            var number_night = parseInt(daydiff(parseDate($('.dpd1').val()), parseDate($('.dpd2').val())));
+            var zero2 = new Padder(2);            
+            $('#number_night').html(zero2.pad(number_night));
+          }
+      }).data('datepicker');
+      var checkout = $('.dpd2').datepicker({
+          format: fmt,
+          onRender: function(date) {
+              return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+          }
+      }).on('changeDate', function(ev) {
+          checkout.hide();
+          if($('.dpd2').val() != '' && $('.dpd1').val() != '' ){
+            var number_night = parseInt(daydiff(parseDate($('.dpd1').val()), parseDate($('.dpd2').val())));
+            var zero2 = new Padder(2);            
+            $('#number_night').html(zero2.pad(number_night));
+          }
+
+      }).data('datepicker');
+
+      var checkins = $('.dpd3').datepicker({
+          format: fmt,
+          language: 'vi',
+          onRender: function(date) {
+              return date.valueOf() < now.valueOf() ? 'disabled' : '';
+          }
+      }).on('changeDate', function(ev) {
+          if (ev.date.valueOf() > checkouts.date.valueOf()) {
+              var newDates = new Date(ev.date)
+              newDates.setDate(newDates.getDate() + 1);
+              checkouts.setValue(newDates);
+          }
+          checkins.hide();
+          $('.dpd4')[0].focus();
+      }).data('datepicker');
+      var checkouts = $('.dpd4').datepicker({
+          format: fmt,
+          onRender: function(date) {
+              return date.valueOf() <= checkins.date.valueOf() ? 'disabled' : '';
+          }
+      }).on('changeDate', function(ev) {
+          checkouts.hide();
+
+      }).data('datepicker');
+
+  /* Expedia datepicker */
+    /* End Expedia Datepicker*/
+
+   /* Dohop datepicker */
+    /* End Dohop Datepicker*/
+
+      // Tours checkin - disabling Single date
+  var nowTemp4 = new Date();
+  var now4 = new Date(nowTemp4.getFullYear(), nowTemp4.getMonth(), nowTemp4.getDate(), 0, 0, 0, 0);
+  var checkin4 = $('#tchkin').datepicker({format: fmt, onRender: function(date) {
+  return date.valueOf() < now4.valueOf() ? 'disabled' : ''; } }).on('changeDate', function(ev) {
+  $('#tchkin').datepicker('hide');
+  });
+  
+  
+    /* Cartrawler datepicker */
+    /* End Cartrawler Datepicker*/
+
+  /* Newsletter subscription */
+  $(".sub_newsletter").on("click",function(){var e=$(".sub_email").val();$.post("http://hospi.local/home/subscribe",{email:e},function(e){$(".subscriberesponse").html(e).fadeIn("slow"),setTimeout(function(){$(".subscriberesponse").fadeOut("slow")},2000)})});
+
+  /* dropdown on hover */
+  $("ul.nav li.dropdown").hover(function(){$(this).find(".dropdown-menu").stop(!0,!0).delay(200).fadeIn(200)},function(){$(this).find(".dropdown-menu").stop(!0,!0).delay(200).fadeOut(200)}); });
+
+  /* start change currency functionality */
+  function change_currency(c){$("#loadingbg").css("display","block"),$.post("http://hospi.local/admin/ajaxcalls/changeCurrency",{id:c},function(){location.reload()})}
+
+  /* map iframe modal */
+  function showMap(a,o){"modal"==o?($("#mapModal").modal("show"),$("#mapModal").on("shown.bs.modal",function(){$("#mapModal .mapContent").html('<iframe src="'+a+'" width="100%" height="450" frameborder="0" style="border:0"></iframe>')})):$("#"+o).html('<iframe src="'+a+'" width="100%" height="450" frameborder="0" style="border:0"></iframe>')}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86943600-1', 'auto');
+  ga('send', 'pageview');
+
+</script><!-- Subiz -->
+<script>
+  (function(s, u, b, i, z){
+    u[i]=u[i]||function(){
+      u[i].t=+new Date();
+      (u[i].q=u[i].q||[]).push(arguments);
+    };
+    z=s.createElement('script');
+    var zz=s.getElementsByTagName('script')[0];
+    z.async=1; z.src=b; z.id='subiz-script';
+    zz.parentNode.insertBefore(z,zz);
+  })(document, window, 'https://widgetv4.subiz.com/static/js/app.js', 'subiz');
+  subiz('setAccount', 'acppjoihtmoaeia84875');
+</script>
+<!-- End Subiz -->
+<style type="text/css">
+    .block-panel-info{
+    line-height: 25px;
+    }
+</style>
+</body>
+</html>

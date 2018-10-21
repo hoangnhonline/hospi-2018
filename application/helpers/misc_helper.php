@@ -1162,6 +1162,7 @@ if (!function_exists('tripAdvisorInfo')) {
         $CI = get_instance();
         $tripmodule = $CI->ptmodules->is_mod_available_enabled("tripadvisor");
         if ($tripmodule && !empty ($id)) {
+         
             $CI->load->library('tripadvisor/tripadvisor_lib');
             return $CI->tripadvisor_lib->location($id);
         } else {
