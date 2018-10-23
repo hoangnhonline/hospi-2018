@@ -179,7 +179,7 @@
             <br>
             <div class="panel panel-default panel-hotel-details">
                 <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false">
-                <?php echo trans('0642');?><?php echo trans('0641'); ?><?php echo $module->title; ?><span class="collapsearrow"></span>
+                THÔNG TIN CHI TIẾT<span class="collapsearrow"></span>
                 </button>
                 <!--<div class="panel-heading go-text-right"><?php echo trans('046');?><?php echo trans('0641'); ?><?php echo $module->title; ?></div>-->
                 <div id="collapse1" class="collapse" aria-expanded="false">
@@ -202,27 +202,24 @@
             <?php if($appModule != "offers"){ ?>
             <div class="panel panel-default panel-hotel-details">
                 <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false">
-                <?php echo trans('0148');?><?php echo trans('0696');?><?php echo $module->title; ?><span class="collapsearrow"></span>
+                 THỜI GIAN, QUY ĐỊNH VÀ PHƯƠNG THỨC<span class="collapsearrow"></span>
                 </button>
                 <div id="collapse2" class="collapse" aria-expanded="false">
                     <div class="panel-body">
                         <p class="RTL hs_time_Getroom">
-                            <p class="title_purple2"><span class="purple">Thời gian nhận phòng</span></p>
+                            <p class="title_purple2" style="margin-bottom: 3px;"><span class="purple"  style="text-transform: uppercase;">Thời gian nhận phòng</span></p>
                             <p>Theo quy định của khách sạn</p>
                             <p>
                                 <i class="fa fa-clock-o text-success"></i> <strong> <?php echo trans('0697');?> </strong> :   <?php echo $module->defcheckin;?>
                                 <br>
                                 <i class="fa fa-clock-o text-warning"></i> <strong> <?php echo trans('0698');?> </strong> :  <?php echo $module->defcheckout;?> 
                             </p>
-                            <p>Trong thời gian quý khách muốn nhận phòng sớm hơn</p>
+                            <p>Trong trường hợp quý khách muốn nhận phòng sớm hơn theo quy định, vui lòng liên hệ với tiếp tân hoặc nhân viên HOSPI để được hỗ trợ và việc check-in sớm còn tùy thuộc vào trình trạng phòng trống ngày bạn đến. Không được xác nhận trước</p>
                         </p>
                         <div class="hs_time_Ruleroom">
-                            <p class="title_purple2"><span class="purple">Quy định nhận phòng</span></p>
-                            <p>Quý khác vui lòng mang chứng minh nhân dân .....</p>
-                        </div>
-                        <span class="RTL">
-                            <p><?php echo nl2br($module->policy); ?></p>
-                        </span>
+                            <p class="title_purple2" style="margin-bottom: 3px;"><span class="purple" style="text-transform: uppercase;">Quy định nhận phòng</span></p>
+                            <p>Quý khách vui lòng mang CMND, hộ chiếu ...(giấy tờ tùy thân theo luật pháp Việt Nam) và phiếu xác nhận của HOSPI giao cho tiếp tân khi làm thủ tục nhận phòng hoặc cung cấp họ tên người nhận phòng.</p>
+                        </div>                        
                         <?php if($appModule != "cars" && $appModule != "ean"){ ?>
                         <!-- <div class="row">
                             <div class="clearfix"></div>
@@ -232,7 +229,7 @@
                         <div class="col-md-12">
                             <div class="row">
                                 <!-- <h4 id="terms" class="main-title  go-right"><?php echo trans('0265');?></h4> -->
-                                <p class="title_purple2"><span class="purple"><?php echo trans('0265');?></span></p>
+                                <p class="title_purple2" style="margin-bottom: 3px;"><span class="purple"  style="text-transform: uppercase;">Phương thức thanh toán</span></p>
                                 <div class="clearfix"></div>
                                 <ul class="RTL hs_methodPay">
                                     <?php foreach($module->paymentOptions as $pay){ if(!empty($pay->name)){ ?>
@@ -285,7 +282,7 @@
             <?php if($appModule == "hotels"){ ?>
             <div class="panel panel-default panel-hotel-details">
             <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapsehuydoi" aria-expanded="false">
-                Điều kiện hủy đổi<span class="collapsearrow"></span>
+                ĐIỀU KIỆN HỦY<span class="collapsearrow"></span>
             </button>
            <div id="collapsehuydoi" class="collapse" aria-expanded="false">
               <div class="panel-body">
@@ -300,7 +297,7 @@
             <div class="panel panel-default panel-hotel-details">
                 <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false">
                     <!-- <?php echo trans('0758');?><span class="collapsearrow"></span> -->
-                    Chính sách phụ thu <span class="collapsearrow"></span>
+                    CHÍNH SÁCH PHỤ THU <span class="collapsearrow"></span>
                 </button>
                 <div id="collapse3" class="collapse" aria-expanded="false">
                     <div class="panel-body">

@@ -2,8 +2,8 @@
     <div id="REVIEWS">
         <div class="panel panel-default">
             <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false">
-               <?php echo trans('0396');?><span class="collapsearrow"></span>
-               <a data-toggle="collapse" data-parent="#accordion" class="text-link pull-right" style="margin-right: 30px;" href="#ADDREVIEW"> <?php echo trans('083');?></a>
+               ĐÁNH GIÁ<span class="collapsearrow"></span>
+               <a data-toggle="collapse" data-parent="#accordion" class="text-link pull-right" style="margin-right: 30px;color: #777; font-weight: normal" href="#ADDREVIEW"> <?php echo trans('083');?></a>
             </button>
             <div id="collapse4" class="collapse in" aria-expanded="true">
                 <div class="panel-body">
