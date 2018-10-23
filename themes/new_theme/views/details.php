@@ -178,22 +178,22 @@
             <!-- rooms -->
             <br>
             <div class="panel panel-default panel-hotel-details">
-                <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false">
+                <button type="button" class="collapsebtn last go-text-right" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
                 THÔNG TIN CHI TIẾT<span class="collapsearrow"></span>
                 </button>
                 <!--<div class="panel-heading go-text-right"><?php echo trans('046');?><?php echo trans('0641'); ?><?php echo $module->title; ?></div>-->
-                <div id="collapse1" class="collapse" aria-expanded="false">
+                <div id="collapse1" class="collapse in" aria-expanded="true">
                     <div class="panel-body wrapper-class">
                         <!-- <div class="col-md-2 align-center andes"><?php echo trans('046');?></div> -->
                         <div class="col-md-12 ">
-                            <p class="title_purple"><span class="purple"><?php echo trans('046');?></span></p>
+                            <p class="title_purple"><span class="purple"  style="text-transform: uppercase;"><?php echo trans('046');?></span></p>
                             <?php echo $module->desc; ?>
                         </div>
                     </div>
                     <div class="panel-body wrapper-class">
                         <!-- <div class="col-md-2 align-center andes"></div> -->
                         <div class="col-md-12 ">
-                            <p class="title_purple"><span class="purple"><?php echo trans('0249');?></span></p>
+                            <p class="title_purple"><span class="purple"  style="text-transform: uppercase;"><?php echo trans('0249');?></span></p>
                             <?php include 'includes/amenities.php';?>
                         </div>
                     </div>
@@ -201,10 +201,10 @@
             </div>
             <?php if($appModule != "offers"){ ?>
             <div class="panel panel-default panel-hotel-details">
-                <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false">
+                <button type="button" class="collapsebtn last go-text-right" data-toggle="collapse" data-target="#collapse2" aria-expanded="true">
                  THỜI GIAN, QUY ĐỊNH VÀ PHƯƠNG THỨC<span class="collapsearrow"></span>
                 </button>
-                <div id="collapse2" class="collapse" aria-expanded="false">
+                <div id="collapse2" class="collapse in" aria-expanded="true">
                     <div class="panel-body">
                         <p class="RTL hs_time_Getroom">
                             <p class="title_purple2" style="margin-bottom: 3px;"><span class="purple"  style="text-transform: uppercase;">Thời gian nhận phòng</span></p>
