@@ -37,7 +37,7 @@
         <div class="col-md-9 go-right">
             <div  class="panel panel-default">
                 <div>
-                    <div class="col-md-9 go-right">
+                    <div class="col-md-9 go-right">                        
                         <div style="margin-top: 6px">
                             <h1 class="go-right" style="font-size: 16px;margin-top: 10px;margin-bottom: 0px;text-transform: uppercase;"><?php echo $module->title;?></h1>
                             <small class="go-right"><?php echo $module->stars;?></small> <span class="pull-right go-left"><?php if($hasRooms){ ?><?php //echo trans('0141');?><?php } ?> </span>
@@ -289,14 +289,9 @@
             </button>
            <div id="collapsehuydoi" class="collapse" aria-expanded="false">
               <div class="panel-body">
-                 <span class="RTL">
-                 <p>Áp dụng cho các booking dưới 09 phòng:<br>
-                 * Từ 01/11/2017 đến 31/10/2018:<br>
-                 - Trường hợp hủy phòng trước 17 ngày ( trừ thứ 7, CN, Lễ, Tết) so với ngày đến không tính phí<br>
-                 - Trường hợp hủy phòng trong vòng 17 (trừ thứ 7, CN, Lễ, Tết) so với ngày đến hoặc không đến, tính 100% tiền phòng đêm đầu tiên <br>
-                 - Trường hợp hủy phòng trong vòng 10 (trừ thứ 7, CN, Lễ, Tết) so với ngày đến hoặc không đến, tính 100 % tiền phòng <br>
-                 - Các booking giai đoạn lễ tết, không được hoàn, hủy hoặc thay đổi</p>
-                 </span>
+               
+                 <?php echo nl2br($module->hotel_policy); ?>
+                 
                  <!-- Start Tours Inclusions / Exclusions -->
                  <!-- End Tours Inclusions / Exclusions -->
               </div>
@@ -305,11 +300,11 @@
             <div class="panel panel-default panel-hotel-details">
                 <button type="button" class="collapsebtn last go-text-right collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false">
                     <!-- <?php echo trans('0758');?><span class="collapsearrow"></span> -->
-                    Chính sách phụ thu
+                    Chính sách phụ thu <span class="collapsearrow"></span>
                 </button>
                 <div id="collapse3" class="collapse" aria-expanded="false">
                     <div class="panel-body">
-                        
+                        <?php echo nl2br($module->hotelsurcharge); ?>
                     </div>
                 </div>
             </div>

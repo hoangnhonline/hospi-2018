@@ -549,6 +549,8 @@ class Hotels_lib
             $this->db->where('hotel_id', $this->hotelid);
         $details = $this->db->get('pt_hotels')->result();
         $tripadvisorid = $details[0]->tripadvisor_id;
+        $hotelsurcharge = $details[0]->hotel_surcharge; 
+        $hotel_policy = $details[0]->hotel_policy; 
         $title = $this->get_title($details[0]->hotel_title, $details[0]->hotel_id);
         $stars = $details[0]->hotel_stars;
         $near = $details[0]->near;
@@ -653,6 +655,8 @@ class Hotels_lib
             'tripadvisorid' => $tripadvisorid,
             'mapAddress' => $details[0]->hotel_map_city,
             'diem_noi_bat' => $details[0]->diem_noi_bat,
+            'hotelsurcharge' => $hotelsurcharge,
+            'hotel_policy' => $hotel_policy
         );
 
         return $detailResults;
