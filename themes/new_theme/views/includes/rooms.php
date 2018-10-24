@@ -42,7 +42,7 @@
     <?php } ?>
     <div class="clearfix block-rooms visible-xs">
         <div class="tabble-responsive">
-            <form action="https://www.hospi.vn/hotels/book/novotel-phu-quoc-resort" method="GET" class="ng-pristine ng-valid">
+            <form action="<?php echo base_url() . $appModule; ?>/book/<?php echo $module->bookingSlug; ?>" method="GET" class="ng-pristine ng-valid">
                 <input type="hidden" name="adults" value="<?php echo $modulelib->adults; ?>" />
                 <input type="hidden" name="child" value="<?php echo $modulelib->children; ?>" />
                 <input type="hidden" name="checkin" value="<?php echo $modulelib->checkin; ?>" />

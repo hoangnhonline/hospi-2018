@@ -338,8 +338,7 @@
                           $so_giuong_phu += $extra_beds[$roomId];
 
 
-                          $quantity = $room_quantity[$roomId];
-                          
+                          $quantity = $room_quantity[$roomId];                          
                           $priceOne = $priceChoose[$roomId];
                           $priceBedOne = $priceBedChoose[$roomId];
                           $thanh_tien_phong = $priceOne * $quantity * $stay;
