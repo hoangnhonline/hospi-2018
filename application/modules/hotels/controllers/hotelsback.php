@@ -309,7 +309,7 @@ class hotelsback extends MX_Controller
                 $this->data['htypes'] = pt_get_hsettings_data("htypes");
                 $this->data['hamts'] = pt_get_hsettings_data("hamenities");
                 $this->data['hpayments'] = pt_get_hsettings_data("hpayments");
-                $this->data['all_hotels'] = $this->hotels_model->select_related_hotels($this->data['userloggedin']);
+                $this->data['all_hotels'] = $this->hotels_model->select_related_hotels($this->data['userloggedin']);                
                 $this->data['nears'] = $this->hotels_model->select_nearby();
                 $this->load->model('admin/locations_model');
                 $this->data['locations'] = $this->locations_model->getLocationsBackend();
@@ -345,6 +345,7 @@ class hotelsback extends MX_Controller
                 }
             } else {
                 @$this->data['hdata'] = $this->hotels_model->get_hotel_data($hotelslug);
+                $hg_detail_hotel = $this->data['hdata'][0];                
                 $comfixed = @$this->data['hdata'][0]->hotel_comm_fixed;
                 $comper = $this->data['hdata'][0]->hotel_comm_percentage;
                 if ($comfixed > 0) {
@@ -408,8 +409,18 @@ class hotelsback extends MX_Controller
                 $this->data['hotelamt'] = explode(",", $this->data['hdata'][0]->hotel_amenities);
                 $this->data['hpayments'] = pt_get_hsettings_data("hpayments");
                 $this->data['hotelpaytypes'] = explode(",", $this->data['hdata'][0]->hotel_payment_opt);
-                $this->data['all_hotels'] = $this->hotels_model->select_related_hotels($this->data['userloggedin']);
-                $this->data['nears'] = $this->hotels_model->select_nearby();
+                
+                
+                if($hg_detail_hotel->hotel_city > 0){
+                    $this->data['nears'] = $this->hotels_model->select_nearby($hg_detail_hotel->hotel_city);
+                    
+                    $this->data['all_hotels'] = $this->hotels_model->search(['hotel_city' => $hg_detail_hotel->hotel_city], 500, 0);
+                                        
+                }else{
+                    $this->data['nears'] = $this->hotels_model->select_nearby();    
+                    $this->data['all_hotels'] = $this->hotels_model->select_related_hotels($this->data['userloggedin']);
+                }
+                
                 $this->load->model('admin/locations_model');
                 $this->data['locations'] = $this->locations_model->getLocationsBackend();
                 $this->data['hotelid'] = $this->data['hdata'][0]->hotel_id;
