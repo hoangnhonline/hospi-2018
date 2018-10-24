@@ -1628,23 +1628,18 @@
                                         <img title="" data-toggle="tooltip" data-placement="top" style="height:23px;" src="https://www.hospi.vn/uploads/images/hotels/amenities/403809_764557_fitness.png" alt="Trông giữ trẻ" data-original-title="Trông giữ trẻ">
                                     </ul>
                                     <ul class="itemlabel-info">
-                                        <li class="hs_cb">Combo</li>
-                                        <li class="hs_deal">Deals - Giảm giá</li>
-                                        <li class="hs_hnm">Gói honeymoon</li>
-                                    </ul>
-                                     <!-- <ul class="itemlabel-info"> -->
-                                        <!-- <?php if(is_combo_hotel($item->id)) { ?>
-                                        <li>
+                                        <?php if(is_combo_hotel($item->id)) { ?>
+                                        <li class="hs_cb">
                                            <a href="#" title="Combo"><span>Combo</span></a>
                                         </li>
                                         <?php } ?>
                                         <?php if(is_deal_hotel($item->id)) { ?>
-                                        <li class="deal-hotel">
+                                        <li class="hs_deal">
                                            <a href="#" title="Deals - Giảm giá"><span>Deals - Giảm giá</span></a>
                                         </li>
-                                        <?php } ?> -->
-                                        <!--<li><a href="#" title="Gói honeymoon"><span>Gói honeymoon</span></a></li>
-                                    </ul> -->
+                                        <?php } ?>
+                                        <li class="hs_hnm"><a href="#" title="Gói honeymoon"><span>Gói honeymoon</span></a></li>
+                                    </ul> 
                                     <p class="grey RTL des hidden-xs">Novotel Phú Quốc Resort&nbsp;tọa lạc tại Bãi Trường, xã Dương Tơ,…</p>
                                     <ul class="hotelpreferences go-right hidden-xs">
                                         <img title="" data-toggle="tooltip" data-placement="top" style="height:25px;" src="https://www.hospi.vn/uploads/images/hotels/amenities/522827_airport.png" alt="Đón tiễn sân bay" data-original-title="Đón tiễn sân bay">
