@@ -2004,9 +2004,16 @@ img.dealthumb {
     float: none;
     clear: both;
 }
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
 
-.prev {
-    width: 34px;
+.prev {    width: 34px;
     height: 55px;
     float: left;
     margin-left: 10px;
@@ -14743,4 +14750,24 @@ span.hs_cl_show_info:before{
 }
 p.hs_cl_show_info{
     margin-bottom: 15px;
+}
+
+.hp_price_mb {
+    margin-bottom: 20px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .block-price .block-price-infos,
+    .block-price .block-price-info {
+        text-align: center !important;
+    }
+    .block-price .block-price-infos span,
+    .block-price .block-price-info span {
+        display: block;
+        font-size: 11px;
+        color: #999;
+    }
+    .block-price .block-price-info:hover .block-info-price-rooms {
+        right: 0;
+    }
 }
