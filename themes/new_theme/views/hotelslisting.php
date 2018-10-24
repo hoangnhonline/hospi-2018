@@ -1257,6 +1257,7 @@
                                     <div class="block-check-sale-sb go-right">
                                         <label for="Khách sạn" class="css-label go-left">
                                         <input type="checkbox" value="97" name="type[]" id="Khách sạn" class="checkbox  filter">
+
                                         <span></span>
                                         Khách sạn                                    </label>
                                     </div>
@@ -1479,6 +1480,7 @@
                                         <label for="Phòng họp, hội nghị" class="css-label go-left">
                                         <input type="checkbox" value="203" name="amenities[]" id="Phòng họp, hội nghị" class="checkbox  filter">
                                         <span></span>
+>>>>>>> html
                                         <img class="go-right" style="height: 22px;margin-right:5px;margin-left:5px" src="https://www.hospi.vn/uploads/images/hotels/amenities/719341_Phong-hop.png">  Phòng họp, hội nghị                                    </label>
                                     </div>
                                     <div class="clearfix"></div>
@@ -1587,19 +1589,23 @@
                                 </div>
                             </span>
                             <?php } ?>
+
                             <!-- <span class="visible-xs icon-best" style="float:right">
                                 <div>
                                     <a><img src="<?php echo $theme_url; ?>images/icon-best.png"></a>
                                 </div>
                             </span> -->
+
                             <!-- Add to whishlist -->
                             <div class="img_list ">
                                 <a href="<?php echo $item->slug; ?>">
                                     <img src="<?php echo $item->thumbnail; ?>" alt="<?php echo character_limiter($item->title, 20); ?>">
+                                    <?php if($item->hotel_is_featured == "yes"){ ?>
                                     <div class="hs_favorite">
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         Yêu thích
                                     </div>
+                                    <?php } ?>
                                     <div class="short_info"></div>
                                 </a>
                             </div>
@@ -1628,9 +1634,15 @@
                                         <img title="" data-toggle="tooltip" data-placement="top" style="height:23px;" src="https://www.hospi.vn/uploads/images/hotels/amenities/403809_764557_fitness.png" alt="Trông giữ trẻ" data-original-title="Trông giữ trẻ">
                                     </ul>
                                     <ul class="itemlabel-info">
+                                        <?php if(is_have_deal($item->id, 2)) { ?>
                                         <li class="hs_cb">Combo</li>
+                                        <?php } ?>
+                                        <?php if(is_have_deal($item->id)) { ?>
                                         <li class="hs_deal">Deals - Giảm giá</li>
+                                        <?php } ?>
+                                        <?php if(is_have_deal($item->id, 3)) { ?>
                                         <li class="hs_hnm">Gói honeymoon</li>
+                                        <?php } ?>
                                     </ul>
                                      <!-- <ul class="itemlabel-info"> -->
                                         <!-- <?php if(is_combo_hotel($item->id)) { ?>
@@ -1662,8 +1674,10 @@
                                         <div class="purple size18 text-center item-book-hotels">
                                             <?php if ($item->price > 0) {
                                                 if ($item->price_status != 'Yes') { ?>
+
                                             <div class="click-2get-price col-xs-4 item-gia-tot">
                                                 <a style="font-size: 11px" id="popoverData" href="#emailme38" data-toggle="modal" data-content="Vì giá tốt nhất không được công bố lên website, Bạn vui lòng click vào để nhận giá tốt nhất qua email hoặc qua điện thoại" rel="popover" data-placement="top" data-original-title="<?php echo $item->title; ?>" data-trigger="hover">
+
                                                     <div class="click-a">Click lấy giá tốt</div>
                                                     <i class="fa fa-check-circle-o" aria-hidden="true"></i>
                                                 </a>
