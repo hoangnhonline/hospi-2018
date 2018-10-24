@@ -420,3 +420,32 @@
   and (orientation: landscape) {
 
 }
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .show_hs_promotionning {
+      margin-left: -8px;
+    }
+    .hs_full_roomMoreP.active {
+      right: 0;
+    }
+    .block-process-evaluate2 .lft,
+    .block-process-evaluate2 .rgt {
+        width: 100%;
+        margin: 0;
+        padding: 0 15px;
+    }
+    .block-process-evaluate2 .lft .andes {
+      text-align: center !important;
+    }
+    .item-review {
+      margin: 15px 0;
+      padding: 15px;
+    }
+    .item-review .lft,
+    .item-review .rgt {
+      width: 100%;
+      margin: 0;
+    }
+  }

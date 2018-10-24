@@ -71,7 +71,7 @@
                     <tbody>
                         <input type="hidden" name="room_id[]" value="<?php echo $r->id; ?>" />
                         <tr>
-                            <td colspan="3">
+                            <td>
                                 <div class="zoom-gallery">
                                     <div class="zoom-gallery<?php echo $r->id; ?>">
                                         <a href="<?php echo $r->fullimage; ?>" data-source="<?php echo $r->fullimage; ?>" title="<?php echo $r->title; ?>">
@@ -80,23 +80,129 @@
                                     </div>
                                 </div>
                             </td>
-                            <td colspan="5">
+                            <td>
                                 <div class="info">
                                     <h4 class="RTL go-text-right"><b class="purple"><?php echo $r->title; ?></b></h4>
                                     <div class="block-people">
                                         <h5>Người lớn: <span><?php echo $r->room_adults; ?></span> </h5>
                                         <h5>Trẻ em: <span><?php echo $r->room_children; ?></span></h5>
                                     </div>
-                                    <div class="block-view-detail">
+                                    <!-- <div class="block-view-detail">
                                         <div class="visible-lg visible-md visible-xs go-right" id="accordion" style="margin-top: 0px;">
                                             <a data-toggle="modal" href="#details55">Xem chi tiết</a>
+                                        </div>
+                                    </div> -->
+                                    <div class="block-view-detail">
+                                        <span class="hs_cl_show_info" href="javascript:;">Xem chi tiết</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hs_room_info hs_show_info">
+                            <td colspan="2">
+                                <div class="clearfix">
+                                    <p class="hs_cl_show_info"><span class="purple" style="font-weight: bold">Thông tin phòng</span> <span class="grey">(chỉ mang tính chất tham khảo)</span></p>
+                                </div>
+                                <div class="hs_room_details">
+                                    <p><strong>Diện tích phòng:</strong>&nbsp;70&nbsp;m2<br>
+                                        <strong>Hướng phòng:&nbsp;</strong>Hướng Hồ/&nbsp;Hướng Vườn<br>
+                                        <strong>Loại giường:&nbsp;</strong>&nbsp;1 Giường King side/ Twin&nbsp;<br>
+                                        <strong>Giường phụ:&nbsp;</strong>Không áp dụng<br>
+                                        <strong>Phòng dành cho:</strong>&nbsp;2&nbsp;người lớn + 1 em bé dưới dưới 5 tuổi miễn phí&nbsp;<br>
+                                        &nbsp;
+                                    </p>
+                                </div>
+                                <div class="hs_room_convenient">
+                                    <p class="title">
+                                        <span class="purple">Tiện nghi</span>
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Máy lạnh</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Nước suối miễn phí trong phòng</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Dụng cụ pha trà/cafe</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Bồn tắm nằm</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Cửa sổ</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Bàn ủi</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Tủ lạnh</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Áo choàng</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Dép đi trong phòng</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Bàn làm việc</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Ban công</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Vòi sen</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">TV truyền hình cáp</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Két sắt an toàn</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Wi-Fi miễn phí trong phòng</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Máy sấy tóc</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Điện thoại bàn</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Bình nước đun sôi</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Tivi </span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
+                                            <span class="grey hs_des_room_convenient">Internet wifi tại sảnh</span>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="3">
+                            <td>
                                 <div class="item-countroom">
                                     <h5 class="size12">Số phòng</h5>
                                     <select class="form-control" name="room_quantity[55]">
@@ -116,7 +222,7 @@
                                     </select>
                                 </div>
                             </td>
-                            <td colspan="5">
+                            <td>
                                 <div class="block-price">
                                     <p class="purple size18"><b><?php echo number_format($r->price['total']); ?></b></p>
                                     <div class="size13 grey">
@@ -146,23 +252,141 @@
                                 </div>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <div class="item-countroom">
+                                    <h5 class="size12">Số phòng</h5>
+                                    <select class="form-control" name="room_quantity[55]">
+                                        <option value="0">0</option>
+                                        <?php for($k = 1; $k <= $r->maxQuantity; $k++){ ?>
+                                        <option value="<?php echo $k; ?>"><?php echo $k; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                                <div class="item-countroom">
+                                    <h5 class="size12">Giường phụ</h5>
+                                    <select name="extra_beds[55]" class="form-control">
+                                        <option value="0">0</option>
+                                        <?php for($j = 1; $j <= $r->extraBeds; $j++){ ?>
+                                        <option value="<?php echo $j; ?>"><?php echo $j; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="block-price block-hs_promotionning">
+                                    <div class="show_hs_promotionning">
+                                        <span>Đang khuyến mãi</span>
+                                        <br>
+                                        <span>24/10/2018-31/10/2018</span>
+                                    </div>
+                                    <p class="purple size18"><b>1,400,000</b></p>
+                                    <div class="size13 grey">
+                                        Giá VND/1 đêm
+                                        <div class="block-price-info" style="display: inline-block;">
+                                            <i class="fa fa-question-circle"></i>
+                                            <div class="block-info-price-rooms">
+                                                <p class="purple size16" style="border-bottom: 1px solid #ccc; padding: 4px 8px; ">Luxury Villa Garden View</p>
+                                                <div class="ct" style="padding: 4px 8px;">
+                                                    <p class="grey">Đêm 24/10: 1,400,000 VND</p>
+                                                </div>
+                                                <p style="border-top: 1px solid #ccc; padding: 4px 8px;">
+                                                    <span class="grey">Tổng 1 đêm:</span>
+                                                    <span class="purple size14">1,400,000 VND</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="block-price-infos">
+                                        <span>Bao gồm: Ăn sáng.</span>
+                                        <span>Phí dịch vụ 5%, VAT 10%</span>
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="item-countroom">
+                                    <h5 class="size12">Số phòng</h5>
+                                    <select class="form-control" name="room_quantity[55]">
+                                        <option value="0">0</option>
+                                        <?php for($k = 1; $k <= $r->maxQuantity; $k++){ ?>
+                                        <option value="<?php echo $k; ?>"><?php echo $k; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                                <div class="item-countroom">
+                                    <h5 class="size12">Giường phụ</h5>
+                                    <select name="extra_beds[55]" class="form-control">
+                                        <option value="0">0</option>
+                                        <?php for($j = 1; $j <= $r->extraBeds; $j++){ ?>
+                                        <option value="<?php echo $j; ?>"><?php echo $j; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="block-price block-hs_promotionning">
+                                    <div class="show_hs_promotionning show_hs_roomMore">
+                                        <span>Đặt trước 30 ngày</span>
+                                        <br>
+                                        <span class="clickShow_hs_full_roomMore">(Chi tiết)</span>
+                                        <div class="hs_full_roomMoreP">
+                                            <p class="size16" style="border-bottom: 1px solid #ccc; padding: 4px 8px; color: #649800;">
+                                                Đặt trước 30 ngày                                <span class="clickHide_hs_full_roomMore">(x)</span>
+                                            </p>
+                                            <div class="ct grey" style="padding: 4px 8px;">
+                                                Ưu đãi đặt trước 30 ngày đến, tặng voucher ăn uống 300,000 VND                            
+                                            </div>
+                                            <p style="border-top: 1px solid #ccc; padding: 4px 8px;">
+                                                <span class="grey">Thời gian</span>
+                                                <span class="blue02 size14">19/10/2018-31/12/2018</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="purple size18"><b>2,200,000</b></p>
+                                    <div class="size13 grey">
+                                        Giá VND/1 đêm
+                                        <div class="block-price-info" style="display: inline-block;">
+                                            <i class="fa fa-question-circle"></i>
+                                            <div class="block-info-price-rooms">
+                                                <p class="purple size16" style="border-bottom: 1px solid #ccc; padding: 4px 8px; ">Luxury Villa Garden View</p>
+                                                <div class="ct" style="padding: 4px 8px;">
+                                                    <p class="grey">Đêm 24/10: 2,200,000 VND</p>
+                                                </div>
+                                                <p style="border-top: 1px solid #ccc; padding: 4px 8px;">
+                                                    <span class="grey">Tổng 1 đêm:</span>
+                                                    <span class="purple size14">2,200,000 VND</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="block-price-infos">
+                                        <span>Bao gồm: Ăn sáng.</span>
+                                        <span>Phí dịch vụ 5%, VAT 10%</span>
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="no-padding-mobile">
+                                    <button type="submit" class="btn btn-action btn-block chk">Đặt phòng</button>
+                                    <p class="size13">Bạn vui lòng chọn số lượng phòng, Bạn có thể đặt một lúc nhiều loại phòng </p>
+                                    <p class="purple andes-bold size13 text-center">Yêu cầu giường</p>
+                                    <div class="col-xs-6 no-padding-mobile">
+                                        <p class="size13 text-center"><label class="radio-inline"><input type="checkbox" name="radiobeds" value="1"><span>  1 giường</span></label></p>
+                                    </div>
+                                    <div class="col-xs-6 no-padding-mobile">
+                                        <p class="size13 text-center"><label class="radio-inline no-padding-mobile"><input type="checkbox" name="radiobeds" value="2">  2 giường</label></p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 <?php } ?>
                 <?php } ?>
-                <div class="clearfix"></div>
-                <div class="col-xs-12 no-padding-mobile">
-                    <button type="submit" class="btn btn-action btn-block chk">Đặt phòng</button>
-                    <p class="size13">Bạn vui lòng chọn số lượng phòng, Bạn có thể đặt một lúc nhiều loại phòng </p>
-                    <p class="purple andes-bold size13 text-center">Yêu cầu giường</p>
-                    <div class="col-xs-6 no-padding-mobile">
-                        <p class="size13 text-center"><label class="radio-inline"><input type="checkbox" name="radiobeds" value="1"><span>  1 giường</span></label></p>
-                    </div>
-                    <div class="col-xs-6 no-padding-mobile">
-                        <p class="size13 text-center"><label class="radio-inline no-padding-mobile"><input type="checkbox" name="radiobeds" value="2">  2 giường</label></p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
             </form>
         </div>
     </div>
