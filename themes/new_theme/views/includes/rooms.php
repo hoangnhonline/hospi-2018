@@ -104,99 +104,25 @@
                                     <p class="hs_cl_show_info"><span class="purple" style="font-weight: bold">Thông tin phòng</span> <span class="grey">(chỉ mang tính chất tham khảo)</span></p>
                                 </div>
                                 <div class="hs_room_details">
-                                    <p><strong>Diện tích phòng:</strong>&nbsp;70&nbsp;m2<br>
-                                        <strong>Hướng phòng:&nbsp;</strong>Hướng Hồ/&nbsp;Hướng Vườn<br>
-                                        <strong>Loại giường:&nbsp;</strong>&nbsp;1 Giường King side/ Twin&nbsp;<br>
-                                        <strong>Giường phụ:&nbsp;</strong>Không áp dụng<br>
-                                        <strong>Phòng dành cho:</strong>&nbsp;2&nbsp;người lớn + 1 em bé dưới dưới 5 tuổi miễn phí&nbsp;<br>
-                                        &nbsp;
-                                    </p>
+                                    <?php 
+                                    echo $r->desc;
+                                    ?>
                                 </div>
                                 <div class="hs_room_convenient">
                                     <p class="title">
                                         <span class="purple">Tiện nghi</span>
                                     </p>
                                     <div class="row">
+                                        <?php 
+                                        $countAment = 0;
+                                        foreach($r->Amenities as $ament){
+                                        
+                                        ?>
                                         <div class="col-sm-6">
                                             <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Máy lạnh</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Nước suối miễn phí trong phòng</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Dụng cụ pha trà/cafe</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Bồn tắm nằm</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Cửa sổ</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Bàn ủi</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Tủ lạnh</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Áo choàng</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Dép đi trong phòng</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Bàn làm việc</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Ban công</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Vòi sen</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">TV truyền hình cáp</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Két sắt an toàn</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Wi-Fi miễn phí trong phòng</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Máy sấy tóc</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Điện thoại bàn</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Bình nước đun sôi</span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Tivi </span>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <span class="hs_ic_room_convenient"><i class="fa fa-check"></i></span>
-                                            <span class="grey hs_des_room_convenient">Internet wifi tại sảnh</span>
-                                        </div>
+                                            <span class="grey hs_des_room_convenient"><?php echo $ament->name; ?></span>
+                                        </div>                        
+                                        <?php } ?>
                                     </div>
                                 </div>
                             </td>
@@ -205,7 +131,7 @@
                             <td>
                                 <div class="item-countroom">
                                     <h5 class="size12">Số phòng</h5>
-                                    <select class="form-control" name="room_quantity[55]">
+                                    <select class="form-control room_quantity" data-type="1" data-p="<?php echo $r->price['total']/$modulelib->stay; ?>" data-name=""  data-detail-id="0">
                                         <option value="0">0</option>
                                         <?php for($k = 1; $k <= $r->maxQuantity; $k++){ ?>
                                         <option value="<?php echo $k; ?>"><?php echo $k; ?></option>
@@ -214,7 +140,7 @@
                                 </div>
                                 <div class="item-countroom">
                                     <h5 class="size12">Giường phụ</h5>
-                                    <select name="extra_beds[55]" class="form-control">
+                                    <select class="form-control extra_beds" data-price="1" data-p="<?php echo $r->price['price_bed_total']/$modulelib->stay; ?>" data-name=""  data-detail-id="0">
                                         <option value="0">0</option>
                                         <?php for($j = 1; $j <= $r->extraBeds; $j++){ ?>
                                         <option value="<?php echo $j; ?>"><?php echo $j; ?></option>
@@ -460,8 +386,7 @@
     </div>
 </section>
 <script type="text/javascript">
-    $('select.room_quantity').change(function(){
-        alert('123');
+    $('select.room_quantity').change(function(){        
         $(this).parents('table.room-multi').find('.room_quantity_hidden').val($(this).val());
         $(this).parents('table.room-multi').find('.ptype_hidden').val($(this).data('type'));
         $(this).parents('table.room-multi').find('.p_hidden').val($(this).data('p'));
