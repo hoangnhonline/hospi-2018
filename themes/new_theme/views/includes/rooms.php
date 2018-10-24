@@ -55,7 +55,7 @@
                     $i++;               
                     ?>
                 <input type="hidden" name="room_id[]" value="<?php echo $r->id; ?>" />
-                <table class="table table-customize">
+                <table class="table table-customize room-multi">
                     <thead class="hidden">
                         <tr>
                             <td></td>
@@ -221,6 +221,13 @@
                                         <?php } ?>
                                     </select>
                                 </div>
+                                <input type="hidden" class="room_quantity_hidden" name="room_quantity[<?php echo $r->id; ?>]" id="room_quantity_<?php echo $r->id; ?>">
+                                <input type="hidden" class="extra_beds_hidden" name="extra_beds[<?php echo $r->id; ?>]" id="extra_beds_<?php echo $r->id; ?>">  
+                                <input type="hidden" class="ptype_hidden" name="ptype[<?php echo $r->id; ?>]" id="ptype<?php echo $r->id; ?>" value="">
+                                <input type="hidden" class="p_hidden" name="p[<?php echo $r->id; ?>]" id="p<?php echo $r->id; ?>" value="">
+                                <input type="hidden" class="pb_hidden" name="pb[<?php echo $r->id; ?>]" id="pb<?php echo $r->id; ?>" value="">
+                                <input type="hidden" class="detail_id" name="detail_id[<?php echo $r->id; ?>]" id="detail_id<?php echo $r->id; ?>" value="">
+                                <input type="hidden" class="name_uudai" name="name_uudai[<?php echo $r->id; ?>]" id="name_uudai<?php echo $r->id; ?>" value="">
                             </td>
                             <td>
                                 <div class="block-price">
@@ -252,11 +259,12 @@
                                 </div>
                             </td>
                         </tr>
+                        <?php if($r->price['price_sale'] > 0 ){ ?>
                         <tr>
                             <td>
                                 <div class="item-countroom">
                                     <h5 class="size12">Số phòng</h5>
-                                    <select class="form-control" name="room_quantity[55]">
+                                    <select class="form-control room_quantity" data-type="2" data-p="<?php echo $r->price['price_sale']/$modulelib->stay; ?>" data-name="Giá khuyến mãi"  data-detail-id="0">
                                         <option value="0">0</option>
                                         <?php for($k = 1; $k <= $r->maxQuantity; $k++){ ?>
                                         <option value="<?php echo $k; ?>"><?php echo $k; ?></option>
@@ -265,7 +273,7 @@
                                 </div>
                                 <div class="item-countroom">
                                     <h5 class="size12">Giường phụ</h5>
-                                    <select name="extra_beds[55]" class="form-control">
+                                    <select class="form-control extra_beds"  data-type="2" data-p="<?php echo $r->price['price_bed_sale']/$modulelib->stay; ?>"  data-name="Giá khuyến mãi"  data-detail-id="0">
                                         <option value="0">0</option>
                                         <?php for($j = 1; $j <= $r->extraBeds; $j++){ ?>
                                         <option value="<?php echo $j; ?>"><?php echo $j; ?></option>
@@ -278,21 +286,26 @@
                                     <div class="show_hs_promotionning">
                                         <span>Đang khuyến mãi</span>
                                         <br>
-                                        <span>24/10/2018-31/10/2018</span>
+                                        <span><?php echo $r->price['duration']; ?></span>
                                     </div>
-                                    <p class="purple size18"><b>1,400,000</b></p>
+                                    <p class="purple size18"><b><?php echo number_format($r->price['price_sale']); ?></b></p>
                                     <div class="size13 grey">
-                                        Giá VND/1 đêm
+                                        Giá VND/<?php echo $modulelib->stay; ?> đêm
                                         <div class="block-price-info" style="display: inline-block;">
                                             <i class="fa fa-question-circle"></i>
                                             <div class="block-info-price-rooms">
-                                                <p class="purple size16" style="border-bottom: 1px solid #ccc; padding: 4px 8px; ">Luxury Villa Garden View</p>
+                                                <p class="purple size16" style="border-bottom: 1px solid #ccc; padding: 4px 8px; "><?php echo $r->title; ?></p>
                                                 <div class="ct" style="padding: 4px 8px;">
-                                                    <p class="grey">Đêm 24/10: 1,400,000 VND</p>
+                                                   <?php 
+                                                        if(!empty($r->price['detail'])){                          
+                                                            foreach($r->price['detail'] as $priceDetail){
+                                                        ?>
+                                                    <p class="grey">Đêm <?php echo date('d/m', strtotime($priceDetail->date_use)); ?>: <?php echo number_format($priceDetail->price_sale); ?> VND</p>
+                                                    <?php } } ?>
                                                 </div>
                                                 <p style="border-top: 1px solid #ccc; padding: 4px 8px;">
-                                                    <span class="grey">Tổng 1 đêm:</span>
-                                                    <span class="purple size14">1,400,000 VND</span>
+                                                    <span class="grey">Tổng <?php echo $modulelib->stay; ?> đêm:</span>
+                                                    <span class="purple size14"><?php echo number_format($r->price['price_sale']); ?> VND</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -304,11 +317,25 @@
                                 </div>
                             </td>
                         </tr>
+                        <?php } ?>
+                        <?php 
+                        if(!empty($r->price['uuDaiTotalArr'])){
+                        ?>
+                        <?php 
+                        $countUuDai = 0;
+                        foreach($r->price['uuDaiTotalArr'] as $detail_id => $uuDaiTotal){            
+                            $priceUuDaiDetail = $r->price['uuDaiDetail'][$detail_id];
+                            $countUuDai++;
+
+                        ?>
+                        <?php 
+                        $tmpUuDaiFirst = reset($priceUuDaiDetail);                
+                        ?>
                         <tr>
                             <td>
                                 <div class="item-countroom">
                                     <h5 class="size12">Số phòng</h5>
-                                    <select class="form-control" name="room_quantity[55]">
+                                    <select class="form-control room_quantity" data-type="3" data-p="<?php echo $uuDaiTotal['total']/$modulelib->stay; ?>" data-name="<?php echo $tmpUuDaiFirst['name_uudai'];?>"  data-detail-id="<?php echo $detail_id; ?>">
                                         <option value="0">0</option>
                                         <?php for($k = 1; $k <= $r->maxQuantity; $k++){ ?>
                                         <option value="<?php echo $k; ?>"><?php echo $k; ?></option>
@@ -317,7 +344,7 @@
                                 </div>
                                 <div class="item-countroom">
                                     <h5 class="size12">Giường phụ</h5>
-                                    <select name="extra_beds[55]" class="form-control">
+                                    <select class="form-control extra_beds" data-type="3" data-p="<?php echo $uuDaiTotal['bed']/$modulelib->stay; ?>" data-name="<?php echo $tmpUuDaiFirst['name_uudai'];?>" data-detail-id="<?php echo $detail_id; ?>">
                                         <option value="0">0</option>
                                         <?php for($j = 1; $j <= $r->extraBeds; $j++){ ?>
                                         <option value="<?php echo $j; ?>"><?php echo $j; ?></option>
@@ -328,35 +355,40 @@
                             <td>
                                 <div class="block-price block-hs_promotionning">
                                     <div class="show_hs_promotionning show_hs_roomMore">
-                                        <span>Đặt trước 30 ngày</span>
+                                        <span><?php echo $tmpUuDaiFirst['name_uudai'];?></span>
                                         <br>
                                         <span class="clickShow_hs_full_roomMore">(Chi tiết)</span>
                                         <div class="hs_full_roomMoreP">
                                             <p class="size16" style="border-bottom: 1px solid #ccc; padding: 4px 8px; color: #649800;">
-                                                Đặt trước 30 ngày                                <span class="clickHide_hs_full_roomMore">(x)</span>
+                                                <?php echo $tmpUuDaiFirst['name_uudai'];?>                               <span class="clickHide_hs_full_roomMore">(x)</span>
                                             </p>
                                             <div class="ct grey" style="padding: 4px 8px;">
-                                                Ưu đãi đặt trước 30 ngày đến, tặng voucher ăn uống 300,000 VND                            
+                                               <?php echo $tmpUuDaiFirst['detail_uudai'];?>                          
                                             </div>
                                             <p style="border-top: 1px solid #ccc; padding: 4px 8px;">
                                                 <span class="grey">Thời gian</span>
-                                                <span class="blue02 size14">19/10/2018-31/12/2018</span>
+                                                <span class="blue02 size14"><?php echo $tmpUuDaiFirst['duration']; ?></span>
                                             </p>
                                         </div>
                                     </div>
-                                    <p class="purple size18"><b>2,200,000</b></p>
+                                    <p class="purple size18"><b><?php echo number_format($uuDaiTotal['total']); ?></b></p>
                                     <div class="size13 grey">
-                                        Giá VND/1 đêm
+                                        Giá VND/<?php echo $modulelib->stay; ?> đêm
                                         <div class="block-price-info" style="display: inline-block;">
                                             <i class="fa fa-question-circle"></i>
                                             <div class="block-info-price-rooms">
-                                                <p class="purple size16" style="border-bottom: 1px solid #ccc; padding: 4px 8px; ">Luxury Villa Garden View</p>
+                                                <p class="purple size16" style="border-bottom: 1px solid #ccc; padding: 4px 8px; "><?php echo $r->title; ?></p>
                                                 <div class="ct" style="padding: 4px 8px;">
-                                                    <p class="grey">Đêm 24/10: 2,200,000 VND</p>
+                                                    <?php 
+                                        if(!empty($r->price['detail'])){                          
+                                            foreach($priceUuDaiDetail as $date_useKey => $priceDetail){
+                                        ?>
+                                    <p class="grey">Đêm <?php echo date('d/m', strtotime($date_useKey)); ?>: <?php echo number_format($priceDetail['price']); ?> VND</p>
+                                    <?php } } ?>
                                                 </div>
                                                 <p style="border-top: 1px solid #ccc; padding: 4px 8px;">
-                                                    <span class="grey">Tổng 1 đêm:</span>
-                                                    <span class="purple size14">2,200,000 VND</span>
+                                                    <span class="grey">Tổng <?php echo $modulelib->stay; ?> đêm:</span>
+                                                    <span class="purple size14"><?php echo number_format($uuDaiTotal['total']); ?> VND</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -368,6 +400,8 @@
                                 </div>
                             </td>
                         </tr>
+                         <?php } // end foreach ?>                         
+                        <?php } // end if ?>
                         <tr>
                             <td colspan="2">
                                 <div class="no-padding-mobile">
@@ -427,6 +461,7 @@
 </section>
 <script type="text/javascript">
     $('select.room_quantity').change(function(){
+        alert('123');
         $(this).parents('table.room-multi').find('.room_quantity_hidden').val($(this).val());
         $(this).parents('table.room-multi').find('.ptype_hidden').val($(this).data('type'));
         $(this).parents('table.room-multi').find('.p_hidden').val($(this).data('p'));
