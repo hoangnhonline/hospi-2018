@@ -1587,11 +1587,11 @@
                                 </div>
                             </span>
                             <?php } ?>
-                            <span class="visible-xs icon-best" style="float:right">
+                            <!-- <span class="visible-xs icon-best" style="float:right">
                                 <div>
                                     <a><img src="<?php echo $theme_url; ?>images/icon-best.png"></a>
                                 </div>
-                            </span>
+                            </span> -->
                             <!-- Add to whishlist -->
                             <div class="img_list ">
                                 <a href="<?php echo $item->slug; ?>">
@@ -1662,11 +1662,8 @@
                                         <div class="purple size18 text-center item-book-hotels">
                                             <?php if ($item->price > 0) {
                                                 if ($item->price_status != 'Yes') { ?>
-                                            <div class="col-xs-4 item-gia-tot item-gia-tot_mb">
-                                                <span class="purple">2,450,000<br>(VNĐ)</span>
-                                            </div>
-                                            <div class="click-2get-price col-xs-4 item-gia-tot hidden">
-                                                <a id="popoverData" href="#emailme38" data-toggle="modal" data-content="Vì giá tốt nhất không được công bố lên website, Bạn vui lòng click vào để nhận giá tốt nhất qua email hoặc qua điện thoại" rel="popover" data-placement="top" data-original-title="<?php echo $item->title; ?>" data-trigger="hover">
+                                            <div class="click-2get-price col-xs-4 item-gia-tot">
+                                                <a style="font-size: 11px" id="popoverData" href="#emailme38" data-toggle="modal" data-content="Vì giá tốt nhất không được công bố lên website, Bạn vui lòng click vào để nhận giá tốt nhất qua email hoặc qua điện thoại" rel="popover" data-placement="top" data-original-title="<?php echo $item->title; ?>" data-trigger="hover">
                                                     <div class="click-a">Click lấy giá tốt</div>
                                                     <i class="fa fa-check-circle-o" aria-hidden="true"></i>
                                                 </a>
