@@ -141,7 +141,7 @@
             </div>
             <!-- offers -->
             <?php if (!empty($offers)) { ?>
-                <div class="block-package hidden-xs">
+                <div class="block-package">
                     <ul>
                         <?php foreach ($offers as $offer) { ?>
                             <li class="package-info clearfix">
