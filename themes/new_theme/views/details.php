@@ -158,8 +158,10 @@
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="row">
-                                            <div class="col-md-8">
+                                            <div class="col-md-8">                          
+                                                <?php if($offer->type != 1){ ?>
                                                 <p class="package-price">Giá: <span class="package-price"><?php echo $offer->price; ?> <?php echo $offer->currSymbol; ?></span></p>
+                                                <?php } ?>
                                             </div>
                                             <div class="col-md-4">
                                                 <a href="<?php echo $offer->slug; ?>" title="Xem chi tiết" class="package-view">Xem chi tiết</a>
