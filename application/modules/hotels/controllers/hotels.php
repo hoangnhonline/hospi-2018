@@ -150,14 +150,17 @@ class Hotels extends MX_Controller
             $this->load->library('offers_lib');
 
             $offers = $this->offers_lib->showOffers(null, null, $type = 1, 1, $this->data['module']->id);
-            $combos = $this->offers_lib->showOffers(null, null, $type = 2, 1, $this->data['module']->id);
+            $combos = $this->offers_lib->showOffers(null, null, $type = 2, 100, $this->data['module']->id);            
             $honeymoons = $this->offers_lib->showOffers(null, null, $type = 3, 1, $this->data['module']->id);
             $this->data['offers'] = [];
             if ($offers['allOffers']['count'] > 0) {
                 $this->data['offers'][] = $offers['allOffers']['offers'][0];
             }
             if ($combos['allOffers']['count'] > 0) {
-                $this->data['offers'][] = $combos['allOffers']['offers'][0];
+                foreach($combos['allOffers']['offers'] as $offerCombo){
+                    $this->data['offers'][] = $offerCombo;    
+                }
+                
             }
             if ($honeymoons['allOffers']['count'] > 0) {
                 $this->data['offers'][] = $honeymoons['allOffers']['offers'][0];
@@ -172,6 +175,7 @@ class Hotels extends MX_Controller
             $this->breadcrumbcomponent->add($this->data['module']->location, base_url() . 'hotels/search/vietnam/' . $this->data['module']->cityName . '/' . $this->data['module']->hotel_city . '?txtSearch=' . $this->data['module']->location . '&searching=' . $this->data['module']->hotel_city . '&modType=location&checkin=&checkout=&adults=1&child=0');
             $this->breadcrumbcomponent->add($this->data['module']->title, base_url() . "hotels/" . $this->data['module']->slug);
             $this->data['breadcrumb'] = $this->breadcrumbcomponent->output();
+
             $this->theme->view('details', $this->data);
 
             // $this->output->cache(20) ; //hoangnhonline
