@@ -123,7 +123,7 @@
     </div>
     <!-- refund policy -->
     <div id="details<?php echo $room['rateCode'];?>" class="alert alert-warning panel-collapse collapse">
-      <div class="panel panel-default">xxxxxxxxxxx
+      <div class="panel panel-default">
         <div class="panel-body">
           <div class="carousel magnific-gallery row">
             <?php $imgCount = 0; foreach($room['RoomImages']['RoomImage'] as $Img){ $imgCount++; if($imgCount <= 4){ $imgurl = str_replace("_s","_z",$Img['url']); ?>
